@@ -1,0 +1,29 @@
+docker run \
+--name amberdata-redis \
+--restart=unless-stopped \
+--net eas-net \
+--link redis-cache \
+-p 1208:1208 \
+-e EA_PORT=1208 \
+-e API_KEY=$AMBERDATA_API_KEY \
+-e TIMEOUT=30000 \
+-e CACHE_ENABLED=true \
+-e CACHE_TYPE=redis \
+-e CACHE_KEY_GROUP=amberdata \
+-e CACHE_KEY_IGNORED_PROPS=meta \
+-e CACHE_REDIS_HOST="192.168.1.1" \
+-e CACHE_REDIS_PORT=6379 \
+-e CACHE_REDIS_TIMEOUT=30000 \
+-e REQUEST_COALESCING_ENABLED=true \
+-e REQUEST_COALESCING_INTERVAL=100 \
+-e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+-e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+-e REQUEST_COALESCING_ENTROPY_MAX=0 \
+-e RATE_LIMIT_ENABLED=true \
+-e RATE_LIMIT_API_TIER=on-demand \
+-e LOG_LEVEL=info \
+-e DEBUG=false \
+-e API_VERBOSE=false \
+-e EXPERIMENTAL_METRICS_ENABLED=true \
+-e METRICS_NAME=amberdata \
+-d public.ecr.aws/chainlink/adapters/amberdata-adapter:$3
