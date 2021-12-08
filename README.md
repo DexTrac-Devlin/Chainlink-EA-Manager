@@ -13,7 +13,7 @@ Collection of scripts for deploying and managing Chainlink External Adapters
 * This will:
   * Install Docker-CE if it is not already installed.
   * Create a Docker Network for your external adapters
-  * Deploy a Redis container for your external adapters' Caching
+  * Deploy a Redis container for your external adapters' caching
 
 ```bash
 sudo ./eaManager.sh -i
