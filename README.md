@@ -44,7 +44,7 @@ sudo ./eaManager.sh -u coingecko 1.0.4
 
 --
 
-### Generael Directions
+### General Directions
 * Update the api_keys file with the keys for each of your external adapters.
 * Modify the file(s) for the external adapter(s) you want deployed located in their respective directories.
   * standardEAs contains the standard external adapters.
