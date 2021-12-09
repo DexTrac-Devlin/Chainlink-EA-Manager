@@ -43,6 +43,17 @@ sudo ./eaManager.sh -i
 
 
 --
+### List all Supported External Adapter
+* This will:
+  * List all supported external adapter names
+
+```bash
+./eaManager.sh -l
+```
+
+
+--
+
 
 ### General Directions
 * Update the ```api_keys``` file with the keys for each of your external adapters.
