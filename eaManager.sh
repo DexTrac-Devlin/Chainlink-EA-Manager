@@ -165,6 +165,8 @@ Help() {
   echo ""
   echo "-v        Print script version and exit."
   echo ""
+  echo "-l        Print all supported EA names and exit."
+  echo ""
   echo "-h        Print this Help function and exit."
   echo
 }
