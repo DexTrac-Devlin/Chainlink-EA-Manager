@@ -26,7 +26,7 @@ sudo ./eaManager.sh -i
   * Deploy a new external adapter of the desired release.
   
 ```bash
-sudo ./eaManager.sh -d coingecko 1.0.0
+./eaManager.sh -d coingecko 1.0.0
 ```
 
 
@@ -38,7 +38,7 @@ sudo ./eaManager.sh -d coingecko 1.0.0
   * Deploy a new container based on the desired iamge version.
 
 ```bash
-sudo ./eaManager.sh -u coingecko 1.0.4
+./eaManager.sh -u coingecko 1.0.4
 ```
 
 
