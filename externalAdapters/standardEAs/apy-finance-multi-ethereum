@@ -1,0 +1,37 @@
+#!/bin/bash
+
+docker run \
+--name apy-finance-multi-redis \
+--restart=unless-stopped \
+--net eas-net \
+--link redis-cache \
+-p 1135:1135 \
+-e EA_PORT=1135 \
+-e DATA_PROVIDER=nomics \
+-e NOMICS_ADAPTER_URL='http://10.10.100.50:1111' \
+-e CRYPTOCOMPARE_ADAPTER_URL='http://10.10.100.50:1114' \
+-e COINMARKETCAP_ADAPTER_URL='http://10.10.100.50:1115' \
+-e DEFAULT_QUOTE=USD \
+-e DEFAULT_METHOD=price \
+-e RPC_URL='$RPC_URL' \
+-e ETHEREUM_RPC_URL='$ETHEREUM_RPC_URL' \
+-e REGISTRY_ADDRESS=0x7ec81b7035e91f8435bdeb2787dcbd51116ad303 \
+-e TIMEOUT=30000 \
+-e CACHE_ENABLED=true \
+-e CACHE_TYPE=redis \
+-e CACHE_KEY_GROUP=apy-finance-ethereum \
+-e CACHE_KEY_IGNORED_PROPS=meta \
+-e CACHE_REDIS_HOST="192.168.1.1" \
+-e CACHE_REDIS_PORT=6379 \
+-e REQUEST_COALESCING_ENABLED=true \
+-e REQUEST_COALESCING_INTERVAL=100 \
+-e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+-e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+-e REQUEST_COALESCING_ENTROPY_MAX=0 \
+-e LOG_LEVEL=info \
+-e DEBUG=false \
+-e API_VERBOSE=false \
+-e EXPERIMENTAL_METRICS_ENABLED=true \
+-e METRICS_NAME=apyFinance-ethereum \
+-d public.ecr.aws/chainlink/adapters/apy-finance-adapter:$1
+# (With the shift in deploy option, the version moves to $1)

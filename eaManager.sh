@@ -33,7 +33,7 @@ Initialize() {
   then
     # Check if running as root
     if [ "$EUID" -ne 0 ]
-      then echo "${b} Run as elevated user (sudo)${n}"
+      then echo "${b}Run as elevated user (sudo)${n}"
       exit
     fi
     read -p "${b} Enter your non-root username:${n} " USERNAME
@@ -49,8 +49,8 @@ Initialize() {
       sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
     }
     yumInstall (){
-      echo " Updating yum"
-      echo " Installing dependencies & Docker-CE"
+      echo "Updating yum"
+      echo "Installing dependencies & Docker-CE"
       sudo yum remove docker* >>/dev/null 2>&1
       sudo yum -y update >>/dev/null 2>&1
       sudo yum -y remove docker* >>/dev/null 2>&1
@@ -121,7 +121,7 @@ Deploy() {
 # Deploy new EA
 echo "${b}Deploying $1:$2 external adapter...${n}"
 echo "test command with variables:"
-bash standardEAs/$1-redis.sh $2
+bash externalAdapters/standardEAs/$1 $2
 }
 
 ########################################################
@@ -130,6 +130,16 @@ bash standardEAs/$1-redis.sh $2
 Version() {
 # Print Version
 echo "eaManager version: ${b}$VERSION${n}"
+}
+
+########################################################
+#                    LIST FUNCTION                     #
+########################################################
+List() {
+# List EA options
+echo "${b}Listing Supported EAs:${n}"
+echo ""
+tree externalAdapters
 }
 
 ########################################################
@@ -162,7 +172,7 @@ Help() {
 ########################################################
 #                        MAIN                          #
 ########################################################
-while getopts ":id:u:vh" option; do
+while getopts ":id:u:lvh" option; do
    case ${option} in
       i) # deploy new external adapter
          Initialize
@@ -179,6 +189,10 @@ while getopts ":id:u:vh" option; do
          ;;
       v) # Print Version
          Version
+         exit
+         ;;
+      l) # list supported EAs
+         List
          exit
          ;;
       h) # Display Help
