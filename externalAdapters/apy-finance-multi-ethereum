@@ -1,16 +1,19 @@
 #!/bin/bash
 
+source ../api_keys
+
 docker run \
 --name apy-finance-multi-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
+--ip 192.168.0.135 \
 -p 1135:1135 \
 -e EA_PORT=1135 \
 -e DATA_PROVIDER=nomics \
--e NOMICS_ADAPTER_URL='http://10.10.100.50:1111' \
--e CRYPTOCOMPARE_ADAPTER_URL='http://10.10.100.50:1114' \
--e COINMARKETCAP_ADAPTER_URL='http://10.10.100.50:1115' \
+-e NOMICS_ADAPTER_URL='http://192.168.1.111:1111' \
+-e CRYPTOCOMPARE_ADAPTER_URL='http://192.168.1.114:1114' \
+-e COINMARKETCAP_ADAPTER_URL='http://192.168.1.115:1115' \
 -e DEFAULT_QUOTE=USD \
 -e DEFAULT_METHOD=price \
 -e RPC_URL='$RPC_URL' \
@@ -34,4 +37,3 @@ docker run \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
 -e METRICS_NAME=apyFinance-ethereum \
 -d public.ecr.aws/chainlink/adapters/apy-finance-adapter:$1
-# (With the shift in deploy option, the version moves to $1)

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $(dpkg-query -W -f='${Status}' docker-ce 2>/dev/null | grep -c "install ok installed") -eq 0 ];
+then
+  echo "Docker is not installed"
+else
+  echo "Docker is installed"
+fi

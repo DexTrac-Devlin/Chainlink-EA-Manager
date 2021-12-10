@@ -1,0 +1,32 @@
+#!/bin/bash
+
+source ../api_keys
+
+docker run \
+--name blockchair-redis \
+--restart=unless-stopped \
+--net eas-net \
+--link redis-cache \
+--ip 192.168.1.194 \
+-p 1194:1194 \
+-e EA_PORT=1194 \
+-e API_KEY=$BLOCKCHAIR_API_KEY \
+-e TIMEOUT=30000 \
+-e CACHE_ENABLED=true \
+-e CACHE_MAX_AGE=60000 \
+-e CACHE_TYPE=redis \
+-e CACHE_KEY_GROUP=blockchair \
+-e CACHE_KEY_IGNORED_PROPS=meta \
+-e CACHE_REDIS_HOST="192.168.1.1" \
+-e CACHE_REDIS_PORT=6379 \
+-e REQUEST_COALESCING_ENABLED=true \
+-e REQUEST_COALESCING_INTERVAL=100 \
+-e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+-e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+-e REQUEST_COALESCING_ENTROPY_MAX=0 \
+-e LOG_LEVEL=info \
+-e DEBUG=false \
+-e API_VERBOSE=false \
+-e EXPERIMENTAL_METRICS_ENABLED=true \
+-e METRICS_NAME=blockchair \
+-d public.ecr.aws/chainlink/adapters/blockchair-adapter:#1
