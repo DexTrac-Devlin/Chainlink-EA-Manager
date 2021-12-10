@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ../api_keys
+source ../misc_vars
 
 docker run \
 --name blockstream-redis \

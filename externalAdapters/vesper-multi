@@ -4,17 +4,25 @@ source ../api_keys
 source ../misc_vars
 
 docker run \
---name bitso-redis \
+--name vesper-multi-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.1.110 \
--p 1110:1110 \
--e EA_PORT=1110 \
+--ip 192.168.1.158 \
+-p 1158:1158 \
+-e EA_PORT=1158 \
+-e API_KEY=$VESPER_API_KEY \
+-e RPC_URL=$RPC_URL \
+-e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
+-e COINAPI_ADAPTER_URL=http://192.168.1.112:1112 \
+-e COINGECKO_ADAPTER_URL=http://192.168.1.113:1113 \
+-e CRYPTOCOMPARE_ADAPTER_URL=http://19.168.1.114:1114 \
+-e COINMARKETCAP_ADAPTER_URL=http://192.168.1.115:1115 \
+-e NOMICS_ADAPTER_URL=http://192.168.1.111:1111 \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=bitso \
+-e CACHE_KEY_GROUP=vesper-multi \
 -e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
@@ -27,5 +35,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=bitso \
--d public.ecr.aws/chainlink/adapters/bitso-adapter:$1
+-e METRICS_NAME=vesper \
+-d public.ecr.aws/chainlink/adapters/vesper-adapter:$1

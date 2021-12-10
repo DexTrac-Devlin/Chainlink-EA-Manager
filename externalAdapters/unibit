@@ -4,20 +4,25 @@ source ../api_keys
 source ../misc_vars
 
 docker run \
---name bitso-redis \
+--name unibit-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.1.110 \
--p 1110:1110 \
--e EA_PORT=1110 \
+--ip 192.168.1.143 \
+-p 1143:8080 \
+-e EA_PORT=1143 \
+-e API_KEY=$UNIBIT_API_KEY \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=bitso \
+-e CACHE_KEY_GROUP=unibit \
 -e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
+-e EXPERIMENTAL_RATE_LIMIT_ENABLED=true \
+-e RATE_LIMIT_API_PROVIDER=unibit \
+-e RATE_LIMIT_API_TIER=freetrial \
+-e EXPERIMENTAL_WARMUP_ENABLED=true \
 -e REQUEST_COALESCING_ENABLED=true \
 -e REQUEST_COALESCING_INTERVAL=100 \
 -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
@@ -27,5 +32,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=bitso \
--d public.ecr.aws/chainlink/adapters/bitso-adapter:$1
+-e METRICS_NAME=unibit \
+-d public.ecr.aws/chainlink/adapters/unibit-adapter:$1

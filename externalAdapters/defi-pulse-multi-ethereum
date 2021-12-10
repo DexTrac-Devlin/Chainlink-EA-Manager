@@ -4,17 +4,23 @@ source ../api_keys
 source ../misc_vars
 
 docker run \
---name bitso-redis \
+--name defi-pulse-adapter-multi-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.1.110 \
--p 1110:1110 \
--e EA_PORT=1110 \
+--ip 192.168.1.210 \
+-p 1210:1210 \
+-e EA_PORT=1210 \
+-e RPC_URL=$RPC_URL \
+-e ETHEREUM_RCP_URL=$ETHEREUM_RPC_URL \
+-e TIINGO_ADAPTER_URL=http://192.168.1.134:1134 \
+-e COINPAPRIKA_ADAPTER_URL=http://192.168.1.116:1116 \
+-e COINAPI_ADAPTER_URL=http://192.168.1.112:1112 \
+-e NOMICS_ADAPTER_URL=http://192.168.1.111:1111 \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=bitso \
+-e CACHE_KEY_GROUP=defiPulse-multi \
 -e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
@@ -27,5 +33,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=bitso \
--d public.ecr.aws/chainlink/adapters/bitso-adapter:$1
+-e METRICS_NAME=defi-pulse-ethereum \
+-d public.ecr.aws/chainlink/adapters/defi-pulse-adapter:$1

@@ -1,12 +1,14 @@
 #!/bin/bash
 
 source ../api_keys
+source ../misc_vars
 
 docker run \
 --name amberdata-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
+--ip 192.168.1.208 \
 -p 1208:1208 \
 -e EA_PORT=1208 \
 -e API_KEY=$AMBERDATA_API_KEY \

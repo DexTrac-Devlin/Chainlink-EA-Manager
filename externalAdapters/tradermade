@@ -4,17 +4,17 @@ source ../api_keys
 source ../misc_vars
 
 docker run \
---name bitso-redis \
+--name tradermade-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.1.110 \
--p 1110:1110 \
--e EA_PORT=1110 \
--e TIMEOUT=30000 \
+--ip 192.168.1.209 \
+-p 1209:1209 \
+-e EA_PORT=1209 \
+-e API_KEY=$TRADERMADE_API_KEY \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=bitso \
+-e CACHE_KEY_GROUP=tradermade \
 -e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
@@ -27,5 +27,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=bitso \
--d public.ecr.aws/chainlink/adapters/bitso-adapter:$1
+-e METRICS_NAME=tradermade \
+-d public.ecr.aws/chainlink/adapters/tradermade-adapter:$1

@@ -4,20 +4,25 @@ source ../api_keys
 source ../misc_vars
 
 docker run \
---name bitso-redis \
+--name coinmarketcap-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.1.110 \
--p 1110:1110 \
--e EA_PORT=1110 \
+--ip 192.168.1.115 \
+-p 1115:1115 \
+-e EA_PORT=1115 \
+-e API_KEY=$COINMARKETCAP_API_KEY \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
+-e CACHE_MAX_AGE=60000 \
 -e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=bitso \
+-e CACHE_KEY_GROUP=coinmarketcap \
 -e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
+-e EXPERIMENTAL_RATE_LIMIT_ENABLED=true \
+-e EXPERIMENTAL_WARMUP_ENABLED=true \
+-e RATE_LIMIT_API_TIER=startup \
 -e REQUEST_COALESCING_ENABLED=true \
 -e REQUEST_COALESCING_INTERVAL=100 \
 -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
@@ -27,5 +32,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=bitso \
--d public.ecr.aws/chainlink/adapters/bitso-adapter:$1
+-e METRICS_NAME=coinmarketcap \
+-d public.ecr.aws/chainlink/adapters/coinmarketcap-adapter:$1

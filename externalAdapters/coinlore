@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ../api_keys
+source ../misc_vars
 
 docker run \
 --name coinlore-redis \
@@ -26,5 +27,5 @@ docker run \
 -e DEBUG=false \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=NAME_HERE \
+-e METRICS_NAME=coinlore \
 -d public.ecr.aws/chainlink/adapters/coinlore-adapter:$1
