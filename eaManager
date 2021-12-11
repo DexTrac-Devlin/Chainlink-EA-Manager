@@ -215,12 +215,8 @@ fi
 ########################################################
 Deploy() {
 # Deploy new EA
-VERSION="$2"
-echo "$VERSION"
 echo "${b}Deploying $1:$2 external adapter...${n}"
-echo "test command with variables:"
-echo "bash externalAdapters/$1 $VERSION"
-bash externalAdapters/$1 $VERSION
+bash externalAdapters/$1 $2
 }
 
 ########################################################
@@ -228,7 +224,12 @@ bash externalAdapters/$1 $VERSION
 ########################################################
 Upgrade() {
 # Upgrade existing EA to specified version
-echo "in progress"
+echo "Stopping, removing, and redeploying $1 at version $2"
+docker stop "$1"-redis
+docker rm "$1"-redis
+echo "${b}Deploying $1:$2 external adapter...${n}"
+bash externalAdapters/$1 $2
+
 }
 
 ########################################################
@@ -304,6 +305,7 @@ while getopts ":id:u:t:lvh" option; do
          exit
          ;;
       u) # upgrade existing external adapter
+         shift
          Upgrade "$@"
          exit
          ;;

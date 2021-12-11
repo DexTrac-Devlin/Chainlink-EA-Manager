@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ../api_keys
-source ../misc_keys
+source api_keys
+source misc_keys
 
 docker run \
 --name eodhistoricaldata-redis \
