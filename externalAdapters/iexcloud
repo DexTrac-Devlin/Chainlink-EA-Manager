@@ -29,4 +29,4 @@ docker run \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
 -e METRICS_NAME=iexcloud \
--d public.ecr.aws/chainlink-staging/adapters/iex-cloud-adapter:$1
+-d public.ecr.aws/chainlink/adapters/iex-cloud-adapter:$1
