@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+--name synthindex-redis \
+--restart=unless-stopped \
+--net eas-net \
+--ip 192.168.1.198 \
+-p 1198:1198 \
+-e EA_PORT=1198 \
+-e COINAPI_ADAPTER_URL=http://192.168.1.112:1112 \
+-e COINGECKO_ADAPTER_URL=http://192.168.1.113:1113 \
+-e CRYPTOCOMPARE_ADAPTER_URL=http://192.168.1.114:1114 \
+-e COINMARKETCAP_ADAPTER_URL=http://192.168.1.115:1115 \
+-e LOG_LEVEL=info \
+-e DEBUG=false \
+-e API_VERBOSE=false \
+-e EXPERIMENTAL_METRICS_ENABLED=true \
+-e METRICS_NAME=synthindex \
+-d public.ecr.aws/chainlink/adapters/synth-index-adapter:$1
