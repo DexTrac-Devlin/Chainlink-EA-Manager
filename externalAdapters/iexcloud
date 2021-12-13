@@ -8,9 +8,9 @@ docker run \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.102 \
+--ip 192.168.1.102 \
 -p 8002:8002 \
--e EA_PORT=8002
+-e EA_PORT=8002 \
 -e API_KEY=$IEXCLOUD_API_KEY \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
