@@ -4,7 +4,7 @@ source api_keys
 source misc_vars
 
 docker run \
---name defi-pulse-adapter-multi-redis \
+--name defi-pulse-multi-ethereum-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
