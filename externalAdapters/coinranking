@@ -10,7 +10,7 @@ docker run \
 --link redis-cache \
 --ip 192.168.1.154 \
 -p 1154:1154 \
--e EA_PORT=1154
+-e EA_PORT=1154 \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
 -e API_KEY=$COINRANKING_API_KEY \
