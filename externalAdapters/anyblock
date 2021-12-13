@@ -11,7 +11,7 @@ docker run \
 --ip 192.168.1.207 \
 -p 1207:1207 \
 -e EA_PORT=1207 \
--e API_KEY=abdf08c3-34e9-4e4b-96fa-674ba073c60f \
+-e API_KEY=$ANYBLOCK_API_KEY \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
