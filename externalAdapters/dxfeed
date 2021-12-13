@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run -it \
+--name dxfeed \
+--restart=unless-stopped \
+--ip 192.168.1.101
+-p 8001:8001 \
+-e EA_PORT=8001 \
+-e API_ENDPOINT=$DXFEED_API_ENDPOINT \
+-e API_USERNAME=$DXFEED_API_USERNAME \
+-e API_PASSWORD=$DXFEED_API_PASSWORD \
+-d public.ecr.aws/chainlink/adapters/dxfeed-adapter:$1
