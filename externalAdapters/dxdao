@@ -5,7 +5,7 @@ source misc_vars
 
 
 docker run \
---name dxdao-xdai \
+--name dxdao-redis \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
