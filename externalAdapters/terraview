@@ -1,0 +1,32 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+--name terraview-redis \
+--restart=unless-stopped \
+--net eas-net \
+--link redis-cache \
+--ip 192.168.1.215 \
+-p 1215:1215 \
+-e EA_PORT=1215 \
+-e TIMEOUT=30000 \
+-e COLUMBUS_5_RPC_URL=$COLUMBUS_5_RPC_URL \
+-e CACHE_ENABLED=true \
+-e CACHE_TYPE=redis \
+-e CACHE_KEY_GROUP=terraview \
+-e CACHE_KEY_IGNORED_PROPS=meta \
+-e CACHE_REDIS_HOST="192.168.1.1" \
+-e CACHE_REDIS_PORT=6379 \
+-e REQUEST_COALESCING_ENABLED=true \
+-e REQUEST_COALESCING_INTERVAL=100 \
+-e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+-e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+-e REQUEST_COALESCING_ENTROPY_MAX=0 \
+-e LOG_LEVEL=info \
+-e DEBUG=false \
+-e API_VERBOSE=false \
+-e EXPERIMENTAL_METRICS_ENABLED=true \
+-e METRICS_NAME=terraview \
+-d public.ecr.aws/chainlink/adapters/terra-view-function-adapter:$1
