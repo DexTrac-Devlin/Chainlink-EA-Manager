@@ -8,7 +8,7 @@ docker run \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.139 \
+--ip 192.168.1.139 \
 -p 1139:1139 \
 -e EA_PORT=1139 \
 -e API_KEY=$XBTO_API_KEY \
