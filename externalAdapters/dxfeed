@@ -7,6 +7,7 @@ docker run -it \
 --name dxfeed \
 --restart=unless-stopped \
 --net eas-net \
+--link redis-cache \
 --ip 192.168.1.101 \
 -p 8001:8001 \
 -e EA_PORT=8001 \
