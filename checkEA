@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source container_names
-
 b=$(tput bold)
 n=$(tput sgr0)
 un=$(tput smul)
