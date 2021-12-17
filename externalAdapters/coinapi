@@ -29,4 +29,4 @@ docker run \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
 -e METRICS_NAME=coinapi \
--d public.ecr.aws/chainlink-staging/adapters/coinapi-adapter:$1
+-d public.ecr.aws/chainlink/adapters/coinapi-adapter:$1
