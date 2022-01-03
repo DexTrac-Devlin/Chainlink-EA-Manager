@@ -11,9 +11,7 @@ Collection of scripts for deploying and managing Chainlink External Adapters
 ## General Directions
 * Update the ```api_keys``` file with the keys for each of your external adapters.
 * Update the ```misc_vars``` file with the environment variables that you need for your ExternalAdapters
-* Modify the file(s) for the external adapter(s) you want deployed located in their respective directories.
-  * ```standardEAs``` contains the standard external adapters.
-  * ```compositeEAs``` contains the composite external adapters. 
+* Modify the file(s) for the external adapter(s) you want deployed.
 
 ---
 ## Utilization
