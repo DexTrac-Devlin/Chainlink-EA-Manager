@@ -1,68 +1,1063 @@
+# =========================================================================================
+# Alpha Vantage
 export ALPHAVANTAGE_API_KEY=
+export ALPHAVANTAGE_SUB_HTTP=
+export ALPHAVANTAGE_SUB_WS=
+
+# WEBSITE: https://www.alphavantage.co/support/#api-key
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  49.99
+#  99.99
+#  149.99
+#  199.99
+#  249.99
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Amberdata
 export AMBERDATA_API_KEY=
+export AMBERDATA_SUB_HTTP=
+export AMBERDATA_SUB_WS=
+
+# WEBSITE: https://amberdata.io/user/account
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  on-demand
+
+# WS Supported Subscription Tiers:
+#  free
+#  on-demand
+#  enterprise
+
+# =========================================================================================
+# Amberdata
 export AMBERDATA_GASPRICE_API_KEY=
+export AMBERDATA_GASPRICE_SUB_HTTP=
+export AMBERDATA_GASPRICE_SUB_WS=
+
+# WEBSITE: https://amberdata.io/user/account
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  on-demand
+
+# WS Supported Subscription Tiers:
+#  free
+#  on-demand
+#  enterprise
+
+# =========================================================================================
+# Anyblock Analytics Gasprice
 export ANYBLOCK_GASPRICE_API_KEY=
+export ANYBLOCK_GASPRICE_SUB_HTTP=
+export ANYBLOCK_GASPRICE_SUB_WS=
+
+# WEBSITE: https://account.anyblock.tools/user/profile/
+
+# HTTP Supported Subscription Tiers:
+#  lite
+#  basic
+#  pro
+#  enterprise
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Anyblock Analytics Uniswap VWAP
 export ANYBLOCK_UNISWAP_VWAP_API_KEY=
+export ANYBLOCK_UNISWAP_VWAP_SUB_HTTP=
+export ANYBLOCK_UNISWAP_VWAP_SUB_WS=
+
+# WEBSITE: https://account.anyblock.tools/user/profile/
+
+# HTTP Supported Subscription Tiers:
+#  lite
+#  basic
+#  pro
+#  enterprise
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Binance Dex
 export BINANCE_DEX_API_KEY=
+export BINANCE_DEX_SUB_HTTP=public
+export BINANCE_DEX_SUB_WS=public
+
+# WEBSITE: https://github.com/binance-us/binance-official-api-docs/blob/master/rest-api.md
+
+# HTTP Supported Subscription Tiers:
+#  public
+
+# WS Supported Subscription Tiers:
+#  public
+
+# =========================================================================================
+# Bitex
 export BITEX_API_KEY=
+export BITEX_SUB_HTTP=free
+export BITEX_SUB_WS=
+
+# WEBSITE: https://www.bitex.la/
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Blockchain.com
 export BLOCKCHAIN_COM_API_KEY=
+export BLOCKCHAIN_COM_SUB_HTTP=global
+export BLOCKCHAIN_COM_SUB_WS=
+
+# WEBSITE: https://www.blockchain.com/api
+
+# HTTP Supported Subscription Tiers:
+#  global
+
+# WS Supported Subscription Tiers:
+#  N/A
+# 
+
+# =========================================================================================
+# Blockchair
 export BLOCKCHAIR_API_KEY=
+export BLOCKCHAIR_SUB_HTTP=
+export BLOCKCHAIR_SUB_WS=
+
+# WEBSITE: https://blockchair.com/api/plans
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  specialist1250
+#  specialist2500
+#  specialist3750
+#  specialist5000
+#  enterprise25000
+#  enterprise50000
+#  enterprise75000
+#  enterprise100000
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Blockcypher
 export BLOCKCYPHER_API_KEY=
+export BLOCKCYPHER_SUB_HTTP=
+export BLOCKCYPHER_SUB_WS=
+
+# WEBSITE: https://accounts.blockcypher.com/tokens
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  prototype
+#  beta
+#  production
+#  business
+#  leader
+#  babyunicorn
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Blockstream
 export BLOCKSTREAM_API_KEY=
+export BLOCKSTREAM_SUB_HTTP=
+export BLOCKSTREAM_SUB_WS=
+
+# WEBSITE: https://help.blockstream.com/hc/en-us
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# BraveNewCoin (BNC)
 export BRAVENEWCOIN_API_KEY=
+export BRAVENEWCOIN_SUB_HTTP=
+export BRAVENEWCOIN_SUB_WS=
+
+# WEBSITE: https://rapidapi.com/BraveNewCoin/api/bravenewcoin/pricing
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# BTC.com
 export BTC_COM_API_KEY=
+export BTC_COM_SUB_HTTP=
+export BTC_COM_SUB_WS=
+
+# WEBSITE: https://btc.com/btc/adapter?type=api-doc
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# CF Benchmarks
 export CFBENCHMARKS_API_KEY=
+export CFBENCHMARKS_SUB_HTTP=
+export CFBENCHMARKS_SUB_WS=
+
+# WEBSITE: https://blog.cfbenchmarks.com/rest-api/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Coinapi
+export COINAPI_API_KEY=
+export COINAPI_SUB_HTTP=
+export COINAPI_SUB_WS=
+
+# WEBSITE: https://www.coinapi.io/Account/GetCode
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  startup
+#  streamer
+#  professional
+
+# WS Supported Subscription Tiers:
+#  free
+#  startup
+#  streamer
+#  professional
+
+# =========================================================================================
+# Coinbase
 export COINBASE_API_KEY=
+export COINBASE_SUB_HTTP=
+export COINBASE_SUB_WS=
+
+# WEBSITE: https://developers.coinbase.com/
+
+# HTTP Supported Subscription Tiers:
+#  public
+#  private
+
+# WS Supported Subscription Tiers
+#  public
+
+# =========================================================================================
+# CoinCodex
 export COINCODEX_API_KEY=
+export COINCODEX_SUB_HTTP=
+export COINCODEX_SUB_WS=
+
+# WEBSITE: https://coincodex.com/page/api/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Coingecko
 export COINGECKO_API_KEY=
+export COINGECKO_SUB_HTTP=
+export COINGECKO_SUB_WS=
+
+# WEBSITE: https://www.coingecko.com/en/developers/dashboard
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  analyst
+#  chainlink
+#  pro
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# coinlore
 export COINLORE_API_KEY=
+export COINLORE_SUB_HTTP=
+export COINLORE_SUB_WS=
+
+# WEBSITE: https://www.coinlore.com/cryptocurrency-data-api
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Coinmarketcap
 export COINMARKETCAP_API_KEY=
+export COINMARKETCAP_SUB_HTTP=
+export COINMARKETCAP_SUB_WS=
+
+# WEBSITE: https://pro.coinmarketcap.com/account
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  hobbyist
+#  startup
+#  standard
+#  professional
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Coinmetrics
+export COINMETRICS_API_KEY=
+export COINMETRICS_SUB_HTTP=
+export COINMETRICS_SUB_WS=
+
+# WEBSITE: https://coinmetrics.io/
+
+# HTTP Supported Subscription Tiers:
+#  community
+#  paid
+
+# WS Supported Subscription Tiers:
+#  community
+#  paid
+
+# =========================================================================================
+# Coinpaprika
 export COINPAPRIKA_API_KEY=
+export COINPAPRIKA_SUB_HTTP=
+export COINPAPRIKA_SUB_WS=
+
+# WEBSITE: https://api.coinpaprika.com/
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  chainlink
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Coinranking
 export COINRANKING_API_KEY=
+export COINRANKING_SUB_HTTP=
+export COINRANKING_SUB_WS=
+
+# WEBSITE: https://developers.coinranking.com/account/
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  hobbysit
+#  pro
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# CryptoAPIs
 export CRYPTOAPIS_API_KEY=
+export CRYPTOAPIS_SUB_HTTP=
+export CRYPTOAPIS_SUB_WS=
+
+# WEBSITE: https://my.cryptoapis.io/
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  growth
+#  startup
+#  partnership
+#  professional
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Cryptocompare
 export CRYPTOCOMPARE_API_KEY=
+export CRYPTOCOMPARE_SUB_HTTP=
+export CRYPTOCOMPARE_SUB_WS=
+
+# WEBSITE: https://www.cryptocompare.com/cryptopian/api-keys
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  professional
+#  corporate
+#  enterprise-lite
+
+# WS Supported Subscription Tiers:
+#  free
+#  professional
+#  corporate
+#  enterprise-lite
+
+# =========================================================================================
+# Crypto ID
 export CRYPTOID_API_KEY=
+export CRYPTOID_SUB_HTTP=
+export CRYPTOID_SUB_WS=
+
+# WEBSITE: https://chainz.cryptoid.info/api.dws
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# CryptoMkt
 export CRYPTOMKT_API_KEY=
+export CRYPTOMKT_SUB_HTTP=free
+export CRYPTOMKT_SUB_WS=
+
+# WEBSITE: https://api.exchange.cryptomkt.com/
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Currencylayer
 export CURRENCYLAYER_API_KEY=
+export CURRENCYLAYER_SUB_HTTP=
+export CURRENCYLAYER_SUB_WS=
+
+# WEBSITE: https://currencylayer.com/plan
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  basic
+#  professional
+#  business
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Derbit
 export DERIBIT_API_KEY=
+export DERIBIT_SUB_HTTP=free
+export DERIBIT_SUB_WS=
+
+# WEBSITE: https://docs.deribit.com/
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# DNS Query
 export DNS_QUERY_API_KEY=
+export DNS_QUERY_SUB_HTTP=free
+export DNS_QUERY_SUB_WS=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# WS Supported Subscription Tiers:
+# N/A
+
+# =========================================================================================
+# DX Feed (includes secondary)
 export DXFEED_API_KEY=
 export DXFEED_API_ENDPOINT=
 export DXFEED_API_USERNAME=
 export DXFEED_API_PASSWORD=
+
+# WEBSITE: https://dxfeed.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# EoD Historical Data
 export EODHISTORICALDATA_API_KEY=
+export EODHISTORICALDATA_SUB_HTTP=all
+export EODHISTORICALDATA_SUB_WS=
+
+# WEBSITE: https://eodhistoricaldata.com/cp/settings
+
+# HTTP Supported Subscription Tiers:
+#  all
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Etherchain
 export ETHERCHAIN_API_KEY=
+export ETHERCHAIN_SUB_HTTP=
+export ETHERCHAIN_SUB_WS=
+
+# WEBSITE: https://etherchain.org/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# ETH Gasstation
 export ETHGASSTATION_API_KEY=
+export ETHGASSTATION_SUB_HTTP=free
+export ETHGASSTATION_SUB_WS=
+
+# WEBSITE: https://docs.ethgas.watch/api
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# FCS API
 export FCSAPI_API_KEY=
+export FCSAPI_SUB_HTTP=
+export FCSAPI_SUB_WS=
+
+# WEBSITE: https://fcsapi.com/login
+
+# HTTPSupported Subscription Tiers:
+#  free
+#  basic
+#  standard
+#  pro
+#  proplus
+#  corporate
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Finage
 export FINAGE_API_KEY=
+export FINAGE_SUB_HTTP=professionalstocksusstockmarket
+export FINAGE_SUB_WS=
+
+# WEBSITE: https://moon.finage.co.uk/login
+
+# HTTP Supported Subscription Tiers:
+#  professionalstocksusstockmarket
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# FinnHub
+export FINNHUB_API_KEY=
+export FINNHUB_SUB_HTTP=
+export FINNHUB_SUB_WS=
+
+# WEBSITE: https://finnhub.io/login
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  all-in-one
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Fixer
 export FIXER_API_KEY=
+export FIXER_SUB_HTTP=
+export FIXER_SUB_WS=
+
+# WEBSITE: https://fixer.io/dashboard
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  basic
+#  professional
+#  professionalplus
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# FMP Cloud
 export FMPCLOUD_API_KEY=
+export FMPCLOUD_SUB_HTTP=
+export FMPCLOUD_SUB_WS=
+
+# WEBSITE: https://site.financialmodelingprep.com/login
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  starter
+#  teams
+#  business
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Genesis Volatility
 export GENESIS_VOLATILITY_API_KEY=
-export GEODB_API_KEY=
+
+# WEBSITE: https://genesisvolatility.io/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Google Finance
+export GOOGLE_FINANCE_API_KEY=
+
+# WEBSITE: https://finance.google.com
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# IEX Cloud
 export IEX_CLOUD_API_KEY=
-export k1FORGE_API_KEY=
+export IEX_CLOUD_SUB_HTTP=
+export IEX_CLOUD_SUB_WS=
+
+# WEBSITE: https://iexcloud.io/console/
+
+# HTTP Supported Subscription Tiers:
+#  individual
+#  business
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Kaiko
 export KAIKO_API_KEY=
+export KAIKO_SUB_HTTP=default
+export KAIKO_SUB_WS=
+
+# WEBSITE: https://www.kaiko.com/
+
+# HTTP Supported Subscription Tiers:
+#  default
+#  
+
+# WS Supported Subscription Tiers:
+#  pro
+#  enterprise
+
+# =========================================================================================
+# LinkPool
 export LINKPOOL_API_KEY=
+
+# WEBSITE: https://linkpool.io/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Lition
 export LITION_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Market Stack
 export MARKETSTACK_API_KEY=
+export MARKETSTACK_SUB_HTTP=
+export MARKETSTACK_SUB_WS=
+
+# WEBSITE: https://marketstack.com/login
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  basic
+#  professional
+#  business
+
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Messari
 export MESSARI_API_KEY=
+export MESSARI_SUB_HTTP=
+export MESSARI_SUB_WS=
+
+# WEBSITE: https://messari.io/api
+
+# HTTP Supported Subscription Tiers:
+#  nokey
+#  apikey
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Metals API
 export METALSAPI_API_KEY=
+export METALSAPI_SUB_HTTP=
+export METALSAPI_SUB_WS=
+
+# WEBSITE: https://www.metals-api.com/dashboard
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  starter
+#  basic
+#  professional
+#  professionalplus
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Nikkei
 export NIKKEI_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Nomics
 export NOMICS_API_KEY=
+export NOMICS_SUB_HTTP=
+export NOMICS_SUB_WS=
+
+# WEBSITE: https://nomics.com/
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  paid
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Oil Price API
+export OILPRICEAPI_API_KEY=
+export OILPRICEAPI_SUB_HTTP=
+export OILPRICEAPI_SUB_WS=
+
+# WEBSITE: https://www.oilpriceapi.com/dashboard
+
+# HTTP Supported Subscription Tiers:
+#  hobby
+#  business
+#  enterprise
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# OnChain
 export ONCHAIN_API_KEY=
+
+# WEBSITE: https://onchain.io/auth/sign_in
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Open Exchange
 export OPENEXCHANGERATES_API_KEY=
+export OPENEXCHANGERATES_SUB_HTTP=
+export OPENEXCHANGERATES_SUB_WS=
+
+# WEBSITE: https://openexchangerates.org/login
+
+# HTTP Supported Subscription Tiers:
+#  developer
+#  enterprise
+#  unlimited
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+#Orchid Bandwidth
 export ORCHID_BANDWIDTH_API_KEY=
+
+# WEBSITE: https://openexchangerates.org/login
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# PaXos
 export PAXOS_API_KEY=
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# PayPal
 export PAYPAL_API_KEY=
+
+# WEBSITE: https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# POA Gasprice
 export POA_GASPRICE_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Polygon
 export POLYGON_API_KEY=
+export POLYGON_SUB_HTTP=
+export POLYGON_SUB_WS=
+
+# WEBSITE: https://polygon.io/dashboard
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  starter
+#  developer
+#  advanced
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# RenVM
 export RENVM_ADDRESS_SET_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Satoshi Tango
 export SATOSHITANGO_API_KEY=
+export SATOSHITANGO_SUB_HTTP=free
+export SATOSHITANGO_SUB_WS=
+
+# WEBSITE: https://www.satoshitango.com/login
+
+# =========================================================================================
+# SO Chain
 export SOCHAIN_API_KEY=
+export SOCHAIN_SUB_HTTP=free
+export SOCHAIN_SUB_WS=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  free
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Stasis
 export STASIS_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Taapi
 export TAAPI_API_KEY=
+export TAAPI_SUB_HTTP=
+export TAAPI_SUB_WS=
+
+# WEBSITE: https://taapi.io/my-account/
+
+# HTTP Supported Subscription Tiers:
+#  free
+#  basic
+#  pro
+#  expert
+#  privatevps
+
+# WS Supported Subscription Tiers:
+#  
+
+# =========================================================================================
+# The Rundown
 export THERUNDOWN_API_KEY=
+
+# WEBSITE: https://auth.therundown.io/login/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Tiingo
 export TIINGO_API_KEY=
+export TIINGO_SUB_HTTP=
+export TIINGO_SUB_WS=
+
+# WEBSITE: https://api.tiingo.com/account/profile
+
+# HTTP Supported Subscription Tiers:
+#  starter
+#  power
+#  commercial
+
+# WS Supported Subscription Tiers:
+#  starter
+#  power
+#  commercial
+
+# =========================================================================================
+# Tradermade
+export TRADERMADE_API_KEY=
+export TRADERMADE_SUB_HTTP=
+export TRADERMADE_SUB_WS=
+
+# WEBSITE: https://marketdata.tradermade.com/myAccount
+
+# HTTP Supported Subscription Tiers:
+#  basic
+#  professional
+#  business
+#  advanced
+#  enterprise
+#  enterprise-x1
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Trading Economics
 export TRADINGECONOMICS_API_KEY=
+export TRADINGECONOMICS_SUB_HTTP=
+export TRADINGECONOMICS_SUB_WS=
+
+# WEBSITE: https://sso.tradingeconomics.com/sso/login?returnurl=https://tradingeconomics.com/api/
+
+# HTTP Supported Subscription Tiers:
+#  standard
+#  professional
+#  enterprise
+
+# WS Supported Subscription Tiers:
+#  standard
+#  professional
+#  enterprise
+
+# =========================================================================================
+# True USD
 export TRUEUSD_API_KEY=
+
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# Unibit
+export UNIBIT_API_KEY=
+export UNIBIT_SUB_HTTP=
+export UNIBIT_SUB_WS=
+
+# WEBSITE: https://unibit.ai/signin
+
+# HTTP Supported Subscription Tiers:
+#  freetrial
+#  starter
+#  pro
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+
+# XBTO
 export XBTO_API_KEY=
+
+# WEBSITE: https://www.xbto.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+# 
+
+# =========================================================================================
