@@ -1,3 +1,11 @@
+###########################################################################################
+#                                         READ ME                                         #
+###########################################################################################
+# This file contains important variables for each of your EAs.
+# This file is read from when deploying all of your External Adapters
+# Update the variables with the relevant API keys and subscription tiers.
+###########################################################################################
+
 # =========================================================================================
 # Alpha Vantage
 export ALPHAVANTAGE_API_KEY=
