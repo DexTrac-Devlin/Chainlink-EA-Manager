@@ -655,9 +655,9 @@ export GOOGLE_FINANCE_API_KEY=
 
 # =========================================================================================
 # IEX Cloud
-export IEX_CLOUD_API_KEY=
-export IEX_CLOUD_SUB_HTTP=
-export IEX_CLOUD_SUB_WS=
+export IEXCLOUD_API_KEY=
+export IEXCLOUD_SUB_HTTP=
+export IEXCLOUD_SUB_WS=
 
 # WEBSITE: https://iexcloud.io/console/
 
