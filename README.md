@@ -40,8 +40,8 @@ sudo ./eaManager.sh -i
 ### Upgrade an Existing External Adapter
 * This will:
   * Stop the current container.
-  * Remove the container image.
-  * Deploy a new container based on the desired iamge version.
+  * Remove the container.
+  * Deploy a new container based on the desired image version.
 
 ```bash
 ./eaManager.sh -u coingecko 1.0.4
