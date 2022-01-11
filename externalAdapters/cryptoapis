@@ -8,9 +8,9 @@ docker run \
 --restart=unless-stopped \
 --net eas-net \
 --link redis-cache \
---ip 192.168.193 \
+--ip 192.168.1.193 \
 -p 1193:1193 \
--e EA_PORT=1193
+-e EA_PORT=1193 \
 -e API_KEY=$CRYPTOAPIS_API_KEY \
 -e TIMEOUT=30000 \
 -e CACHE_ENABLED=true \
