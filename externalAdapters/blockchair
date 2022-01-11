@@ -34,4 +34,4 @@ docker run \
 -e API_VERBOSE=false \
 -e EXPERIMENTAL_METRICS_ENABLED=true \
 -e METRICS_NAME=blockchair \
--d public.ecr.aws/chainlink/adapters/blockchair-adapter:#1
+-d public.ecr.aws/chainlink/adapters/blockchair-adapter:$1
