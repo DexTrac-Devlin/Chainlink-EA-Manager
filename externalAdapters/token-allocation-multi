@@ -9,7 +9,7 @@ docker run \
 --net eas-net \
 --link redis-cache \
 --ip 192.168.1.152 \
--p 1152:8080 \
+-p 1152:1152 \
 -e EA_PORT=1152 \
 -e AMBERDATA_ADAPTER_URL=http://192.168.1.208:1208 \
 -e COINGECKO_ADAPTER_URL=http://192.168.1.113:1113 \
