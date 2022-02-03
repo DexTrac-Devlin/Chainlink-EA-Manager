@@ -3,7 +3,6 @@
 source api_keys
 source misc_vars
 
-
 docker run \
 --name dxdao-redis \
 --restart=unless-stopped \

@@ -3,7 +3,6 @@
 source api_keys
 source misc_vars
 
-
 docker run \
 --name fcsapi-redis \
 --restart=unless-stopped \
@@ -17,14 +16,14 @@ docker run \
 -e CACHE_ENABLED=true \
 -e CACHE_TYPE=redis \
 -e CACHE_KEY_GROUP=fcsapi \
--e CACHE_KEY_IGNORED_PROPS=meta \
 -e CACHE_REDIS_HOST="192.168.1.1" \
 -e CACHE_REDIS_PORT=6379 \
+-e CACHE_REDIS_TIMEOUT=30000 \
 -e RATE_LIMIT_ENABLED=true \
 -e WARMUP_ENABLED=true \
 -e RATE_LIMIT_API_PROVIDER=fcsapi \
 -e RATE_LIMIT_API_TIER=$FCSAPI_SUB_HTTP \
--e REQUEST_COALESCING_ENABLED=true \
+-e REQUEST_COALESCING_ENABLED=false \
 -e REQUEST_COALESCING_INTERVAL=100 \
 -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
 -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
