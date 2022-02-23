@@ -568,13 +568,13 @@ export FCSAPI_SUB_WS=
 
 # =========================================================================================
 # Finage
- export FINAGE_API_KEY=
- export WS_SOCKET_KEY=
- export STOCK_WS_API_ENDPOINT=
- export FOREX_WS_API_ENDPOINT=
- export CRYPTO_WS_API_ENDPOINT=
- export FINAGE_SUB_HTTP=professionalstocksusstockmarket
- export FINAGE_SUB_WS=
+export FINAGE_API_KEY=
+export FINAGE_WS_SOCKET_KEY=
+export FINAGE_STOCK_WS_API_ENDPOINT=
+export FINAGE_FOREX_WS_API_ENDPOINT=
+export FINAGE_CRYPTO_WS_API_ENDPOINT=
+export FINAGE_SUB_HTTP=professionalstocksusstockmarket
+export FINAGE_SUB_WS=
 
 # WEBSITE: https://moon.finage.co.uk/login
 
