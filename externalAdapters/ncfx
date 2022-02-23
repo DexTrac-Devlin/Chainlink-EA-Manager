@@ -4,7 +4,7 @@ source api_keys
 source misc_vars
 
 docker run \
- --name coingecko-redis \
+ --name ncfx-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
