@@ -760,6 +760,19 @@ export METALSAPI_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# NCFX      
+export NCFX_API_USERNAME= 
+export NCFX_API_PASSWORD=
+
+# WEBSITE: https://newchangefx.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # Nikkei
 export NIKKEI_API_KEY=
 
