@@ -4,33 +4,38 @@ source api_keys
 source misc_vars
 
 docker run \
---name coinapi-redis \
---restart=unless-stopped \
---net eas-net \
---link redis-cache \
---ip 192.168.1.112 \
--p 1112:1112 \
--e EA_PORT=1112 \
--e API_KEY=$COINAPI_API_KEY \
--e TIMEOUT=30000 \
--e CACHE_ENABLED=true \
--e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=coinapi \
--e CACHE_REDIS_HOST="192.168.1.1" \
--e CACHE_REDIS_PORT=6379 \
--e CACHE_REDIS_TIMEOUT=30000 \
--e RATE_LIMIT_ENABLED=true \
--e WARMUP_ENABLED=true \
--e RATE_LIMIT_API_PROVIDER=coinapi \
--e RATE_LIMIT_API_TIER=$COINAPI_SUB_HTTP \
--e REQUEST_COALESCING_ENABLED=true \
--e REQUEST_COALESCING_INTERVAL=100 \
--e REQUEST_COALESCING_INTERVAL_MAX=1000 \
--e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
--e REQUEST_COALESCING_ENTROPY_MAX=0 \
--e LOG_LEVEL=info \
--e DEBUG=false \
--e API_VERBOSE=false \
--e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=coinapi \
--d public.ecr.aws/chainlink/adapters/coinapi-adapter:$1
+ --name coinapi-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.1.112 \
+ -p 1112:1112 \
+ -e EA_PORT=1112 \
+ -e API_KEY=$COINAPI_API_KEY \
+ -e TIMEOUT=30000 \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=coinapi \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e CACHE_REDIS_TIMEOUT=30000 \
+ -e RATE_LIMIT_ENABLED=true \
+ -e WARMUP_ENABLED=true \
+ -e RATE_LIMIT_API_PROVIDER=coinapi \
+ -e RATE_LIMIT_API_TIER=$COINAPI_SUB_HTTP \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=coinapi \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="coinapi-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/coinapi-adapter:$1

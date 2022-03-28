@@ -4,15 +4,25 @@ source api_keys
 source misc_vars
 
 docker run \
---name dxdao-redis \
---restart=unless-stopped \
---net eas-net \
---link redis-cache \
---ip 192.168.1.157 \
--p 1157:1157 \
--e EA_PORT=1157 \
--e COINGECKO_DATA_PROVIDER_URL=http://192.168.1.113:1113 \
--e CRYPTOCOMPARE_DATA_PROVIDER_URL=http://192.168.1.114:1114 \
--e TIINGO_DATA_PROVIDER_URL=http://192.168.1.134:1134 \
--e XDAI_RPC_URL=$XDAI_RPC_URL \
--d public.ecr.aws/chainlink/adapters/dxdao-adapter:$1
+ --name dxdao-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.1.157 \
+ -p 1157:1157 \
+ -e EA_PORT=1157 \
+ -e COINGECKO_DATA_PROVIDER_URL=http://192.168.1.113:1113 \
+ -e CRYPTOCOMPARE_DATA_PROVIDER_URL=http://192.168.1.114:1114 \
+ -e TIINGO_DATA_PROVIDER_URL=http://192.168.1.134:1134 \
+ -e XDAI_RPC_URL=$XDAI_RPC_URL \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=defi-dozen-multi \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="dxdao-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/dxdao-adapter:$1

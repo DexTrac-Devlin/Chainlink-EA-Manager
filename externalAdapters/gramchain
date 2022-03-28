@@ -4,19 +4,17 @@ source api_keys
 source misc_vars
 
 docker run \
- --name view-function-redis \
+ --name gramchain-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
- --ip 192.168.1.211 \
- -p 1211:1211 \
- -e EA_PORT=1211 \
- -e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
- -e MATIC_RPC_URL=$MATIC_RPC_URL \
+ --ip 192.168.1.170 \
+ -p 1170:1170 \
+ -e EA_PORT=1170 \
  -e TIMEOUT=30000 \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
- -e CACHE_KEY_GROUP=viewFunction \
+ -e CACHE_KEY_GROUP=gramchain \
  -e CACHE_KEY_IGNORED_PROPS=meta \
  -e CACHE_REDIS_HOST="192.168.1.1" \
  -e CACHE_REDIS_PORT=6379 \
@@ -29,10 +27,10 @@ docker run \
  -e DEBUG=false \
  -e API_VERBOSE=false \
  -e EXPERIMENTAL_METRICS_ENABLED=true \
- -e METRICS_NAME=view-function \
+ -e METRICS_NAME=gramchain \
  -e RETRY=1 \
  -l prometheus-scrape.enabled=true \
- -l prometheus-scrape.job_name="view-function-redis" \
+ -l prometheus-scrape.job_name="=gramchain-redis" \
  -l prometheus-scrape.port=9080 \
  -l prometheus-scrape.metrics_path="/metrics" \
- -d public.ecr.aws/chainlink/adapters/view-function-adapter:$1
+ -d public.ecr.aws/chainlink/adapters/gramchain-adapter:$1

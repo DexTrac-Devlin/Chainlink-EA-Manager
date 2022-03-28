@@ -4,23 +4,30 @@ source api_keys
 source misc_vars
 
 docker run \
- --name view-function-redis \
+ --name cryptocompare-sol-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
- --ip 192.168.1.211 \
- -p 1211:1211 \
- -e EA_PORT=1211 \
- -e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
- -e MATIC_RPC_URL=$MATIC_RPC_URL \
+ --ip 192.168.1.166 \
+ -p 1166:1166 \
+ -e EA_PORT=1166 \
+ -e API_KEY=$CRYPTOCOMPARE_API_KEY \
  -e TIMEOUT=30000 \
  -e CACHE_ENABLED=true \
+ -e CACHE_MAX_AGE=61000 \
  -e CACHE_TYPE=redis \
- -e CACHE_KEY_GROUP=viewFunction \
+ -e CACHE_KEY_GROUP=cryptocompare-sol \
  -e CACHE_KEY_IGNORED_PROPS=meta \
  -e CACHE_REDIS_HOST="192.168.1.1" \
  -e CACHE_REDIS_PORT=6379 \
- -e REQUEST_COALESCING_ENABLED=false \
+ -e RATE_LIMIT_ENABLED=false \
+ -e CACHE_MIN_AGE=60000 \
+ -e CACHE_MAX_AGE=120000 \
+ -e WARMUP_ENABLED=false \
+ -e RATE_LIMIT_API_PROVIDER=cryptocompare \
+ -e RATE_LIMIT_API_TIER=$CRYPTOCOMPARE_SUB_HTTP \
+ -e WS_ENABLED=true \
+ -e REQUEST_COALESCING_ENABLED=true \
  -e REQUEST_COALESCING_INTERVAL=100 \
  -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
  -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
@@ -29,10 +36,10 @@ docker run \
  -e DEBUG=false \
  -e API_VERBOSE=false \
  -e EXPERIMENTAL_METRICS_ENABLED=true \
- -e METRICS_NAME=view-function \
+ -e METRICS_NAME=cryptocompare-sol \
  -e RETRY=1 \
  -l prometheus-scrape.enabled=true \
- -l prometheus-scrape.job_name="view-function-redis" \
+ -l prometheus-scrape.job_name="cryptocompare-sol-redis" \
  -l prometheus-scrape.port=9080 \
  -l prometheus-scrape.metrics_path="/metrics" \
- -d public.ecr.aws/chainlink/adapters/view-function-adapter:$1
+ -d public.ecr.aws/chainlink/adapters/cryptocompare-adapter:$1

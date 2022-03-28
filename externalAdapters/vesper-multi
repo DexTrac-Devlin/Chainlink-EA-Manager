@@ -4,36 +4,42 @@ source api_keys
 source misc_vars
 
 docker run \
---name vesper-multi-redis \
---restart=unless-stopped \
---net eas-net \
---link redis-cache \
---ip 192.168.1.158 \
--p 1158:1158 \
--e EA_PORT=1158 \
--e API_KEY=$VESPER_API_KEY \
--e RPC_URL=$RPC_URL \
--e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
--e COINAPI_ADAPTER_URL=http://192.168.1.112:1112 \
--e COINGECKO_ADAPTER_URL=http://192.168.1.113:1113 \
--e CRYPTOCOMPARE_ADAPTER_URL=http://19.168.1.114:1114 \
--e COINMARKETCAP_ADAPTER_URL=http://192.168.1.115:1115 \
--e NOMICS_ADAPTER_URL=http://192.168.1.111:1111 \
--e TIMEOUT=30000 \
--e CACHE_ENABLED=true \
--e CACHE_TYPE=redis \
--e CACHE_KEY_GROUP=vesper-multi \
--e CACHE_REDIS_HOST="192.168.1.1" \
--e CACHE_REDIS_PORT=6379 \
--e CACHE_REDIS_TIMEOUT=30000 \
--e REQUEST_COALESCING_ENABLED=false \
--e REQUEST_COALESCING_INTERVAL=100 \
--e REQUEST_COALESCING_INTERVAL_MAX=1000 \
--e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
--e REQUEST_COALESCING_ENTROPY_MAX=0 \
--e LOG_LEVEL=info \
--e DEBUG=false \
--e API_VERBOSE=false \
--e EXPERIMENTAL_METRICS_ENABLED=true \
--e METRICS_NAME=vesper \
--d public.ecr.aws/chainlink/adapters/vesper-adapter:$1
+ --name vesper-multi-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.1.158 \
+ -p 1158:1158 \
+ -e EA_PORT=1158 \
+ -e API_KEY=$VESPER_API_KEY \
+ -e RPC_URL=$RPC_URL \
+ -e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
+ -e COINAPI_ADAPTER_URL=http://192.168.1.112:1112 \
+ -e COINGECKO_ADAPTER_URL=http://192.168.1.113:1113 \
+ -e CRYPTOCOMPARE_ADAPTER_URL=http://19.168.1.114:1114 \
+ -e COINMARKETCAP_ADAPTER_URL=http://192.168.1.115:1115 \
+ -e NOMICS_ADAPTER_URL=http://192.168.1.111:1111 \
+ -e TIINGO_ADAPTER_URL=http://192.168.1.134:1134 \
+ -e TIMEOUT=30000 \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=vesper-multi-new \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e REQUEST_COALESCING_ENABLED=false \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=vesper \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="vesper-multi-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/vesper-adapter:$1

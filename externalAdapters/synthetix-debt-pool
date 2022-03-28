@@ -1,0 +1,27 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name synthetix-debt-pool-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --ip 192.168.1.172 \
+ -p 1172:1172 \
+ -e EA_PORT=1172 \
+ -e RPC_URL=$ETHEREUM_RPC_URL \
+ -e OPTIMISM_RPC_URL=$OPTIMISM_RPC_URL \
+ -e KOVAN_RPC_URL=$KOVAN_RPC_URL \
+ -e KOVAN_OPTIMISM_RPC_URL=$KOVAN_OPTIMISM_RPC_URL \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=synth-debtpool \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="synthetix-debt-pool-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/synthetix-debt-pool-adapter:$1

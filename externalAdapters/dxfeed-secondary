@@ -4,14 +4,24 @@ source api_keys
 source misc_vars
 
 docker run -it \
---name dxfeed-secondary-redis \
---restart=unless-stopped \
---net eas-net \
---link redis-cache \
---ip 192.168.1.100 \
--p 8000:8000 \
--e EA_PORT=8001 \
--e API_ENDPOINT=$DXFEED_API_ENDPOINT \
--e API_USERNAME=$DXFEED_API_USERNAME \
--e API_PASSWORD=$DXFEED_API_PASSWORD \
--d public.ecr.aws/chainlink/adapters/dxfeed-secondary-adapter:$1
+ --name dxfeed-secondary-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.1.100 \
+ -p 8000:8000 \
+ -e EA_PORT=8001 \
+ -e API_ENDPOINT=$DXFEED_API_ENDPOINT \
+ -e API_USERNAME=$DXFEED_API_USERNAME \
+ -e API_PASSWORD=$DXFEED_API_PASSWORD \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=dxfeed-secondary \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="dxfeed-secondary" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/dxfeed-secondary-adapter:$1
