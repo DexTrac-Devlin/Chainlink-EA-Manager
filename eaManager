@@ -171,6 +171,7 @@ fi
   grep -qxF 'export finage_redis='http://192.168.1.169:1169'' ~/.profile || echo 'export finage_redis='http://192.168.1.169:1169'' >> ~/.profile
   grep -qxF 'export fixer_redis='http://192.168.1.130:1130'' ~/.profile || echo 'export fixer_redis='http://192.168.1.130:1130'' >> ~/.profile
   grep -qxF 'export iex_cloud_redis='http://192.168.102:8002'' ~/.profile || echo 'export iex_cloud_redis='http://192.168.102:8002'' >> ~/.profile
+  grep -qxF 'export implied_price_redis='http://192.168.1.174:1174'' ~/.profile || echo 'export implied_price_redis='http://192.168.1.174:1174'' >> ~/.profile
   grep -qxF 'export intrinio_redis='http://192.168.1.197:1197'' ~/.profile || echo 'export intrinio_redis='http://192.168.1.197:1197'' >> ~/.profile
   grep -qxF 'export linear_finance_redis='http://192.168.1.155.50:1155'' ~/.profile || echo 'export linear_finance_redis='http://192.168.1.155.50:1155'' >> ~/.profile
   grep -qxF 'export lition_redis='http://192.168.1.140:1140'' ~/.profile || echo 'export lition_redis='http://192.168.1.140:1140'' >> ~/.profile
