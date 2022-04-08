@@ -40,4 +40,4 @@ docker run \
  -l prometheus-scrape.job_name="implied-price-redis" \
  -l prometheus-scrape.port=9080 \
  -l prometheus-scrape.metrics_path="/metrics" \
- -d https://public.ecr.aws/chainlink/adapters/implied-price-adapter:$1
+ -d public.ecr.aws/chainlink/adapters/implied-price-adapter:$1
