@@ -179,6 +179,21 @@ export BLOCKCYPHER_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# Blocksize Capital
+export BLOCKSIZECAPITAL_API_KEY=
+export BLOCKSIZECAPITAL_SUB_HTTP=
+export BLOCKSIZECAPITAL_SUB_WS=
+
+# WEBSITE: https://blocksize-capital.com/blocksize-connect/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
+# =========================================================================================
 # Blockstream
 export BLOCKSTREAM_API_KEY=
 export BLOCKSTREAM_SUB_HTTP=
