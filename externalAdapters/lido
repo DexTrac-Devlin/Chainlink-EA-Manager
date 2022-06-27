@@ -11,6 +11,7 @@ docker run \
  --ip 192.168.1.219 \
  -p 1219:1219 \
  -e EA_PORT=1219 \
+ -e POLYGON_RPC_URL=$POLYGON_RPC_URL \
  -e MATIC_RPC_URL=$MATIC_RPC_URL \
  -e TIMEOUT=30000 \
  -e CACHE_ENABLED=true \
