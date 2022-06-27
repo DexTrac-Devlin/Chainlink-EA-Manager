@@ -520,6 +520,18 @@ export DXFEED_API_PASSWORD=
 #  N/A
 
 # =========================================================================================
+# Elwood
+export ELWOOD_API_KEY=
+
+# WEBSITE: https://elwood.io/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # EoD Historical Data
 export EODHISTORICALDATA_API_KEY=
 export EODHISTORICALDATA_SUB_HTTP=all
