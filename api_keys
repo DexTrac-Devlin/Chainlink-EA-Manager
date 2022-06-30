@@ -1,5 +1,7 @@
 ###########################################################################################
-#                                         READ ME                                         #
+#                       _____  ____   ____   ____     __  __  ____                        #
+#                       | () )| ===| / () \ | _) \   |  \/  || ===|                       #
+#                       |_|\_\|____|/__/\__\|____/   |_|\/|_||____|                       #
 ###########################################################################################
 # This file contains important variables for each of your EAs.
 # This file is read from when deploying all of your External Adapters
@@ -7,7 +9,10 @@
 ###########################################################################################
 
 # =========================================================================================
-# Alpha Vantage
+#    db    88     88""Yb 88  88    db        Yb    dP    db    88b 88 888888    db     dP""b8 888888 
+#   dPYb   88     88__dP 88  88   dPYb        Yb  dP    dPYb   88Yb88   88     dPYb   dP   `" 88__   
+#  dP__Yb  88  .o 88"""  888888  dP__Yb        YbdP    dP__Yb  88 Y88   88    dP__Yb  Yb  "88 88""   
+# dP""""Yb 88ood8 88     88  88 dP""""Yb        YP    dP""""Yb 88  Y8   88   dP""""Yb  YboodP 888888 
 export ALPHAVANTAGE_API_KEY=
 export ALPHAVANTAGE_SUB_HTTP=
 export ALPHAVANTAGE_SUB_WS=
@@ -26,7 +31,10 @@ export ALPHAVANTAGE_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Amberdata
+#    db    8b    d8 88""Yb 888888 88""Yb 8888b.     db    888888    db    
+#   dPYb   88b  d88 88__dP 88__   88__dP  8I  Yb   dPYb     88     dPYb   
+#  dP__Yb  88YbdP88 88""Yb 88""   88"Yb   8I  dY  dP__Yb    88    dP__Yb  
+# dP""""Yb 88 YY 88 88oodP 888888 88  Yb 8888Y"  dP""""Yb   88   dP""""Yb 
 export AMBERDATA_API_KEY=
 export AMBERDATA_SUB_HTTP=
 export AMBERDATA_SUB_WS=
@@ -43,7 +51,10 @@ export AMBERDATA_SUB_WS=
 #  enterprise
 
 # =========================================================================================
-# Amberdata
+#    db    8b    d8 88""Yb 888888 88""Yb 8888b.     db    888888    db         dP""b8    db    .dP"Y8 
+#   dPYb   88b  d88 88__dP 88__   88__dP  8I  Yb   dPYb     88     dPYb       dP   `"   dPYb   `Ybo." 
+#  dP__Yb  88YbdP88 88""Yb 88""   88"Yb   8I  dY  dP__Yb    88    dP__Yb      Yb  "88  dP__Yb  o.`Y8b 
+# dP""""Yb 88 YY 88 88oodP 888888 88  Yb 8888Y"  dP""""Yb   88   dP""""Yb      YboodP dP""""Yb 8bodP' 
 export AMBERDATA_GASPRICE_API_KEY=
 export AMBERDATA_GASPRICE_SUB_HTTP=
 export AMBERDATA_GASPRICE_SUB_WS=
@@ -60,7 +71,10 @@ export AMBERDATA_GASPRICE_SUB_WS=
 #  enterprise
 
 # =========================================================================================
-# Anyblock Analytics Gasprice
+#    db    88b 88 Yb  dP 88""Yb 88      dP"Yb   dP""b8 88  dP      dP""b8    db    .dP"Y8 
+#   dPYb   88Yb88  YbdP  88__dP 88     dP   Yb dP   `" 88odP      dP   `"   dPYb   `Ybo." 
+#  dP__Yb  88 Y88   8P   88""Yb 88  .o Yb   dP Yb      88"Yb      Yb  "88  dP__Yb  o.`Y8b 
+# dP""""Yb 88  Y8  dP    88oodP 88ood8  YbodP   YboodP 88  Yb      YboodP dP""""Yb 8bodP' 
 export ANYBLOCK_GASPRICE_API_KEY=
 export ANYBLOCK_GASPRICE_SUB_HTTP=
 export ANYBLOCK_GASPRICE_SUB_WS=
@@ -77,7 +91,10 @@ export ANYBLOCK_GASPRICE_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Anyblock Analytics Uniswap VWAP
+#    db    88b 88 Yb  dP 88""Yb 88      dP"Yb   dP""b8 88  dP     Yb    dP Yb        dP    db    88""Yb 
+#   dPYb   88Yb88  YbdP  88__dP 88     dP   Yb dP   `" 88odP       Yb  dP   Yb  db  dP    dPYb   88__dP 
+#  dP__Yb  88 Y88   8P   88""Yb 88  .o Yb   dP Yb      88"Yb        YbdP     YbdPYbdP    dP__Yb  88"""  
+# dP""""Yb 88  Y8  dP    88oodP 88ood8  YbodP   YboodP 88  Yb        YP       YP  YP    dP""""Yb 88     
 export ANYBLOCK_UNISWAP_VWAP_API_KEY=
 export ANYBLOCK_UNISWAP_VWAP_SUB_HTTP=
 export ANYBLOCK_UNISWAP_VWAP_SUB_WS=
@@ -94,7 +111,10 @@ export ANYBLOCK_UNISWAP_VWAP_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Binance Dex
+# 88""Yb 88 88b 88    db    88b 88  dP""b8 888888     8888b.  888888 Yb  dP 
+# 88__dP 88 88Yb88   dPYb   88Yb88 dP   `" 88__        8I  Yb 88__    YbdP  
+# 88""Yb 88 88 Y88  dP__Yb  88 Y88 Yb      88""        8I  dY 88""    dPYb  
+# 88oodP 88 88  Y8 dP""""Yb 88  Y8  YboodP 888888     8888Y"  888888 dP  Yb 
 export BINANCE_DEX_API_KEY=
 export BINANCE_DEX_SUB_HTTP=public
 export BINANCE_DEX_SUB_WS=public
@@ -108,7 +128,10 @@ export BINANCE_DEX_SUB_WS=public
 #  public
 
 # =========================================================================================
-# Bitex
+# 88""Yb 88 888888 888888 Yb  dP 
+# 88__dP 88   88   88__    YbdP  
+# 88""Yb 88   88   88""    dPYb  
+# 88oodP 88   88   888888 dP  Yb 
 export BITEX_API_KEY=
 export BITEX_SUB_HTTP=free
 export BITEX_SUB_WS=
@@ -122,7 +145,10 @@ export BITEX_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Blockchain.com
+# 88""Yb 88      dP"Yb   dP""b8 88  dP  dP""b8 88  88    db    88 88b 88      dP""b8  dP"Yb  8b    d8 
+# 88__dP 88     dP   Yb dP   `" 88odP  dP   `" 88  88   dPYb   88 88Yb88     dP   `" dP   Yb 88b  d88 
+# 88""Yb 88  .o Yb   dP Yb      88"Yb  Yb      888888  dP__Yb  88 88 Y88 .o. Yb      Yb   dP 88YbdP88 
+# 88oodP 88ood8  YbodP   YboodP 88  Yb  YboodP 88  88 dP""""Yb 88 88  Y8 `"'  YboodP  YbodP  88 YY 88 
 export BLOCKCHAIN_COM_API_KEY=
 export BLOCKCHAIN_COM_SUB_HTTP=global
 export BLOCKCHAIN_COM_SUB_WS=
@@ -137,7 +163,10 @@ export BLOCKCHAIN_COM_SUB_WS=
 # 
 
 # =========================================================================================
-# Blockchair
+# 88""Yb 88      dP"Yb   dP""b8 88  dP  dP""b8 88  88    db    88 88""Yb 
+# 88__dP 88     dP   Yb dP   `" 88odP  dP   `" 88  88   dPYb   88 88__dP 
+# 88""Yb 88  .o Yb   dP Yb      88"Yb  Yb      888888  dP__Yb  88 88"Yb  
+# 88oodP 88ood8  YbodP   YboodP 88  Yb  YboodP 88  88 dP""""Yb 88 88  Yb 
 export BLOCKCHAIR_API_KEY=
 export BLOCKCHAIR_SUB_HTTP=
 export BLOCKCHAIR_SUB_WS=
@@ -159,7 +188,10 @@ export BLOCKCHAIR_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Blockcypher
+# 88""Yb 88      dP"Yb   dP""b8 88  dP  dP""b8 Yb  dP 88""Yb 88  88 888888 88""Yb 
+# 88__dP 88     dP   Yb dP   `" 88odP  dP   `"  YbdP  88__dP 88  88 88__   88__dP 
+# 88""Yb 88  .o Yb   dP Yb      88"Yb  Yb        8P   88"""  888888 88""   88"Yb  
+# 88oodP 88ood8  YbodP   YboodP 88  Yb  YboodP  dP    88     88  88 888888 88  Yb 
 export BLOCKCYPHER_API_KEY=
 export BLOCKCYPHER_SUB_HTTP=
 export BLOCKCYPHER_SUB_WS=
@@ -179,7 +211,10 @@ export BLOCKCYPHER_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Blocksize Capital
+# 88""Yb 88      dP"Yb   dP""b8 88  dP .dP"Y8 88 8888P 888888      dP""b8    db    88""Yb 
+# 88__dP 88     dP   Yb dP   `" 88odP  `Ybo." 88   dP  88__       dP   `"   dPYb   88__dP 
+# 88""Yb 88  .o Yb   dP Yb      88"Yb  o.`Y8b 88  dP   88""       Yb       dP__Yb  88"""  
+# 88oodP 88ood8  YbodP   YboodP 88  Yb 8bodP' 88 d8888 888888      YboodP dP""""Yb 88     
 export BLOCKSIZECAPITAL_API_KEY=
 export BLOCKSIZECAPITAL_SUB_HTTP=
 export BLOCKSIZECAPITAL_SUB_WS=
@@ -193,7 +228,10 @@ export BLOCKSIZECAPITAL_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Blockstream
+# 88""Yb 88      dP"Yb   dP""b8 88  dP .dP"Y8 888888 88""Yb 888888    db    8b    d8 
+# 88__dP 88     dP   Yb dP   `" 88odP  `Ybo."   88   88__dP 88__     dPYb   88b  d88 
+# 88""Yb 88  .o Yb   dP Yb      88"Yb  o.`Y8b   88   88"Yb  88""    dP__Yb  88YbdP88 
+# 88oodP 88ood8  YbodP   YboodP 88  Yb 8bodP'   88   88  Yb 888888 dP""""Yb 88 YY 88 
 export BLOCKSTREAM_API_KEY=
 export BLOCKSTREAM_SUB_HTTP=
 export BLOCKSTREAM_SUB_WS=
@@ -207,7 +245,10 @@ export BLOCKSTREAM_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# BraveNewCoin (BNC)
+# 88""Yb 88""Yb    db    Yb    dP 888888     88b 88 888888 Yb        dP      dP""b8  dP"Yb  88 88b 88 
+# 88__dP 88__dP   dPYb    Yb  dP  88__       88Yb88 88__    Yb  db  dP      dP   `" dP   Yb 88 88Yb88 
+# 88""Yb 88"Yb   dP__Yb    YbdP   88""       88 Y88 88""     YbdPYbdP       Yb      Yb   dP 88 88 Y88 
+# 88oodP 88  Yb dP""""Yb    YP    888888     88  Y8 888888    YP  YP         YboodP  YbodP  88 88  Y8 
 export BRAVENEWCOIN_API_KEY=
 export BRAVENEWCOIN_SUB_HTTP=
 export BRAVENEWCOIN_SUB_WS=
@@ -221,7 +262,10 @@ export BRAVENEWCOIN_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# BTC.com
+# 88""Yb 888888  dP""b8      dP""b8  dP"Yb  8b    d8 
+# 88__dP   88   dP   `"     dP   `" dP   Yb 88b  d88 
+# 88""Yb   88   Yb      .o. Yb      Yb   dP 88YbdP88 
+# 88oodP   88    YboodP `"'  YboodP  YbodP  88 YY 88 
 export BTC_COM_API_KEY=
 export BTC_COM_SUB_HTTP=
 export BTC_COM_SUB_WS=
@@ -235,7 +279,10 @@ export BTC_COM_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# CF Benchmarks
+#  dP""b8 888888     88""Yb 888888 88b 88  dP""b8 88  88 8b    d8    db    88""Yb 88  dP .dP"Y8 
+# dP   `" 88__       88__dP 88__   88Yb88 dP   `" 88  88 88b  d88   dPYb   88__dP 88odP  `Ybo." 
+# Yb      88""       88""Yb 88""   88 Y88 Yb      888888 88YbdP88  dP__Yb  88"Yb  88"Yb  o.`Y8b 
+#  YboodP 88         88oodP 888888 88  Y8  YboodP 88  88 88 YY 88 dP""""Yb 88  Yb 88  Yb 8bodP' 
 export CFBENCHMARKS_API_KEY=
 export CFBENCHMARKS_SUB_HTTP=
 export CFBENCHMARKS_SUB_WS=
@@ -249,7 +296,10 @@ export CFBENCHMARKS_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Coinapi
+#  dP""b8  dP"Yb  88 88b 88    db    88""Yb 88 
+# dP   `" dP   Yb 88 88Yb88   dPYb   88__dP 88 
+# Yb      Yb   dP 88 88 Y88  dP__Yb  88"""  88 
+#  YboodP  YbodP  88 88  Y8 dP""""Yb 88     88 
 export COINAPI_API_KEY=
 export COINAPI_SUB_HTTP=
 export COINAPI_SUB_WS=
@@ -269,7 +319,10 @@ export COINAPI_SUB_WS=
 #  professional
 
 # =========================================================================================
-# Coinbase
+#  dP""b8  dP"Yb  88 88b 88 88""Yb    db    .dP"Y8 888888 
+# dP   `" dP   Yb 88 88Yb88 88__dP   dPYb   `Ybo." 88__   
+# Yb      Yb   dP 88 88 Y88 88""Yb  dP__Yb  o.`Y8b 88""   
+#  YboodP  YbodP  88 88  Y8 88oodP dP""""Yb 8bodP' 888888 
 export COINBASE_API_KEY=
 export COINBASE_SUB_HTTP=
 export COINBASE_SUB_WS=
@@ -284,7 +337,10 @@ export COINBASE_SUB_WS=
 #  public
 
 # =========================================================================================
-# CoinCodex
+#  dP""b8  dP"Yb  88 88b 88  dP""b8  dP"Yb  8888b.  888888 Yb  dP 
+# dP   `" dP   Yb 88 88Yb88 dP   `" dP   Yb  8I  Yb 88__    YbdP  
+# Yb      Yb   dP 88 88 Y88 Yb      Yb   dP  8I  dY 88""    dPYb  
+#  YboodP  YbodP  88 88  Y8  YboodP  YbodP  8888Y"  888888 dP  Yb 
 export COINCODEX_API_KEY=
 export COINCODEX_SUB_HTTP=
 export COINCODEX_SUB_WS=
@@ -298,7 +354,10 @@ export COINCODEX_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Coingecko
+#  dP""b8  dP"Yb  88 88b 88  dP""b8 888888  dP""b8 88  dP  dP"Yb  
+# dP   `" dP   Yb 88 88Yb88 dP   `" 88__   dP   `" 88odP  dP   Yb 
+# Yb      Yb   dP 88 88 Y88 Yb  "88 88""   Yb      88"Yb  Yb   dP 
+#  YboodP  YbodP  88 88  Y8  YboodP 888888  YboodP 88  Yb  YbodP  
 export COINGECKO_API_KEY=
 export COINGECKO_SUB_HTTP=
 export COINGECKO_SUB_WS=
@@ -315,7 +374,10 @@ export COINGECKO_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# coinlore
+#  dP""b8  dP"Yb  88 88b 88 88      dP"Yb  88""Yb 888888 
+# dP   `" dP   Yb 88 88Yb88 88     dP   Yb 88__dP 88__   
+# Yb      Yb   dP 88 88 Y88 88  .o Yb   dP 88"Yb  88""   
+#  YboodP  YbodP  88 88  Y8 88ood8  YbodP  88  Yb 888888 
 export COINLORE_API_KEY=
 export COINLORE_SUB_HTTP=
 export COINLORE_SUB_WS=
@@ -329,7 +391,10 @@ export COINLORE_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Coinmarketcap
+#  dP""b8  dP"Yb  88 88b 88 8b    d8    db    88""Yb 88  dP 888888 888888  dP""b8    db    88""Yb 
+# dP   `" dP   Yb 88 88Yb88 88b  d88   dPYb   88__dP 88odP  88__     88   dP   `"   dPYb   88__dP 
+# Yb      Yb   dP 88 88 Y88 88YbdP88  dP__Yb  88"Yb  88"Yb  88""     88   Yb       dP__Yb  88"""  
+#  YboodP  YbodP  88 88  Y8 88 YY 88 dP""""Yb 88  Yb 88  Yb 888888   88    YboodP dP""""Yb 88     
 export COINMARKETCAP_API_KEY=
 export COINMARKETCAP_SUB_HTTP=
 export COINMARKETCAP_SUB_WS=
@@ -347,7 +412,10 @@ export COINMARKETCAP_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Coinmetrics
+#  dP""b8  dP"Yb  88 88b 88 8b    d8 888888 888888 88""Yb 88  dP""b8 .dP"Y8 
+# dP   `" dP   Yb 88 88Yb88 88b  d88 88__     88   88__dP 88 dP   `" `Ybo." 
+# Yb      Yb   dP 88 88 Y88 88YbdP88 88""     88   88"Yb  88 Yb      o.`Y8b 
+#  YboodP  YbodP  88 88  Y8 88 YY 88 888888   88   88  Yb 88  YboodP 8bodP' 
 export COINMETRICS_API_KEY=
 export COINMETRICS_SUB_HTTP=
 export COINMETRICS_SUB_WS=
@@ -363,7 +431,10 @@ export COINMETRICS_SUB_WS=
 #  paid
 
 # =========================================================================================
-# Coinpaprika
+#  dP""b8  dP"Yb  88 88b 88 88""Yb    db    88""Yb 88""Yb 88 88  dP    db    
+# dP   `" dP   Yb 88 88Yb88 88__dP   dPYb   88__dP 88__dP 88 88odP    dPYb   
+# Yb      Yb   dP 88 88 Y88 88"""   dP__Yb  88"""  88"Yb  88 88"Yb   dP__Yb  
+#  YboodP  YbodP  88 88  Y8 88     dP""""Yb 88     88  Yb 88 88  Yb dP""""Yb 
 export COINPAPRIKA_API_KEY=
 export COINPAPRIKA_SUB_HTTP=
 export COINPAPRIKA_SUB_WS=
@@ -378,7 +449,10 @@ export COINPAPRIKA_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Coinranking
+#  dP""b8  dP"Yb  88 88b 88 88""Yb    db    88b 88 88  dP 88 88b 88  dP""b8 
+# dP   `" dP   Yb 88 88Yb88 88__dP   dPYb   88Yb88 88odP  88 88Yb88 dP   `" 
+# Yb      Yb   dP 88 88 Y88 88"Yb   dP__Yb  88 Y88 88"Yb  88 88 Y88 Yb  "88 
+#  YboodP  YbodP  88 88  Y8 88  Yb dP""""Yb 88  Y8 88  Yb 88 88  Y8  YboodP 
 export COINRANKING_API_KEY=
 export COINRANKING_SUB_HTTP=
 export COINRANKING_SUB_WS=
@@ -394,7 +468,10 @@ export COINRANKING_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# CryptoAPIs
+#  dP""b8 88""Yb Yb  dP 88""Yb 888888  dP"Yb     db    88""Yb 88 .dP"Y8 
+# dP   `" 88__dP  YbdP  88__dP   88   dP   Yb   dPYb   88__dP 88 `Ybo." 
+# Yb      88"Yb    8P   88"""    88   Yb   dP  dP__Yb  88"""  88 o.`Y8b 
+#  YboodP 88  Yb  dP    88       88    YbodP  dP""""Yb 88     88 8bodP' 
 export CRYPTOAPIS_API_KEY=
 export CRYPTOAPIS_SUB_HTTP=
 export CRYPTOAPIS_SUB_WS=
@@ -412,7 +489,10 @@ export CRYPTOAPIS_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Cryptocompare
+#  dP""b8 88""Yb Yb  dP 88""Yb 888888  dP"Yb   dP""b8  dP"Yb  8b    d8 88""Yb    db    88""Yb 888888 
+# dP   `" 88__dP  YbdP  88__dP   88   dP   Yb dP   `" dP   Yb 88b  d88 88__dP   dPYb   88__dP 88__   
+# Yb      88"Yb    8P   88"""    88   Yb   dP Yb      Yb   dP 88YbdP88 88"""   dP__Yb  88"Yb  88""   
+#  YboodP 88  Yb  dP    88       88    YbodP   YboodP  YbodP  88 YY 88 88     dP""""Yb 88  Yb 888888 
 export CRYPTOCOMPARE_API_KEY=
 export CRYPTOCOMPARE_SUB_HTTP=
 export CRYPTOCOMPARE_SUB_WS=
@@ -432,7 +512,10 @@ export CRYPTOCOMPARE_SUB_WS=
 #  enterprise-lite
 
 # =========================================================================================
-# Crypto ID
+#  dP""b8 88""Yb Yb  dP 88""Yb 888888  dP"Yb      88 8888b.  
+# dP   `" 88__dP  YbdP  88__dP   88   dP   Yb     88  8I  Yb 
+# Yb      88"Yb    8P   88"""    88   Yb   dP     88  8I  dY 
+#  YboodP 88  Yb  dP    88       88    YbodP      88 8888Y"  
 export CRYPTOID_API_KEY=
 export CRYPTOID_SUB_HTTP=
 export CRYPTOID_SUB_WS=
@@ -446,7 +529,10 @@ export CRYPTOID_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# CryptoMkt
+#  dP""b8 88""Yb Yb  dP 88""Yb 888888  dP"Yb  8b    d8 88  dP 888888 
+# dP   `" 88__dP  YbdP  88__dP   88   dP   Yb 88b  d88 88odP    88   
+# Yb      88"Yb    8P   88"""    88   Yb   dP 88YbdP88 88"Yb    88   
+#  YboodP 88  Yb  dP    88       88    YbodP  88 YY 88 88  Yb   88   
 export CRYPTOMKT_API_KEY=
 export CRYPTOMKT_SUB_HTTP=free
 export CRYPTOMKT_SUB_WS=
@@ -460,7 +546,10 @@ export CRYPTOMKT_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Currencylayer
+#  dP""b8 88   88 88""Yb 88""Yb 888888 88b 88  dP""b8 Yb  dP 88        db    Yb  dP 888888 88""Yb 
+# dP   `" 88   88 88__dP 88__dP 88__   88Yb88 dP   `"  YbdP  88       dPYb    YbdP  88__   88__dP 
+# Yb      Y8   8P 88"Yb  88"Yb  88""   88 Y88 Yb        8P   88  .o  dP__Yb    8P   88""   88"Yb  
+#  YboodP `YbodP' 88  Yb 88  Yb 888888 88  Y8  YboodP  dP    88ood8 dP""""Yb  dP    888888 88  Yb 
 export CURRENCYLAYER_API_KEY=
 export CURRENCYLAYER_SUB_HTTP=
 export CURRENCYLAYER_SUB_WS=
@@ -477,7 +566,10 @@ export CURRENCYLAYER_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Derbit
+# 8888b.  888888 88""Yb 88""Yb 88 888888 
+#  8I  Yb 88__   88__dP 88__dP 88   88   
+#  8I  dY 88""   88"Yb  88""Yb 88   88   
+# 8888Y"  888888 88  Yb 88oodP 88   88   
 export DERIBIT_API_KEY=
 export DERIBIT_SUB_HTTP=free
 export DERIBIT_SUB_WS=
@@ -491,7 +583,10 @@ export DERIBIT_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# DNS Query
+# 8888b.  88b 88 .dP"Y8      dP"Yb  88   88 888888 88""Yb Yb  dP 
+#  8I  Yb 88Yb88 `Ybo."     dP   Yb 88   88 88__   88__dP  YbdP  
+#  8I  dY 88 Y88 o.`Y8b     Yb b dP Y8   8P 88""   88"Yb    8P   
+# 8888Y"  88  Y8 8bodP'      `"YoYo `YbodP' 888888 88  Yb  dP    
 export DNS_QUERY_API_KEY=
 export DNS_QUERY_SUB_HTTP=free
 export DNS_QUERY_SUB_WS=
@@ -505,7 +600,10 @@ export DNS_QUERY_SUB_WS=
 # N/A
 
 # =========================================================================================
-# DX Feed (includes secondary)
+# 8888b.  Yb  dP     888888 888888 888888 8888b.  
+#  8I  Yb  YbdP      88__   88__   88__    8I  Yb 
+#  8I  dY  dPYb      88""   88""   88""    8I  dY 
+# 8888Y"  dP  Yb     88     888888 888888 8888Y"  
 export DXFEED_API_KEY=
 export DXFEED_API_ENDPOINT=
 export DXFEED_API_USERNAME=
@@ -520,7 +618,10 @@ export DXFEED_API_PASSWORD=
 #  N/A
 
 # =========================================================================================
-# Elwood
+# 888888 88     Yb        dP  dP"Yb   dP"Yb  8888b.  
+# 88__   88      Yb  db  dP  dP   Yb dP   Yb  8I  Yb 
+# 88""   88  .o   YbdPYbdP   Yb   dP Yb   dP  8I  dY 
+# 888888 88ood8    YP  YP     YbodP   YbodP  8888Y"  
 export ELWOOD_API_KEY=
 
 # WEBSITE: https://elwood.io/
@@ -532,7 +633,10 @@ export ELWOOD_API_KEY=
 #  N/A
 
 # =========================================================================================
-# EoD Historical Data
+# E888888  dP"Yb  8888b.     88  88 88 .dP"Y8 888888         88""Yb 88""Yb 88  dP""b8 888888 
+# 88__   dP   Yb  8I  Yb     88  88 88 `Ybo."   88           88__dP 88__dP 88 dP   `" 88__   
+# 88""   Yb   dP  8I  dY     888888 88 o.`Y8b   88   .o.     88"""  88"Yb  88 Yb      88""   
+# 888888  YbodP  8888Y"      88  88 88 8bodP'   88   `"'     88     88  Yb 88  YboodP 888888 
 export EODHISTORICALDATA_API_KEY=
 export EODHISTORICALDATA_SUB_HTTP=all
 export EODHISTORICALDATA_SUB_WS=
@@ -546,7 +650,10 @@ export EODHISTORICALDATA_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Etherchain
+# 888888 888888 88  88 888888 88""Yb  dP""b8 88  88    db    88 88b 88 
+# 88__     88   88  88 88__   88__dP dP   `" 88  88   dPYb   88 88Yb88 
+# 88""     88   888888 88""   88"Yb  Yb      888888  dP__Yb  88 88 Y88 
+# 888888   88   88  88 888888 88  Yb  YboodP 88  88 dP""""Yb 88 88  Y8 
 export ETHERCHAIN_API_KEY=
 export ETHERCHAIN_SUB_HTTP=
 export ETHERCHAIN_SUB_WS=
@@ -560,7 +667,10 @@ export ETHERCHAIN_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# ETH Gasstation
+# 888888 888888 88  88      dP""b8    db    .dP"Y8 .dP"Y8 888888    db    888888 88  dP"Yb  88b 88 
+# 88__     88   88  88     dP   `"   dPYb   `Ybo." `Ybo."   88     dPYb     88   88 dP   Yb 88Yb88 
+# 88""     88   888888     Yb  "88  dP__Yb  o.`Y8b o.`Y8b   88    dP__Yb    88   88 Yb   dP 88 Y88 
+# 888888   88   88  88      YboodP dP""""Yb 8bodP' 8bodP'   88   dP""""Yb   88   88  YbodP  88  Y8 
 export ETHGASSTATION_API_KEY=
 export ETHGASSTATION_SUB_HTTP=free
 export ETHGASSTATION_SUB_WS=
@@ -574,7 +684,10 @@ export ETHGASSTATION_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# FCS API
+# 888888  dP""b8 .dP"Y8        db    88""Yb 88 
+# 88__   dP   `" `Ybo."       dPYb   88__dP 88 
+# 88""   Yb      o.`Y8b      dP__Yb  88"""  88 
+# 88      YboodP 8bodP'     dP""""Yb 88     88 
 export FCSAPI_API_KEY=
 export FCSAPI_SUB_HTTP=
 export FCSAPI_SUB_WS=
@@ -593,7 +706,10 @@ export FCSAPI_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Finage
+# 888888 88 88b 88    db     dP""b8 888888 
+# 88__   88 88Yb88   dPYb   dP   `" 88__   
+# 88""   88 88 Y88  dP__Yb  Yb  "88 88""   
+# 88     88 88  Y8 dP""""Yb  YboodP 888888 
 export FINAGE_API_KEY=
 export FINAGE_WS_SOCKET_KEY=
 export FINAGE_STOCK_WS_API_ENDPOINT=wss://e4s39ar3mr.finage.ws:7002
@@ -611,7 +727,10 @@ export FINAGE_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# FinnHub
+# 888888 88 88b 88 88b 88 88  88 88   88 88""Yb 
+# 88__   88 88Yb88 88Yb88 88  88 88   88 88__dP 
+# 88""   88 88 Y88 88 Y88 888888 Y8   8P 88""Yb 
+# 88     88 88  Y8 88  Y8 88  88 `YbodP' 88oodP 
 export FINNHUB_API_KEY=
 export FINNHUB_SUB_HTTP=
 export FINNHUB_SUB_WS=
@@ -626,7 +745,10 @@ export FINNHUB_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Fixer
+# 888888 88 Yb  dP 888888 88""Yb 
+# 88__   88  YbdP  88__   88__dP 
+# 88""   88  dPYb  88""   88"Yb  
+# 88     88 dP  Yb 888888 88  Yb 
 export FIXER_API_KEY=
 export FIXER_SUB_HTTP=
 export FIXER_SUB_WS=
@@ -643,7 +765,10 @@ export FIXER_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# FMP Cloud
+# 888888 8b    d8 88""Yb      dP""b8 88      dP"Yb  88   88 8888b.  
+# 88__   88b  d88 88__dP     dP   `" 88     dP   Yb 88   88  8I  Yb 
+# 88""   88YbdP88 88"""      Yb      88  .o Yb   dP Y8   8P  8I  dY 
+# 88     88 YY 88 88          YboodP 88ood8  YbodP  `YbodP' 8888Y"  
 export FMPCLOUD_API_KEY=
 export FMPCLOUD_SUB_HTTP=
 export FMPCLOUD_SUB_WS=
@@ -660,7 +785,10 @@ export FMPCLOUD_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Genesis Volatility
+#  dP""b8 888888 88b 88 888888 .dP"Y8 88 .dP"Y8     Yb    dP  dP"Yb  88     
+# dP   `" 88__   88Yb88 88__   `Ybo." 88 `Ybo."      Yb  dP  dP   Yb 88     
+# Yb  "88 88""   88 Y88 88""   o.`Y8b 88 o.`Y8b       YbdP   Yb   dP 88  .o 
+#  YboodP 888888 88  Y8 888888 8bodP' 88 8bodP'        YP     YbodP  88ood8 
 export GENESIS_VOLATILITY_API_KEY=
 
 # WEBSITE: https://genesisvolatility.io/
@@ -672,7 +800,10 @@ export GENESIS_VOLATILITY_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Google Finance
+#  dP""b8  dP"Yb   dP"Yb   dP""b8 88     888888     888888 88 88b 88    db    88b 88  dP""b8 888888 
+# dP   `" dP   Yb dP   Yb dP   `" 88     88__       88__   88 88Yb88   dPYb   88Yb88 dP   `" 88__   
+# Yb  "88 Yb   dP Yb   dP Yb  "88 88  .o 88""       88""   88 88 Y88  dP__Yb  88 Y88 Yb      88""   
+#  YboodP  YbodP   YbodP   YboodP 88ood8 888888     88     88 88  Y8 dP""""Yb 88  Y8  YboodP 888888 
 export GOOGLE_FINANCE_API_KEY=
 
 # WEBSITE: https://finance.google.com
@@ -684,7 +815,10 @@ export GOOGLE_FINANCE_API_KEY=
 #  N/A
 
 # =========================================================================================
-# IEX Cloud
+# 88 888888 Yb  dP      dP""b8 88      dP"Yb  88   88 8888b.  
+# 88 88__    YbdP      dP   `" 88     dP   Yb 88   88  8I  Yb 
+# 88 88""    dPYb      Yb      88  .o Yb   dP Y8   8P  8I  dY 
+# 88 888888 dP  Yb      YboodP 88ood8  YbodP  `YbodP' 8888Y"  
 export IEXCLOUD_API_KEY=
 export IEXCLOUD_SUB_HTTP=
 export IEXCLOUD_SUB_WS=
@@ -699,7 +833,42 @@ export IEXCLOUD_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Kaiko
+# 88 88b 88 888888 88""Yb 88 88b 88 88  dP"Yb  
+# 88 88Yb88   88   88__dP 88 88Yb88 88 dP   Yb 
+# 88 88 Y88   88   88"Yb  88 88 Y88 88 Yb   dP 
+# 88 88  Y8   88   88  Yb 88 88  Y8 88  YbodP  
+export INTRINIO_API_KEY=
+
+# WEBSITE: https://www.intrinio.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+#  88888 88""Yb 888888  dP""b8 8888b.  
+#     88 88__dP 88__   dP   `"  8I  Yb 
+# o.  88 88"""  88""   Yb  "88  8I  dY 
+# "bodP' 88     888888  YboodP 8888Y"  
+export JPEGD_API_KEY=
+export JPEGD_SUB_HTTP=
+export JPEGD_SUB_WS=
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# 88  dP    db    88 88  dP  dP"Yb  
+# 88odP    dPYb   88 88odP  dP   Yb 
+# 88"Yb   dP__Yb  88 88"Yb  Yb   dP 
+# 88  Yb dP""""Yb 88 88  Yb  YbodP  
 export KAIKO_API_KEY=
 export KAIKO_SUB_HTTP=default
 export KAIKO_SUB_WS=
@@ -715,7 +884,10 @@ export KAIKO_SUB_WS=
 #  enterprise
 
 # =========================================================================================
-# LinkPool
+# 88     88 88b 88 88  dP 88""Yb  dP"Yb   dP"Yb  88     
+# 88     88 88Yb88 88odP  88__dP dP   Yb dP   Yb 88     
+# 88  .o 88 88 Y88 88"Yb  88"""  Yb   dP Yb   dP 88  .o 
+# 88ood8 88 88  Y8 88  Yb 88      YbodP   YbodP  88ood8 
 export LINKPOOL_API_KEY=
 
 # WEBSITE: https://linkpool.io/
@@ -727,7 +899,10 @@ export LINKPOOL_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Lition
+# 88     88 888888 88  dP"Yb  88b 88 
+# 88     88   88   88 dP   Yb 88Yb88 
+# 88  .o 88   88   88 Yb   dP 88 Y88 
+# 88ood8 88   88   88  YbodP  88  Y8 
 export LITION_API_KEY=
 
 # WEBSITE: 
@@ -739,7 +914,10 @@ export LITION_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Market Stack
+# 8b    d8    db    88""Yb 88  dP 888888 888888     .dP"Y8 888888    db     dP""b8 88  dP 
+# 88b  d88   dPYb   88__dP 88odP  88__     88       `Ybo."   88     dPYb   dP   `" 88odP  
+# 88YbdP88  dP__Yb  88"Yb  88"Yb  88""     88       o.`Y8b   88    dP__Yb  Yb      88"Yb  
+# 88 YY 88 dP""""Yb 88  Yb 88  Yb 888888   88       8bodP'   88   dP""""Yb  YboodP 88  Yb 
 export MARKETSTACK_API_KEY=
 export MARKETSTACK_SUB_HTTP=
 export MARKETSTACK_SUB_WS=
@@ -757,7 +935,10 @@ export MARKETSTACK_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Messari
+# 8b    d8 888888 .dP"Y8 .dP"Y8    db    88""Yb 88 
+# 88b  d88 88__   `Ybo." `Ybo."   dPYb   88__dP 88 
+# 88YbdP88 88""   o.`Y8b o.`Y8b  dP__Yb  88"Yb  88 
+# 88 YY 88 888888 8bodP' 8bodP' dP""""Yb 88  Yb 88 
 export MESSARI_API_KEY=
 export MESSARI_SUB_HTTP=
 export MESSARI_SUB_WS=
@@ -772,7 +953,10 @@ export MESSARI_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Metals API
+# 8b    d8 888888 888888    db    88     .dP"Y8        db    88""Yb 88 
+# 88b  d88 88__     88     dPYb   88     `Ybo."       dPYb   88__dP 88 
+# 88YbdP88 88""     88    dP__Yb  88  .o o.`Y8b      dP__Yb  88"""  88 
+# 88 YY 88 888888   88   dP""""Yb 88ood8 8bodP'     dP""""Yb 88     88 
 export METALSAPI_API_KEY=
 export METALSAPI_SUB_HTTP=
 export METALSAPI_SUB_WS=
@@ -790,7 +974,10 @@ export METALSAPI_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# NCFX      
+# 88b 88  dP""b8 888888 Yb  dP 
+# 88Yb88 dP   `" 88__    YbdP  
+# 88 Y88 Yb      88""    dPYb  
+# 88  Y8  YboodP 88     dP  Yb 
 export NCFX_API_USERNAME= 
 export NCFX_API_PASSWORD=
 
@@ -803,7 +990,10 @@ export NCFX_API_PASSWORD=
 #  N/A
 
 # =========================================================================================
-# Nikkei
+# 88b 88 88 88  dP 88  dP 888888 88 
+# 88Yb88 88 88odP  88odP  88__   88 
+# 88 Y88 88 88"Yb  88"Yb  88""   88 
+# 88  Y8 88 88  Yb 88  Yb 888888 88 
 export NIKKEI_API_KEY=
 
 # WEBSITE: 
@@ -815,7 +1005,10 @@ export NIKKEI_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Nomics
+# 88b 88  dP"Yb  8b    d8 88  dP""b8 .dP"Y8 
+# 88Yb88 dP   Yb 88b  d88 88 dP   `" `Ybo." 
+# 88 Y88 Yb   dP 88YbdP88 88 Yb      o.`Y8b 
+# 88  Y8  YbodP  88 YY 88 88  YboodP 8bodP' 
 export NOMICS_API_KEY=
 export NOMICS_SUB_HTTP=
 export NOMICS_SUB_WS=
@@ -830,7 +1023,10 @@ export NOMICS_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Oil Price API
+#  dP"Yb  88 88         88""Yb 88""Yb 88  dP""b8 888888        db    88""Yb 88 
+# dP   Yb 88 88         88__dP 88__dP 88 dP   `" 88__         dPYb   88__dP 88 
+# Yb   dP 88 88  .o     88"""  88"Yb  88 Yb      88""        dP__Yb  88"""  88 
+#  YbodP  88 88ood8     88     88  Yb 88  YboodP 888888     dP""""Yb 88     88 
 export OILPRICEAPI_API_KEY=
 export OILPRICEAPI_SUB_HTTP=
 export OILPRICEAPI_SUB_WS=
@@ -846,7 +1042,10 @@ export OILPRICEAPI_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# OnChain
+#  dP"Yb  88b 88  dP""b8 88  88    db    88 88b 88 
+# dP   Yb 88Yb88 dP   `" 88  88   dPYb   88 88Yb88 
+# Yb   dP 88 Y88 Yb      888888  dP__Yb  88 88 Y88 
+#  YbodP  88  Y8  YboodP 88  88 dP""""Yb 88 88  Y8 
 export ONCHAIN_API_KEY=
 
 # WEBSITE: https://onchain.io/auth/sign_in
@@ -858,7 +1057,10 @@ export ONCHAIN_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Open Exchange
+#  dP"Yb  88""Yb 888888 88b 88     888888 Yb  dP  dP""b8 88  88    db    88b 88  dP""b8 888888 
+# dP   Yb 88__dP 88__   88Yb88     88__    YbdP  dP   `" 88  88   dPYb   88Yb88 dP   `" 88__   
+# Yb   dP 88"""  88""   88 Y88     88""    dPYb  Yb      888888  dP__Yb  88 Y88 Yb  "88 88""   
+#  YbodP  88     888888 88  Y8     888888 dP  Yb  YboodP 88  88 dP""""Yb 88  Y8  YboodP 888888 
 export OPENEXCHANGERATES_API_KEY=
 export OPENEXCHANGERATES_SUB_HTTP=
 export OPENEXCHANGERATES_SUB_WS=
@@ -874,7 +1076,10 @@ export OPENEXCHANGERATES_SUB_WS=
 #  N/A
 
 # =========================================================================================
-#Orchid Bandwidth
+#  dP"Yb  88""Yb  dP""b8 88  88 88 8888b.      88""Yb    db    88b 88 8888b.  Yb        dP 88 8888b.  888888 88  88 
+# dP   Yb 88__dP dP   `" 88  88 88  8I  Yb     88__dP   dPYb   88Yb88  8I  Yb  Yb  db  dP  88  8I  Yb   88   88  88 
+# Yb   dP 88"Yb  Yb      888888 88  8I  dY     88""Yb  dP__Yb  88 Y88  8I  dY   YbdPYbdP   88  8I  dY   88   888888 
+#  YbodP  88  Yb  YboodP 88  88 88 8888Y"      88oodP dP""""Yb 88  Y8 8888Y"     YP  YP    88 8888Y"    88   88  88 
 export ORCHID_BANDWIDTH_API_KEY=
 
 # WEBSITE: https://openexchangerates.org/login
@@ -886,7 +1091,10 @@ export ORCHID_BANDWIDTH_API_KEY=
 #  N/A
 
 # =========================================================================================
-# PaXos
+# 88""Yb    db    Yb  dP  dP"Yb  .dP"Y8 
+# 88__dP   dPYb    YbdP  dP   Yb `Ybo." 
+# 88"""   dP__Yb   dPYb  Yb   dP o.`Y8b 
+# 88     dP""""Yb dP  Yb  YbodP  8bodP' 
 export PAXOS_API_KEY=
 
 # WEBSITE: N/A
@@ -898,7 +1106,10 @@ export PAXOS_API_KEY=
 #  N/A
 
 # =========================================================================================
-# PayPal
+# 88""Yb    db    Yb  dP 88""Yb    db    88     
+# 88__dP   dPYb    YbdP  88__dP   dPYb   88     
+# 88"""   dP__Yb    8P   88"""   dP__Yb  88  .o 
+# 88     dP""""Yb  dP    88     dP""""Yb 88ood8 
 export PAYPAL_API_KEY=
 
 # WEBSITE: https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications
@@ -910,7 +1121,10 @@ export PAYPAL_API_KEY=
 #  N/A
 
 # =========================================================================================
-# POA Gasprice
+# 88""Yb  dP"Yb     db         dP""b8    db    .dP"Y8 88""Yb 88""Yb 88  dP""b8 888888 
+# 88__dP dP   Yb   dPYb       dP   `"   dPYb   `Ybo." 88__dP 88__dP 88 dP   `" 88__   
+# 88"""  Yb   dP  dP__Yb      Yb  "88  dP__Yb  o.`Y8b 88"""  88"Yb  88 Yb      88""   
+# 88      YbodP  dP""""Yb      YboodP dP""""Yb 8bodP' 88     88  Yb 88  YboodP 888888 
 export POA_GASPRICE_API_KEY=
 
 # WEBSITE: 
@@ -922,7 +1136,10 @@ export POA_GASPRICE_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Polygon
+# 88""Yb  dP"Yb  88     Yb  dP  dP""b8  dP"Yb  88b 88 
+# 88__dP dP   Yb 88      YbdP  dP   `" dP   Yb 88Yb88 
+# 88"""  Yb   dP 88  .o   8P   Yb  "88 Yb   dP 88 Y88 
+# 88      YbodP  88ood8  dP     YboodP  YbodP  88  Y8 
 export POLYGON_API_KEY=
 export POLYGON_SUB_HTTP=
 export POLYGON_SUB_WS=
@@ -939,7 +1156,10 @@ export POLYGON_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# RenVM
+# 88""Yb 888888 88b 88     Yb    dP 8b    d8 
+# 88__dP 88__   88Yb88      Yb  dP  88b  d88 
+# 88"Yb  88""   88 Y88       YbdP   88YbdP88 
+# 88  Yb 888888 88  Y8        YP    88 YY 88 
 export RENVM_ADDRESS_SET_API_KEY=
 
 # WEBSITE: 
@@ -951,7 +1171,10 @@ export RENVM_ADDRESS_SET_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Satoshi Tango
+# .dP"Y8    db    888888  dP"Yb  .dP"Y8 88  88 88     888888    db    88b 88  dP""b8  dP"Yb  
+# `Ybo."   dPYb     88   dP   Yb `Ybo." 88  88 88       88     dPYb   88Yb88 dP   `" dP   Yb 
+# o.`Y8b  dP__Yb    88   Yb   dP o.`Y8b 888888 88       88    dP__Yb  88 Y88 Yb  "88 Yb   dP 
+# 8bodP' dP""""Yb   88    YbodP  8bodP' 88  88 88       88   dP""""Yb 88  Y8  YboodP  YbodP  
 export SATOSHITANGO_API_KEY=
 export SATOSHITANGO_SUB_HTTP=free
 export SATOSHITANGO_SUB_WS=
@@ -959,7 +1182,10 @@ export SATOSHITANGO_SUB_WS=
 # WEBSITE: https://www.satoshitango.com/login
 
 # =========================================================================================
-# SO Chain
+# .dP"Y8  dP"Yb       dP""b8 88  88    db    88 88b 88 
+# `Ybo." dP   Yb     dP   `" 88  88   dPYb   88 88Yb88 
+# o.`Y8b Yb   dP     Yb      888888  dP__Yb  88 88 Y88 
+# 8bodP'  YbodP       YboodP 88  88 dP""""Yb 88 88  Y8 
 export SOCHAIN_API_KEY=
 export SOCHAIN_SUB_HTTP=free
 export SOCHAIN_SUB_WS=
@@ -973,7 +1199,10 @@ export SOCHAIN_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Stasis
+# .dP"Y8 888888    db    .dP"Y8 88 .dP"Y8 
+# `Ybo."   88     dPYb   `Ybo." 88 `Ybo." 
+# o.`Y8b   88    dP__Yb  o.`Y8b 88 o.`Y8b 
+# 8bodP'   88   dP""""Yb 8bodP' 88 8bodP' 
 export STASIS_API_KEY=
 
 # WEBSITE: 
@@ -985,7 +1214,10 @@ export STASIS_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Taapi
+# 888888    db       db    88""Yb 88 
+#   88     dPYb     dPYb   88__dP 88 
+#   88    dP__Yb   dP__Yb  88"""  88 
+#   88   dP""""Yb dP""""Yb 88     88 
 export TAAPI_API_KEY=
 export TAAPI_SUB_HTTP=
 export TAAPI_SUB_WS=
@@ -1003,7 +1235,10 @@ export TAAPI_SUB_WS=
 #  
 
 # =========================================================================================
-# The Rundown
+# 888888 88  88 888888     88""Yb 88   88 88b 88 8888b.   dP"Yb  Yb        dP 88b 88 
+#   88   88  88 88__       88__dP 88   88 88Yb88  8I  Yb dP   Yb  Yb  db  dP  88Yb88 
+#   88   888888 88""       88"Yb  Y8   8P 88 Y88  8I  dY Yb   dP   YbdPYbdP   88 Y88 
+#   88   88  88 888888     88  Yb `YbodP' 88  Y8 8888Y"   YbodP     YP  YP    88  Y8 
 export THERUNDOWN_API_KEY=
 
 # WEBSITE: https://auth.therundown.io/login/
@@ -1015,7 +1250,10 @@ export THERUNDOWN_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Tiingo
+# 888888 88 88 88b 88  dP""b8  dP"Yb  
+#   88   88 88 88Yb88 dP   `" dP   Yb 
+#   88   88 88 88 Y88 Yb  "88 Yb   dP 
+#   88   88 88 88  Y8  YboodP  YbodP  
 export TIINGO_API_KEY=
 export TIINGO_SUB_HTTP=
 export TIINGO_SUB_WS=
@@ -1033,7 +1271,10 @@ export TIINGO_SUB_WS=
 #  commercial
 
 # =========================================================================================
-# Tradermade
+# 888888 88""Yb    db    8888b.  888888 88""Yb 8b    d8    db    8888b.  888888 
+#   88   88__dP   dPYb    8I  Yb 88__   88__dP 88b  d88   dPYb    8I  Yb 88__   
+#   88   88"Yb   dP__Yb   8I  dY 88""   88"Yb  88YbdP88  dP__Yb   8I  dY 88""   
+#   88   88  Yb dP""""Yb 8888Y"  888888 88  Yb 88 YY 88 dP""""Yb 8888Y"  888888 
 export TRADERMADE_API_KEY=
 export TRADERMADE_SUB_HTTP=
 export TRADERMADE_SUB_WS=
@@ -1052,7 +1293,10 @@ export TRADERMADE_SUB_WS=
 #  N/A
 
 # =========================================================================================
-# Trading Economics
+# 888888 88""Yb    db    8888b.  88 88b 88  dP""b8     888888  dP""b8  dP"Yb  88b 88 
+#   88   88__dP   dPYb    8I  Yb 88 88Yb88 dP   `"     88__   dP   `" dP   Yb 88Yb88 
+#   88   88"Yb   dP__Yb   8I  dY 88 88 Y88 Yb  "88     88""   Yb      Yb   dP 88 Y88 
+#   88   88  Yb dP""""Yb 8888Y"  88 88  Y8  YboodP     888888  YboodP  YbodP  88  Y8 
 export TRADINGECONOMICS_API_KEY=
 export TRADINGECONOMICS_SUB_HTTP=
 export TRADINGECONOMICS_SUB_WS=
@@ -1070,7 +1314,10 @@ export TRADINGECONOMICS_SUB_WS=
 #  enterprise
 
 # =========================================================================================
-# True USD
+# 888888 88""Yb 88   88 888888     88   88 .dP"Y8 8888b.  
+#   88   88__dP 88   88 88__       88   88 `Ybo."  8I  Yb 
+#   88   88"Yb  Y8   8P 88""       Y8   8P o.`Y8b  8I  dY 
+#   88   88  Yb `YbodP' 888888     `YbodP' 8bodP' 8888Y"  
 export TRUEUSD_API_KEY=
 
 # WEBSITE: 
@@ -1082,7 +1329,10 @@ export TRUEUSD_API_KEY=
 #  N/A
 
 # =========================================================================================
-# Unibit
+# 88   88 88b 88 88 88""Yb 88 888888 
+# 88   88 88Yb88 88 88__dP 88   88   
+# Y8   8P 88 Y88 88 88""Yb 88   88   
+# `YbodP' 88  Y8 88 88oodP 88   88   
 export UNIBIT_API_KEY=
 export UNIBIT_SUB_HTTP=
 export UNIBIT_SUB_WS=
@@ -1098,8 +1348,27 @@ export UNIBIT_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# Yb        dP  dP"Yb   dP"Yb      888888 88""Yb    db    8888b.  888888 
+#  Yb  db  dP  dP   Yb dP   Yb       88   88__dP   dPYb    8I  Yb 88__   
+#   YbdPYbdP   Yb   dP Yb   dP       88   88"Yb   dP__Yb   8I  dY 88""   
+#    YP  YP     YbodP   YbodP        88   88  Yb dP""""Yb 8888Y"  888888 
+export WOOTRADE_API_KEY=
 
-# XBTO
+# WEBSITE: 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+# 
+
+# =========================================================================================
+
+# Yb  dP 88""Yb 888888  dP"Yb  
+#  YbdP  88__dP   88   dP   Yb 
+#  dPYb  88""Yb   88   Yb   dP 
+# dP  Yb 88oodP   88    YbodP  
 export XBTO_API_KEY=
 
 # WEBSITE: https://www.xbto.com/
