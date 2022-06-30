@@ -11,7 +11,6 @@ docker run \
  --ip 192.168.1.220 \
  -p 1220:1220 \
  -e EA_PORT=1220 \
- -e ARBITRUM_HEALTH_ENDPOINT=$ARBITRUM_RPC_URL \
  -e ARBITRUM_RPC_ENDPOINT=$ARBITRUM_RPC_URL \
  -e METIS_HEALTH_ENDPOINT=https://tokenapi.metis.io/andromeda/health \
  -e METIS_RPC_ENDPOINT=$METIS_RPC_URL \
