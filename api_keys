@@ -9,6 +9,27 @@
 ###########################################################################################
 
 # =========================================================================================
+#   .d 888888  dP"Yb  88""Yb  dP""b8 888888 
+# .d88 88__   dP   Yb 88__dP dP   `" 88__   
+#   88 88""   Yb   dP 88"Yb  Yb  "88 88""   
+#   88 88      YbodP  88  Yb  YboodP 888888 
+export 1FORGE_API_KEY=
+export 1FORGE_SUB_HTTP=
+
+# WEBSITE: https://1forge.com/pricing
+
+# HTTP Supported Subscription Tiers:
+#  starter
+#  premium
+#  business
+#  business+
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
+
+# =========================================================================================
 #    db    88     88""Yb 88  88    db        Yb    dP    db    88b 88 888888    db     dP""b8 888888 
 #   dPYb   88     88__dP 88  88   dPYb        Yb  dP    dPYb   88Yb88   88     dPYb   dP   `" 88__   
 #  dP__Yb  88  .o 88"""  888888  dP__Yb        YbdP    dP__Yb  88 Y88   88    dP__Yb  Yb  "88 88""   
