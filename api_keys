@@ -13,8 +13,8 @@
 # .d88 88__   dP   Yb 88__dP dP   `" 88__   
 #   88 88""   Yb   dP 88"Yb  Yb  "88 88""   
 #   88 88      YbodP  88  Yb  YboodP 888888 
-export 1FORGE_API_KEY=
-export 1FORGE_SUB_HTTP=
+export ONEFORGE_API_KEY=
+export ONEFORGE_SUB_HTTP=
 
 # WEBSITE: https://1forge.com/pricing
 
