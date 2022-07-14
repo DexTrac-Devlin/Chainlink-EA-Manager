@@ -11,7 +11,6 @@ docker run \
  --ip 192.168.1.227 \
  -p 2227:2227 \
  -e EA_PORT=2227 \
- -e API_KEY=$ENZYME_API_KEY \
  -e RPC_URL=$RPC_URL \
  -e ETHEREUM_RPC_URL=$ETHEREUM_RPC_URL \
  -e TIMEOUT=30000 \
