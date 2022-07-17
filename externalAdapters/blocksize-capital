@@ -12,7 +12,7 @@ docker run \
  -p 1218:1218 \
  -e EA_PORT=1218 \
  -e TIMEOUT=30000 \
- -e WS_ENABLED=false \
+ -e WS_ENABLED=true \
  -e API_KEY=$BLOCKSIZECAPITAL_API_KEY \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
