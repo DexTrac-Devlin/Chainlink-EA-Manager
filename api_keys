@@ -835,25 +835,24 @@ export GOOGLE_FINANCE_API_KEY=
 # WS Supported Subscription Tiers:
 #  N/A
 
- 839 # =========================================================================================
- 840 #  dP""b8 .dP"Y8 88""Yb 
- 841 # dP   `" `Ybo." 88__dP 
- 842 # Yb  "88 o.`Y8b 88"Yb  
- 843 #  YboodP 8bodP' 88  Yb 
- 844 export GSR_API_ENDPOINT=
- 845 export GSR_WS_API_ENDPOINT=
- 846 export GSR_WS_USER_ID=
- 847 export GSR_WS_PULIC_KEY=
- 848 export GSR_WS_PRIVATE_KEY=
- 849
- 850 # WEBSITE: https://www.gsr.io
- 851
- 852 # HTTP Supported Subscription Tiers:
- 853 #  N/A
- 854
- 855 # WS Supported Subscription Tiers:
- 856 #  N/A
- 857
+# =========================================================================================
+#  dP""b8 .dP"Y8 88""Yb 
+# dP   `" `Ybo." 88__dP 
+# Yb  "88 o.`Y8b 88"Yb  
+#  YboodP 8bodP' 88  Yb 
+export GSR_API_ENDPOINT=https://oracle.prod.gsr.io/v1
+export GSR_WS_API_ENDPOINT=wss://oracle.prod.gsr.io/oracle
+export GSR_WS_USER_ID=
+export GSR_WS_PULIC_KEY=
+export GSR_WS_PRIVATE_KEY=
+
+# WEBSITE: https://www.gsr.io
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
 
 # =========================================================================================
 # 88 888888 Yb  dP      dP""b8 88      dP"Yb  88   88 8888b.  
