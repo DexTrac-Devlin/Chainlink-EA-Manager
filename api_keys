@@ -835,6 +835,26 @@ export GOOGLE_FINANCE_API_KEY=
 # WS Supported Subscription Tiers:
 #  N/A
 
+ 839 # =========================================================================================
+ 840 #  dP""b8 .dP"Y8 88""Yb 
+ 841 # dP   `" `Ybo." 88__dP 
+ 842 # Yb  "88 o.`Y8b 88"Yb  
+ 843 #  YboodP 8bodP' 88  Yb 
+ 844 export GSR_API_ENDPOINT=
+ 845 export GSR_WS_API_ENDPOINT=
+ 846 export GSR_WS_USER_ID=
+ 847 export GSR_WS_PULIC_KEY=
+ 848 export GSR_WS_PRIVATE_KEY=
+ 849
+ 850 # WEBSITE: https://www.gsr.io
+ 851
+ 852 # HTTP Supported Subscription Tiers:
+ 853 #  N/A
+ 854
+ 855 # WS Supported Subscription Tiers:
+ 856 #  N/A
+ 857
+
 # =========================================================================================
 # 88 888888 Yb  dP      dP""b8 88      dP"Yb  88   88 8888b.  
 # 88 88__    YbdP      dP   `" 88     dP   Yb 88   88  8I  Yb 
@@ -1001,6 +1021,8 @@ export METALSAPI_SUB_WS=
 # 88  Y8  YboodP 88     dP  Yb 
 export NCFX_API_USERNAME= 
 export NCFX_API_PASSWORD=
+export NCFX_FOREX_WS_USERNAME
+export NCFX_FOREX_WS_PASSWORD
 
 # WEBSITE: https://newchangefx.com/
 
