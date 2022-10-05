@@ -140,6 +140,7 @@ export BANKFRICK_API_KEY=
 export BANKFRICK_PASSWORD=
 export BANKFRICK_PRIVATE_KEY='-----BEGIN RSA PRIVATE KEY-----<singleLinePrivateKey_keepTheSingleQuotes>-----END RSA PRIVATE KEY-----'
 export BANKFRICK_PAGE_SIZE=500
+export BANKFRICK_API_ENDPOINT="https://olb.bankfrick.li/webapi/v2/"
 export BANKFRICK_ALLOW_INSECURE=
 export BANKFRICK_SUB_HTTP=
 export BANKFRICK_SUB_WS=
