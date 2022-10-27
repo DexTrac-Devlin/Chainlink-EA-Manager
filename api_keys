@@ -853,6 +853,25 @@ export FMPCLOUD_SUB_WS=
 #  N/A
 
 # =========================================================================================
+#  dP""b8    db    88        db    Yb  dP Yb  dP 
+# dP   `"   dPYb   88       dPYb    YbdP   YbdP  
+# Yb  "88  dP__Yb  88  .o  dP__Yb   dPYb    8P   
+#  YboodP dP""""Yb 88ood8 dP""""Yb dP  Yb  dP    
+export GALAXY_API_ENDPOINT=https://data.galaxy.com/v1.0/login
+export GALAXY_WS_API_ENDPOINT=wss://data.galaxy.com/v1.0/ws
+export GALAXY_WS_API_KEY=
+expoty GALAXY_API_PASSWORD=
+
+# WEBSITE: https://www.galaxy.com/                     
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
+# =========================================================================================
 #  dP""b8 888888 88b 88 888888 .dP"Y8 88 .dP"Y8     Yb    dP  dP"Yb  88     
 # dP   `" 88__   88Yb88 88__   `Ybo." 88 `Ybo."      Yb  dP  dP   Yb 88     
 # Yb  "88 88""   88 Y88 88""   o.`Y8b 88 o.`Y8b       YbdP   Yb   dP 88  .o 
