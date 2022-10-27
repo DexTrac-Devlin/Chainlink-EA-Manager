@@ -852,6 +852,26 @@ export FMPCLOUD_SUB_WS=
 # WS Supported Subscription Tiers:
 #  N/A
 
+
+# =========================================================================================
+#  dP""b8    db    88        db    Yb  dP 88 .dP"Y8 
+# dP   `"   dPYb   88       dPYb    YbdP  88 `Ybo." 
+# Yb  "88  dP__Yb  88  .o  dP__Yb   dPYb  88 o.`Y8b 
+#  YboodP dP""""Yb 88ood8 dP""""Yb dP  Yb 88 8bodP' 
+export GALAXIS_API_ENDPOINT=
+export GALAXIS_EC_REGISTRY_ADDRESS=0x163883263274e8Ef6332cFa84F35B23c6C51dF72
+export GALAXIS_EC_REGISTRY_MAP_ADDRESS=0x139B522955D54482E7662927653ABb0bFB6F19BA
+export GALAXIS_CHAIN_BATCH_WRITE_ADAPTER_ADDRESS=0xB57fba975C89492B016e0215E819B4d489F0fbcD
+
+# WEBSITE: https://galaxis.xyz/#/ 
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
 # =========================================================================================
 #  dP""b8    db    88        db    Yb  dP Yb  dP 
 # dP   `"   dPYb   88       dPYb    YbdP   YbdP  
