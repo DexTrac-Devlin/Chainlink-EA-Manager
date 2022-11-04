@@ -1,0 +1,43 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name elwood-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.1.235 \
+ -p 2235:2235 \
+ -e EA_PORT=2235 \
+ -e TIMEOUT=60000 \
+ -e API_KEY=$ELWOOD_API_KEY \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=elwood \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e CACHE_MIN_AGE=120000 \
+ -e CACHE_MAX_AGE=180000 \
+ -e RATE_LIMIT_ENABLED=true \
+ -e WARMUP_ENABLED=false \
+ -e RATE_LIMIT_API_PROVIDER=elwood \
+ -e RATE_LIMIT_API_TIER=$ELWOOD_SUB_HTTP \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=elwood \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="elwood-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/elwood-adapter:$1
