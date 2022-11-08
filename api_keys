@@ -394,6 +394,9 @@ export COINAPI_SUB_WS=
 export COINBASE_API_KEY=
 export COINBASE_SUB_HTTP=
 export COINBASE_SUB_WS=
+export COINBASE_NFT_AUTH_HEADER=
+export COINBASE_NFT_API_ENDPOINT=
+
 
 # WEBSITE: https://developers.coinbase.com/
 
