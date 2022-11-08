@@ -24,6 +24,13 @@ source ~/.profile
 # $3 --> specific version for external adapter (0.1.4)
 
 ########################################################
+#                    CHECK RELEASE                     #
+########################################################
+Check_Release() {
+RELEASE=$(cat /etc/os-release |grep PRETTY_NAME)
+}
+
+########################################################
 #                 INITIALIZE FUNCTION                  #
 ########################################################
 Initialize() {
@@ -41,14 +48,28 @@ Initialize() {
     read -p "${b} Enter your non-root username:${n} " USERNAME
     aptInstall () {
       echo "${b}Updating apt & Installing Docker-CE${n}"
-      apt-get -y update >>/dev/null 2>&1
-      apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
-      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
-      add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
-      apt-get -y update >>/dev/null 2>&1
-      apt-get -y install docker-ce >>/dev/null 2>&1
-      groupadd docker >>/dev/null 2>&1
-      sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
+    Check_Release
+      if [ $RELEASE == 'PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"' ]; then
+        echo "Debian 11 Detected."
+        apt-get -y update >>/dev/null 2>&1
+        apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
+        curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg >>/dev/null 2>&1
+        echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >>/dev/null 2>&1
+        apt-get -y update >>/dev/null 2>&1
+        apt-get -y install apt-get install docker-ce docker-ce-cli containerd.io
+        groupadd docker >>/dev/null 2>&1
+        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
+      else
+        echo "Running Release older than Debian 11."
+        apt-get -y update >>/dev/null 2>&1
+        apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
+        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
+        add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
+        apt-get -y update >>/dev/null 2>&1
+        apt-get -y install docker-ce >>/dev/null 2>&1
+        groupadd docker >>/dev/null 2>&1
+        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
+      fi
     }
     yumInstall (){
       echo "Updating yum"
