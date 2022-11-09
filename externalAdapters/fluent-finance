@@ -10,7 +10,7 @@ docker run \
  --link redis-cache \
  --ip 192.168.1.238 \
  -p 2238:2238 \
- -e EA_PORT=1113 \
+ -e EA_PORT=2238 \
  -e TIMEOUT=60000 \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
