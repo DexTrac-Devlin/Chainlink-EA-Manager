@@ -395,7 +395,7 @@ export COINBASE_API_KEY=
 export COINBASE_SUB_HTTP=
 export COINBASE_SUB_WS=
 export COINBASE_NFT_AUTH_HEADER=
-export COINBASE_NFT_API_ENDPOINT=
+export COINBASE_NFT_API_ENDPOINT=https://nft-api.coinbase.com
 
 
 # WEBSITE: https://developers.coinbase.com/
