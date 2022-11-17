@@ -689,6 +689,25 @@ export DXFEED_API_PASSWORD=
 #  N/A
 
 # =========================================================================================
+# 8888b.  Yb  dP 8888b.  Yb  dP 
+#  8I  Yb  YbdP   8I  Yb  YbdP  
+#  8I  dY   8P    8I  dY  dPYb  
+# 8888Y"   dP    8888Y"  dP  Yb 
+export DYDX_PRIVATE_KEY=
+export DYDX_STARK_MESSAGE=
+export DYDX_ORACLE_NAME=
+export DYDX_PROD_API_ENDPOINT=
+export DYDX_STAGING_API_ENDPOINT=
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # 888888 88     Yb        dP  dP"Yb   dP"Yb  8888b.  
 # 88__   88      Yb  db  dP  dP   Yb dP   Yb  8I  Yb 
 # 88""   88  .o   YbdPYbdP   Yb   dP Yb   dP  8I  dY 
