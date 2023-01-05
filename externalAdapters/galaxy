@@ -9,8 +9,8 @@ docker run \
  --net eas-net \
  --link redis-cache \
  --ip 192.168.1.223 \
- -p 2233:2233 \
- -e EA_PORT=1113 \
+ -p 2241:2241 \
+ -e EA_PORT=2241 \
  -e TIMEOUT=60000 \
  -e API_ENDPOINT=$GALAXY_API_ENDPOINT \
  -e WS_API_ENDPOINT=$WS_GALAXY_API_ENDPOINT \
