@@ -654,6 +654,22 @@ export DERIBIT_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# 8888b.     db    88""Yb 
+#  8I  Yb   dPYb   88__dP 
+#  8I  dY  dP__Yb  88"Yb  
+# 8888Y"  dP""""Yb 88  Yb 
+export DAR_API_USERNAME=
+export DAR_API_KEY=
+
+# WEBSITE: https://www.digitalassetresearch.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # 8888b.  88b 88 .dP"Y8      dP"Yb  88   88 888888 88""Yb Yb  dP 
 #  8I  Yb 88Yb88 `Ybo."     dP   Yb 88   88 88__   88__dP  YbdP  
 #  8I  dY 88 Y88 o.`Y8b     Yb b dP Y8   8P 88""   88"Yb    8P   
