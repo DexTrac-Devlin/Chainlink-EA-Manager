@@ -10,7 +10,7 @@ docker run \
  --link redis-cache \
  --ip 192.168.1.216 \
  -p 1216:1216 \
- -e EA_PORT=1261 \
+ -e EA_PORT=1216 \
  -e WS_ENABLED=true \
  -e TIMEOUT=30000 \
  -e API_URL=$TRADINGECONOMICS_API_URL \
