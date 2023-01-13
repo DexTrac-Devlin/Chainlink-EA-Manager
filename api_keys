@@ -1463,9 +1463,10 @@ export TRADERMADE_SUB_WS=
 #   88   88__dP   dPYb    8I  Yb 88 88Yb88 dP   `"     88__   dP   `" dP   Yb 88Yb88 
 #   88   88"Yb   dP__Yb   8I  dY 88 88 Y88 Yb  "88     88""   Yb      Yb   dP 88 Y88 
 #   88   88  Yb dP""""Yb 8888Y"  88 88  Y8  YboodP     888888  YboodP  YbodP  88  Y8 
-export TRADINGECONOMICS_API_KEY=
-export TRADINGECONOMICS_SUB_HTTP=
-export TRADINGECONOMICS_SUB_WS=
+export TRADINGECONOMICS_API_CLIENT_KEY=
+export TRADINGECONOMICS_API_CLIENT_SECRET=
+export TRADINGECONOMICS_SUB_HTTP=standard
+export TRADINGECONOMICS_SUB_WS=standard
 
 # WEBSITE: https://sso.tradingeconomics.com/sso/login?returnurl=https://tradingeconomics.com/api/
 
