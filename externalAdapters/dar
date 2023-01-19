@@ -8,9 +8,9 @@ docker run \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
- --ip 192.168.1.242 \
- -p 2242:2242 \
- -e EA_PORT=2242 \
+ --ip 192.168.1.244 \
+ -p 2244:2244 \
+ -e EA_PORT=2244 \
  -e TIMEOUT=60000 \
  -e API_USERNAME=$DAR_API_USERNAME \
  -e API_KEY=$DAR_API_KEY \
