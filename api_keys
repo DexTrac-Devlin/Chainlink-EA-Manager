@@ -1144,8 +1144,10 @@ export METALSAPI_SUB_WS=
 # 88  Y8  YboodP 88     dP  Yb 
 export NCFX_API_USERNAME= 
 export NCFX_API_PASSWORD=
-export NCFX_FOREX_WS_USERNAME
-export NCFX_FOREX_WS_PASSWORD
+export NCFX_FOREX_WS_USERNAME=
+export NCFX_FOREX_WS_PASSWORD=
+export NCFX_WS_API_ENDPOINT=wss://cryptofeed.ws.newchangefx.com
+export NCFX_FOREX_WS_APT_ENDPOINT=wss://fiat-ws.eu-west-2.apingxelb.v1.newchangefx.com/sub/fiat/ws/ref
 
 # WEBSITE: https://newchangefx.com/
 
