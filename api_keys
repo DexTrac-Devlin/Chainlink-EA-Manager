@@ -1191,6 +1191,28 @@ export NOMICS_SUB_WS=
 #  N/A
 
 # =========================================================================================
+#  dP"Yb     db    88b 88 8888b.     db    
+# dP   Yb   dPYb   88Yb88  8I  Yb   dPYb   
+# Yb   dP  dP__Yb  88 Y88  8I  dY  dP__Yb  
+#  YbodP  dP""""Yb 88  Y8 8888Y"  dP""""Yb 
+export OANDA_API_KEY=
+export OANDA_API_ACCOUNT_ID=
+export OANDA_API_ENDPOINT=https://exchange-rates-api.oanda.com/v2
+export OANDA_INSTRUMENTS_API_ENDPOINT=https://api-fxtrade.oanda.com/v3
+export OANDA_SSE_API_KEY=
+export OANDA_SSE_API_ENDPOINT=https://stream-fxtrade.oanda.com/v3
+export OANDA_SUB_HTTP=
+export OANDA_SUB_WS=
+
+# WEBSITE: https://developer.oanda.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 #  dP"Yb  88 88         88""Yb 88""Yb 88  dP""b8 888888        db    88""Yb 88 
 # dP   Yb 88 88         88__dP 88__dP 88 dP   `" 88__         dPYb   88__dP 88 
 # Yb   dP 88 88  .o     88"""  88"Yb  88 Yb      88""        dP__Yb  88"""  88 
