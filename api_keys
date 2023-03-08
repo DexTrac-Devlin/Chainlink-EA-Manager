@@ -96,6 +96,7 @@ export AMBERDATA_GASPRICE_SUB_WS=
 #   dPYb   88Yb88  YbdP  88__dP 88     dP   Yb dP   `" 88odP      dP   `"   dPYb   `Ybo." 
 #  dP__Yb  88 Y88   8P   88""Yb 88  .o Yb   dP Yb      88"Yb      Yb  "88  dP__Yb  o.`Y8b 
 # dP""""Yb 88  Y8  dP    88oodP 88ood8  YbodP   YboodP 88  Yb      YboodP dP""""Yb 8bodP' 
+export ANYBLOCK_API_KEY=
 export ANYBLOCK_GASPRICE_API_KEY=
 export ANYBLOCK_GASPRICE_SUB_HTTP=
 export ANYBLOCK_GASPRICE_SUB_WS=
