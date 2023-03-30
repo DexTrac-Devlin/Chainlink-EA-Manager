@@ -1542,6 +1542,24 @@ export TRUEUSD_API_KEY=
 #  N/A
 
 # =========================================================================================
+# 888888 Yb        dP  dP"Yb  .dP"Y8 88  dP""b8 8b    d8    db    
+#   88    Yb  db  dP  dP   Yb `Ybo." 88 dP   `" 88b  d88   dPYb   
+#   88     YbdPYbdP   Yb   dP o.`Y8b 88 Yb  "88 88YbdP88  dP__Yb  
+#   88      YP  YP     YbodP  8bodP' 88  YboodP 88 YY 88 dP""""Yb 
+export TWOSIGMA_WS_API_ENDPOINT= 
+export TWOSIGMA_WS_API_KEY=
+
+# WEBSITE: https://www.twosigma.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+
+
+# =========================================================================================
 # 88   88 88b 88 88 88""Yb 88 888888 
 # 88   88 88Yb88 88 88__dP 88   88   
 # Y8   8P 88 Y88 88 88""Yb 88   88   
