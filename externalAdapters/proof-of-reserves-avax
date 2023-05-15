@@ -1,0 +1,58 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name proof-of-reserves-avax-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.2.14 \
+ -p 2014:2014 \
+ -e EA_PORT=2014 \
+ -e TIMEOUT=60000 \
+ -e WBTC_ADAPTER_URL= \
+ -e RENVM_ADAPTER_URL= \
+ -e GEMINI_ADAPTER_URL= \
+ -e CELSIUS_ADDRESS_LIST_ADAPTER_URL= \
+ -e CHAIN_RESERVE_WALLET_ADAPTER_URL= \
+ -e WRAPPED_ADAPTER_URL= \
+ -e POR_ADDRESS_LIST_ADAPTER_URL= \
+ -e ADA_BALANCE_ADAPTER_URL= \
+ -e AMBERDATA_ADAPTER_URL=http://192.168.1.208:1208 \
+ -e AVALANCHE_PLATFORM_ADAPTER_URL=http://192.168.2.13:2013 \
+ -e BITCOIN_JSON_RPC_ADAPTER_URL= \
+ -e BLOCKCHAIN_COM_ADAPTER_URL= \
+ -e BLOCKCHAIR_ADAPTER_URL=http://192.168.1.194:1194 \
+ -e BLOCKCYPHER_ADAPTER_URL= \
+ -e BTC_COM_ADAPTER_URL= \
+ -e CRYPTOAPIS_ADAPTER_URL=http://192.168.1.193:1193 \
+ -e ETH_BALANCE_ADAPTER_URL= \
+ -e POR_ADDRESS_LIST_ADAPTER_URL=http://192.168.2.13:2013 \
+ -e ETH_BEACON_ADAPTER_URL=http://192.168.1.254:2254 \
+ -e LOTUS_ADAPTER_URL= \
+ -e POR_INDEXER_ADAPTER_URL= \
+ -e SOCHAIN_ADAPTER_URL= \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=proof-of-reserves-avax \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=proof-of-reserves-avax \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="proof-of-reserves-avax-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/proof-of-reserves-adapter:$1
