@@ -11,7 +11,7 @@ docker run \
  --ip 192.168.2.15 \
  -p 2015:2015 \
  -e EA_PORT=2015 \
- -e RPC_URL=$AVALANCHE_PCHAIN_RPC_URL \
+ -e RPC_URL=$AVALANCHE_RPC_URL \
  -e CHAIN_ID=43114 \
  -e TIMEOUT=60000 \
  -e CACHE_ENABLED=true \
