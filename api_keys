@@ -1576,6 +1576,28 @@ export TWOSIGMA_WS_API_KEY=
 # HTTP Supported Subscription Tiers:
 #  N/A
 
+# =========================================================================================
+# 888888 Yb        dP 888888 88     Yb    dP 888888 8888b.     db    888888    db    
+#   88    Yb  db  dP  88__   88      Yb  dP  88__    8I  Yb   dPYb     88     dPYb   
+#   88     YbdPYbdP   88""   88  .o   YbdP   88""    8I  dY  dP__Yb    88    dP__Yb  
+#   88      YP  YP    888888 88ood8    YP    888888 8888Y"  dP""""Yb   88   dP""""Yb 
+export TWELVEDATA_API_KEY=
+export TWELVEDATA_API_ENDPOINT=https://api.twelvedata.com/
+export TWELVEDATA_SUB_HTTP=
+
+# WEBSITE: https://twelvedata.com/
+
+# HTTP Supported Subscription Tiers:
+#  basic
+#  grow1
+#  grow2
+#  grow3
+#  pro1
+#  pro2
+#  pro3
+#  enterprise1
+#  enterprise2
+#  enterprise3
 
 
 # =========================================================================================
