@@ -859,6 +859,7 @@ export FINAGE_SUB_WS=
 # 88__   88 88Yb88 88Yb88 88  88 88   88 88__dP 
 # 88""   88 88 Y88 88 Y88 888888 Y8   8P 88""Yb 
 # 88     88 88  Y8 88  Y8 88  88 `YbodP' 88oodP 
+export FINNHUB_API_ENDPOINT=https://finnhub.io/api/v1
 export FINNHUB_API_KEY=
 export FINNHUB_SUB_HTTP=
 export FINNHUB_SUB_WS=
