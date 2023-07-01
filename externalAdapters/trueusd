@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name trueusd-adapter \
+ --restart=unless-stopped \
+ -p 1138:1138 \
+ --ip 192.168.1.138 \
+ -e EA_PORT=1138 \
+ -d public.ecr.aws/chainlink/adapters/trueusd-adapter:$1
