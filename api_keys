@@ -746,6 +746,23 @@ export DYDX_STAGING_API_ENDPOINT=
 #  N/A
 
 # =========================================================================================
+# 888888 88     Yb    dP 888888 88b 88 
+# 88__   88      Yb  dP  88__   88Yb88 
+# 88""   88  .o   YbdP   88""   88 Y88 
+# 888888 88ood8    YP    888888 88  Y8 
+export ELVEN_API_KEY=
+export ELVEN_API_SECRET=
+
+# WEBSITE: https://api.elevenlabs.io/docs
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
+# =========================================================================================
 # 888888 88     Yb        dP  dP"Yb   dP"Yb  8888b.  
 # 88__   88      Yb  db  dP  dP   Yb dP   Yb  8I  Yb 
 # 88""   88  .o   YbdPYbdP   Yb   dP Yb   dP  8I  dY 
