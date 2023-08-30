@@ -1052,6 +1052,22 @@ export INTRINIO_API_KEY=
 #  N/A
 
 # =========================================================================================
+# 88  dP"Yb  88b 88        db    88   88 
+# 88 dP   Yb 88Yb88       dPYb   88   88 
+# 88 Yb   dP 88 Y88 .o.  dP__Yb  Y8   8P 
+# 88  YbodP  88  Y8 `"' dP""""Yb `YbodP' 
+
+export IONAU_API_ENDPOINT=https://ion-digital-proof-of-reserve.instruxi.dev
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 #  88888 88""Yb 888888  dP""b8 8888b.  
 #     88 88__dP 88__   dP   `"  8I  Yb 
 # o.  88 88"""  88""   Yb  "88  8I  dY 
