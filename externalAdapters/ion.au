@@ -36,4 +36,4 @@ docker run \
  -l prometheus-scrape.job_name="ionau-redis" \
  -l prometheus-scrape.port=9080 \
  -l prometheus-scrape.metrics_path="/metrics" \
- -d public.ecr.aws/chainlink/adapters/ionau-adapter:$1
+ -d public.ecr.aws/chainlink/adapters/ion.au-adapter:$1
