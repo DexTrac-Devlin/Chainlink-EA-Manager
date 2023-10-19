@@ -958,7 +958,7 @@ export GALAXIS_CHAIN_BATCH_WRITE_ADAPTER_ADDRESS=0xB57fba975C89492B016e0215E819B
 export GALAXY_API_ENDPOINT=https://data.galaxy.com/v1.0/login
 export GALAXY_WS_API_ENDPOINT=wss://data.galaxy.com/v1.0/ws
 export GALAXY_WS_API_KEY=
-expoty GALAXY_API_PASSWORD=
+export GALAXY_API_PASSWORD=
 
 # WEBSITE: https://www.galaxy.com/                     
 
