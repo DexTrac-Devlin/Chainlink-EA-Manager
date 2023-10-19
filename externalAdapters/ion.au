@@ -4,7 +4,7 @@ source api_keys
 source misc_vars
 
 docker run \
- --name ionau-redis \
+ --name ion.au-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
