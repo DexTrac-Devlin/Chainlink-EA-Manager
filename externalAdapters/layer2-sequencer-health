@@ -16,6 +16,7 @@ docker run \
  -e METIS_RPC_ENDPOINT=$METIS_RPC_URL \
  -e OPTIMISM_HEALTH_ENDPOINT=https://mainnet-sequencer.optimism.io/health \
  -e OPTIMISM_RPC_ENDPOINT=$OPTIMISM_RPC_URL \
+ -e SCROLL_RPC_URL=$SCROLL_RPC_URL \
  -e TIMEOUT=30000 \
  -e CACHE_ENABLED=false \
  -e CACHE_TYPE=redis \
