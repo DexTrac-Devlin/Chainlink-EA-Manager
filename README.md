@@ -3,7 +3,7 @@ Collection of scripts for deploying and managing Chainlink External Adapters
 
 ---
 
-#### This has been tested on Debian 10 & 11.
+#### This has been tested on Debian 10, 11, & 12.
 
 (use at your own risk, consider this as 100% untested)
 
