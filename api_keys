@@ -386,6 +386,21 @@ export CFBENCHMARKS_SUB_WS=
 #  N/A
 
 # =========================================================================================
+#  dP""b8 88     888888    db    88""Yb     88""Yb    db    88b 88 88  dP 
+# dP   `" 88     88__     dPYb   88__dP     88__dP   dPYb   88Yb88 88odP  
+# Yb      88  .o 88""    dP__Yb  88"Yb      88""Yb  dP__Yb  88 Y88 88"Yb  
+#  YboodP 88ood8 888888 dP""""Yb 88  Yb     88oodP dP""""Yb 88  Y8 88  Yb 
+export CLEAR_BANK_API_KEY=
+
+# WEBSITE: https://clear.bank/enquiry-form
+
+# HTTP Supported Subscription Tiers:
+#  default
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 #  dP""b8  dP"Yb  88 88b 88    db    88""Yb 88 
 # dP   `" dP   Yb 88 88Yb88   dPYb   88__dP 88 
 # Yb      Yb   dP 88 88 Y88  dP__Yb  88"""  88 
