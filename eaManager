@@ -128,7 +128,7 @@ fi
   --ip=192.168.1.1 \
   -p 6379:6379 \
   -v ~/.redis:/data \
-  -d redis redis-server
+  -d redis redis-server --maxclients 2500
 
   # Provide Redis container information
   echo ""
