@@ -141,101 +141,6 @@ fi
   echo ""
   echo "Adding eaManager to PATH"
   sudo cp eaManager /usr/bin/eaManager
-
-
-  # Add environment variables to bash for each external adapter
-  echo ""
-  echo "Creating variables for each container..."
-  echo "ex: \$coingecko_EA points to http://192.168.1.113:113"
-  grep -qxF '# ====================================================' ~/.profile || echo '# ====================================================' >> ~/.profile
-  grep -qxF '# Setting variables for each of the external adapters:' ~/.profile || echo '# Setting variables for each of the external adapters:' >> ~/.profile
-  grep -qxF 'export amberdata_redis='http://192.168.1.208:1208'' ~/.profile || echo 'export amberdata_redis='http://192.168.1.208:1208'' >> ~/.profile
-  grep -qxF 'export anyblock_redis='http://192.168.1.207:1207'' ~/.profile || echo 'export anyblock_redis='http://192.168.1.207:1207'' >> ~/.profile
-  grep -qxF 'export apy_finance_coinmarketcap_redis='http://192.168.1.137:1137/?source=coinmarketcap'' ~/.profile || echo 'export apy_finance_coinmarketcap_redis='http://192.168.1.137:1137/?source=coinmarketcap'' >> ~/.profile
-  grep -qxF 'export apy_finance_cryptocompare_redis='http://192.168.1.136:1136/?source=cryptocompare'' ~/.profile || echo 'export apy_finance_cryptocompare_redis='http://192.168.1.136:1136/?source=cryptocompare'' >> ~/.profile
-  grep -qxF 'export arbitrum_sequencer_health_redis='http://192.168.1.55:5555'' ~/.profile || echo 'export arbitrum_sequencer_health_redis='http://192.168.1.55:5555'' >> ~/.profile
-  grep -qxF 'export bitso_redis='http://192.168.1.110:1110'' ~/.profile || echo 'export bitso_redis='http://192.168.1.110:1110'' >> ~/.profile
-  grep -qxF 'export blockchair_redis='http://192.168.1.194:1194'' ~/.profile || echo 'export blockchair_redis='http://192.168.1.194:1194'' >> ~/.profile
-  grep -qxF 'export blockcypher_renBTC_redis='http://192.168.1.118:1118'' ~/.profile || echo 'export blockcypher_renBTC_redis='http://192.168.1.118:1118'' >> ~/.profile
-  grep -qxF 'export blockcypher_wBTC_redis='http://192.168.1.119:1119'' ~/.profile || echo 'export blockcypher_wBTC_redis='http://192.168.1.119:1119'' >> ~/.profile
-  grep -qxF 'export blockstream_redis='http://192.168.1.195:1195'' ~/.profile || echo 'export blockstream_redis='http://192.168.1.195:1195'' >> ~/.profile
-  grep -qxF 'export coinapi_redis='http://192.168.1.112:1112'' ~/.profile || echo 'export coinapi_redis='http://192.168.1.112:1112'' >> ~/.profile
-  grep -qxF 'export coingecko_redis='http://192.168.1.113:1113'' ~/.profile || echo 'export coingecko_redis='http://192.168.1.113:1113'' >> ~/.profile
-  grep -qxF 'export coinlore_redis='http://192.168.1.150:1150'' ~/.profile || echo 'export coinlore_redis='http://192.168.1.150:1150'' >> ~/.profile
-  grep -qxF 'export coinmarketcap_redis='http://192.168.1.115:1115'' ~/.profile || echo 'export coinmarketcap_redis='http://192.168.1.115:1115'' >> ~/.profile
-  grep -qxF 'export coinmetrics_redis='http://192.168.1.164:1164'' ~/.profile || echo 'export coinmetrics_redis='http://192.168.1.164:1164'' >> ~/.profile
-  grep -qxF 'export coinpaprika_redis='http://192.168.1.116:1116'' ~/.profile || echo 'export coinpaprika_redis='http://192.168.1.116:1116'' >> ~/.profile
-  grep -qxF 'export coinranking_redis='http://192.168.1.154:1154'' ~/.profile || echo 'export coinranking_redis='http://192.168.1.154:1154'' >> ~/.profile
-  grep -qxF 'export cryptoapis_redis='http://192.168.1.193:1193'' ~/.profile || echo 'export cryptoapis_redis='http://192.168.1.193:1193'' >> ~/.profile
-  grep -qxF 'export cryptocompare_redis='http://192.168.1.114:1114'' ~/.profile || echo 'export cryptocompare_redis='http://192.168.1.114:1114'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_coinmarketcap__arbitrum_redis='http//192.168.1.190:1190'' ~/.profile || echo 'export crypto_volatility_coinmarketcap__arbitrum_redis='http//192.168.1.190:1190'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_coinmarketcap__matic_redis='http://192.168.1.148:1148'' ~/.profile || echo 'export crypto_volatility_coinmarketcap__matic_redis='http://192.168.1.148:1148'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_coinpaprika_redis='http://192.168.1.125:1125'' ~/.profile || echo 'export crypto_volatility_coinpaprika_redis='http://192.168.1.125:1125'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_coinpaprika__arbitrum_redis='http://192.168.1.191:1191'' ~/.profile || echo 'export crypto_volatility_coinpaprika__arbitrum_redis='http://192.168.1.191:1191'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_coinpaprika__matic_redis='http://192.168.1.199:1199'' ~/.profile || echo 'export crypto_volatility_coinpaprika__matic_redis='http://192.168.1.199:1199'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_cryptocompare__arbitrum='http://192.168.1.192:1192'' ~/.profile || echo 'export crypto_volatility_cryptocompare__arbitrum='http://192.168.1.192:1192'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_cryptocompare__matic_redis='http://192.168.1.149:1149'' ~/.profile || echo 'export crypto_volatility_cryptocompare__matic_redis='http://192.168.1.149:1149'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_multi--ethereum_redis='http://192.168.1.156:1156'' ~/.profile || echo 'export crypto_volatility_multi__mainnet_redis='http://192.168.1.156:1156'' >> ~/.profile
-  grep -qxF 'export crypto_volatility_nomics__matic_redis='http://192.168.1.147:1147'' ~/.profile || echo 'export crypto_volatility_nomics__matic_redis='http://192.168.1.147:1147'' >> ~/.profile
-  grep -qxF 'export currencylayer_redis='http://192.168.1.141:1141'' ~/.profile || echo 'export currencylayer_redis='http://192.168.1.141:1141'' >> ~/.profile
-  grep -qxF 'export defi_dozen_redis='http://192.168.1.217:1217'' ~/.profile || echo 'export defi_dozen_redis='http://192.168.1.217:1217'' >> ~/.profile
-  grep -qxF 'export defi_pulse_adapter_coinapi_redis='http://192.168.1.201:1201'' ~/.profile || echo 'export defi_pulse_adapter_coinapi_redis='http://192.168.1.201:1201'' >> ~/.profile
-  grep -qxF 'export defi_pulse_adapter_coinpaprika_redis='http://192.168.203.50:1203'' ~/.profile || echo 'export defi_pulse_adapter_coinpaprika_redis='http://192.168.203.50:1203'' >> ~/.profile
-  grep -qxF 'export defi_pulse_adapter_multi_redis='http://192.168.210:1210'' ~/.profile || echo 'export defi_pulse_adapter_multi_redis='http://192.168.210:1210'' >> ~/.profile
-  grep -qxF 'export defi_pulse_adapter_nomics_redis='http://192.168.1.200:1200'' ~/.profile || echo 'export defi_pulse_adapter_nomics_redis='http://192.168.1.200:1200'' >> ~/.profile
-  grep -qxF 'export defi_pulse_adapter_tiingo_redis='http://192.168.1.202:1202'' ~/.profile || echo 'export defi_pulse_adapter_tiingo_redis='http://192.168.1.202:1202'' >> ~/.profile
-  grep -qxF 'export dxdao_redis='http://192.168.1.157:1157'' ~/.profile || echo 'export dxdao_redis='http://192.168.1.157:1157'' >> ~/.profile
-  grep -qxF 'export dxfeed_redis='http://192.168.101:8001'' ~/.profile || echo 'export dxfeed_redis='http://192.168.101:8001'' >> ~/.profile
-  grep -qxF 'export dxfeed_secondary_redis='http://192.168.100:8000'' ~/.profile || echo 'export dxfeed_secondary_redis='http://192.168.100:8000'' >> ~/.profile
-  grep -qxF 'export eodhistoricaldata_redis='http://192.168.1.132:1132'' ~/.profile || echo 'export eodhistoricaldata_redis='http://192.168.1.132:1132'' >> ~/.profile
-  grep -qxF 'export fcsapi_redis='http://192.168.1.133:1133'' ~/.profile || echo 'export fcsapi_redis='http://192.168.1.133:1133'' >> ~/.profile
-  grep -qxF 'export finage_redis='http://192.168.1.169:1169'' ~/.profile || echo 'export finage_redis='http://192.168.1.169:1169'' >> ~/.profile
-  grep -qxF 'export fixer_redis='http://192.168.1.130:1130'' ~/.profile || echo 'export fixer_redis='http://192.168.1.130:1130'' >> ~/.profile
-  grep -qxF 'export iex_cloud_redis='http://192.168.102:8002'' ~/.profile || echo 'export iex_cloud_redis='http://192.168.102:8002'' >> ~/.profile
-  grep -qxF 'export implied_price_redis='http://192.168.1.174:1174'' ~/.profile || echo 'export implied_price_redis='http://192.168.1.174:1174'' >> ~/.profile
-  grep -qxF 'export intrinio_redis='http://192.168.1.197:1197'' ~/.profile || echo 'export intrinio_redis='http://192.168.1.197:1197'' >> ~/.profile
-  grep -qxF 'export linear_finance_redis='http://192.168.1.155.50:1155'' ~/.profile || echo 'export linear_finance_redis='http://192.168.1.155.50:1155'' >> ~/.profile
-  grep -qxF 'export lition_redis='http://192.168.1.140:1140'' ~/.profile || echo 'export lition_redis='http://192.168.1.140:1140'' >> ~/.profile
-  grep -qxF 'export metalsapi_redis='http://192.168.1.129:1129'' ~/.profile || echo 'export metalsapi_redis='http://192.168.1.129:1129'' >> ~/.profile
-  grep -qxF 'export ncfx_redis='http://192.168.1.163:1163'' ~/.profile || echo 'export ncfx_redis='http://192.168.1.163:1163'' >> ~/.profile
-  grep -qxF 'export nomics_redis='http://192.168.1.111:1111'' ~/.profile || echo 'export nomics_redis='http://192.168.1.111:1111'' >> ~/.profile
-  grep -qxF 'export orchid_bandwidth_adapter_redis='http://192.168.1.124:1124'' ~/.profile || echo 'export orchid_bandwidth_adapter_redis='http://192.168.1.124:1124'' >> ~/.profile
-  grep -qxF 'export paxos_redis='http://192.168.1.122:1122'' ~/.profile || echo 'export paxos_redis='http://192.168.1.122:1122'' >> ~/.profile
-  grep -qxF 'export poa_noCache='http://192.168.1.206:1206'' ~/.profile || echo 'export poa_noCache='http://192.168.1.206:1206'' >> ~/.profile
-  grep -qxF 'export polygon_redis='http://192.168.1.117:1117'' ~/.profile || echo 'export polygon_redis='http://192.168.1.117:1117'' >> ~/.profile
-  grep -qxF 'export redis_cache='http://192.168.1.1:6379'' ~/.profile || echo 'export redis_cache='http://192.168.1.1:6379'' >> ~/.profile
-  grep -qxF 'export satoshitango_redis='http://192.168.1.142:1142'' ~/.profile || echo 'export satoshitango_redis='http://192.168.1.142:1142'' >> ~/.profile
-  grep -qxF 'export set_token_index_multi_ethereum_redis='http://192.168.1.213:1213'' ~/.profile || echo 'export set_token_multi_ethereum_redis='http://192.168.1.213:1213'' >> ~/.profile
-  grep -qxF 'export set_token_index_multi_matic_redis='http://192.168.1.212:1212'' ~/.profile || echo 'export set_token_multi_matic_redis='http://192.168.1.212:1212'' >> ~/.profile
-  grep -qxF 'export stasis_noCache='http://192.168.1.205:1205'' ~/.profile || echo 'export stasis_noCache='http://192.168.1.205:1205'' >> ~/.profile
-  grep -qxF 'export synth_coinapi_redis='http://192.168.1.126:1126'' ~/.profile || echo 'export synth_coinapi_redis='http://192.168.1.126:1126'' >> ~/.profile
-  grep -qxF 'export synth_coingecko_redis='http://192.168.1.127:1127'' ~/.profile || echo 'export synth_coingecko_redis='http://192.168.1.127:1127'' >> ~/.profile
-  grep -qxF 'export synth_cryptocompare_redis='http://192.168.1.128:1128'' ~/.profile || echo 'export synth_cryptocompare_redis='http://192.168.1.128:1128'' >> ~/.profile
-  grep -qxF 'export synth_index_redis='http://192.168.1.198:1198'' ~/.profile || echo 'export synth_index_redis='http://192.168.1.198:1198'' >> ~/.profile
-  grep -qxF 'export terraview_redis='http://192.168.1.215:1215'' ~/.profile || echo 'export terraview_redis='http://192.168.1.215:1215'' >> ~/.profile
-  grep -qxF 'export tiingo_redis='http://192.168.1.134:1134'' ~/.profile || echo 'export tiingo_redis='http://192.168.1.134:1134'' >> ~/.profile
-  grep -qxF 'export tradermade_redis='http://192.168.1.209:1209'' ~/.profile || echo 'export tradermade_redis='http://192.168.1.209:1209'' >> ~/.profile
-  grep -qxF 'export trueusd_adapter_redis='http://192.168.1.138:1138'' ~/.profile || echo 'export trueusd_adapter_redis='http://192.168.1.138:1138'' >> ~/.profile
-  grep -qxF 'export unibit_redis='http://192.168.1.143:1143'' ~/.profile || echo 'export unibit_redis='http://192.168.1.143:1143'' >> ~/.profile
-  grep -qxF 'export vesper_coinmarketcap_redis='http://192.168.1.153:1153'' ~/.profile || echo 'export vesper_coinmarketcap_redis='http://192.168.1.153:1153'' >> ~/.profile
-  grep -qxF 'export vesper_multi_redis='http://192.168.1.158:1158'' ~/.profile || echo 'export vesper_multi_redis='http://192.168.1.158:1158'' >> ~/.profile
-  grep -qxF 'export vesper_nomics_redis='http://192.168.1.152:1152'' ~/.profile || echo 'export vesper_nomics_redis='http://192.168.1.152:1152'' >> ~/.profile
-  grep -qxF 'export vesper_tiingo_redis='http://192.168.1.151:1151'' ~/.profile || echo 'export vesper_tiingo_redis='http://192.168.1.151:1151'' >> ~/.profile
-  grep -qxF 'export viewfunction_redis='http://192.168.1.211:1211'' ~/.profile || echo 'export viewfunction_redis='http://192.168.1.211:1211'' >> ~/.profile
-  grep -qxF 'export wootrade_redis='http://192.168.1.161:1161'' ~/.profile || echo 'export wootrade_redis='http://192.168.1.161:1161'' >> ~/.profile
-  grep -qxF 'export wti_outlier_eth_redis='http://192.168.1.222:2222'' ~/.profile || echo 'export wti_outlier_eth_redis='http://192.168.1.222:2222'' >> ~/.profile
-  grep -qxF 'export wti_outlier_heco_redis='http://192.168.1.224:2224'' ~/.profile || echo 'export wti_outlier_heco_redis='http://192.168.1.224:2224'' >> ~/.profile
-  grep -qxF 'export xbto_redis='http://192.168.1.139:1139'' ~/.profile || echo 'export xbto_redis='http://192.168.1.139:1139'' >> ~/.profile
-  grep -qxF 'export xsushi_price_redis='http://192.168.1.214:1214'' ~/.profile || echo 'export xsushi_price_redis='http://192.168.1.214:1214'' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  #grep -qxF '' ~/.profile || echo '' >> ~/.profile
-  source ~/.profile
 }
 
 ########################################################
@@ -251,15 +156,63 @@ bash externalAdapters/$1 $2
 #                  UPGRADE FUNCTION                    #
 ########################################################
 Upgrade() {
-# Upgrade existing EA to specified version
-echo "Stopping, removing, and redeploying $1 at version $2"
-docker stop "$1"-redis
-docker rm "$1"-redis
-echo "${b}Deploying $1:$2 external adapter...${n}"
-bash externalAdapters/$1 $2
+  # Check if skopeo is installed, if not, install it
+  if ! command -v skopeo &> /dev/null; then
+    echo "skopeo could not be found, installing..."
+    sudo apt-get update && sudo apt-get install -y skopeo
+  fi
 
+  # Fetch available tags using skopeo
+  local repo="public.ecr.aws/chainlink/adapters/$1-adapter"
+  local tags
+  local tag_list
+  local selected_tag
+
+  echo "Fetching available tags for $1-adapter..."
+  tags=$(skopeo list-tags "docker://$repo" | jq -r '.Tags[]' | sort -Vr | head -n 10)
+
+  if [[ -z "$tags" ]]; then
+    echo "No tags found for repository: $repo"
+    exit 1
+  fi
+
+  # Display the tags and prompt the user for selection
+  echo "Available tags for $repo:"
+  tag_list=($tags)  # Convert tags into an array
+
+  for i in "${!tag_list[@]}"; do
+    echo "$i) ${tag_list[$i]}"
+  done
+
+  read -p "Select a tag (0-${#tag_list[@]}): " selected_index
+
+  # Validate input and assign the selected tag
+  if [[ "$selected_index" =~ ^[0-9]+$ ]] && [ "$selected_index" -ge 0 ] && [ "$selected_index" -lt "${#tag_list[@]}" ]; then
+    selected_tag="${tag_list[$selected_index]}"
+    echo "Selected tag: $selected_tag"
+  else
+    echo "Invalid selection."
+    exit 1
+  fi
+
+  # Ensure selected_tag is not empty
+  if [ -z "$selected_tag" ]; then
+    echo "No tag selected, exiting."
+    exit 1
+  fi
+
+  # Upgrade existing EA to the selected version
+  echo "Stopping, removing, and redeploying $1 at version $selected_tag"
+  docker stop "$1-redis"
+  docker rm "$1-redis"
+
+  # Construct the Docker image reference and verify it
+  local docker_image="$repo:$selected_tag"
+  echo "Running Docker container with image: $docker_image"
+
+  # Deploy the container with the selected tag
+  docker run -d --name "$1-redis" "$docker_image"
 }
-
 ########################################################
 #                  TEST FUNCTION                    #
 ########################################################
