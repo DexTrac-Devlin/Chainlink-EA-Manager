@@ -147,9 +147,58 @@ fi
 #                    DEPLOY FUNCTION                   #
 ########################################################
 Deploy() {
-# Deploy new EA
-echo "${b}Deploying $1:$2 external adapter...${n}"
-bash externalAdapters/$1 $2
+  # Check if skopeo is installed, if not, install it
+  if ! command -v skopeo &> /dev/null; then
+    echo "skopeo could not be found, installing..."
+    sudo apt-get update && sudo apt-get install -y skopeo
+  fi
+
+  # Fetch available tags using skopeo
+  local repo="public.ecr.aws/chainlink/adapters/$1-adapter"
+  local tags
+  local tag_list
+  local selected_tag
+
+  echo "Fetching available tags for $1-adapter..."
+  tags=$(skopeo list-tags "docker://$repo" | jq -r '.Tags[]' | sort -Vr | head -n 10)
+
+  if [[ -z "$tags" ]]; then
+    echo "No tags found for repository: $repo"
+    exit 1
+  fi
+
+  # Display the tags and prompt the user for selection
+  echo "Available tags for $repo:"
+  tag_list=($tags)  # Convert tags into an array
+
+  for i in "${!tag_list[@]}"; do
+    echo "$i) ${tag_list[$i]}"
+  done
+
+  read -p "Select a tag (0-${#tag_list[@]}): " selected_index
+
+  # Validate input and assign the selected tag
+  if [[ "$selected_index" =~ ^[0-9]+$ ]] && [[ "$selected_index" -ge 0 ]] && [[ "$selected_index" -lt "${#tag_list[@]}" ]]; then
+    selected_tag="${tag_list[$selected_index]}"
+    echo "Selected tag: $selected_tag"
+  else
+    echo "Invalid selection."
+    exit 1
+  fi
+
+  # Ensure selected_tag is not empty
+  if [ -z "$selected_tag" ]; then
+    echo "No tag selected, exiting."
+    exit 1
+  fi
+
+  # Deploy the external adapter with the selected version
+  echo "Deploying $1 at version $selected_tag"
+  local docker_image="$repo:$selected_tag"
+  echo "Running Docker container with image: $docker_image"
+
+  # Deploy the container with the selected tag
+  docker run -d --name "$1-redis" --rm "$docker_image"
 }
 
 ########################################################
