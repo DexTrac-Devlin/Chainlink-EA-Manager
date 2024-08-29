@@ -24,13 +24,6 @@ source ~/.profile
 # $3 --> specific version for external adapter (0.1.4)
 
 ########################################################
-#                    CHECK RELEASE                     #
-########################################################
-Check_Release() {
-RELEASE=$(cat /etc/os-release |grep PRETTY_NAME)
-}
-
-########################################################
 #                 INITIALIZE FUNCTION                  #
 ########################################################
 Initialize() {
@@ -48,28 +41,14 @@ Initialize() {
     read -p "${b} Enter your non-root username:${n} " USERNAME
     aptInstall () {
       echo "${b}Updating apt & Installing Docker-CE${n}"
-    Check_Release
-      if [ $RELEASE == 'PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"' ]; then
-        echo "Debian 11 Detected."
-        apt-get -y update >>/dev/null 2>&1
-        apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
-        curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg >>/dev/null 2>&1
-        echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >>/dev/null 2>&1
-        apt-get -y update >>/dev/null 2>&1
-        apt-get -y install docker-ce docker-ce-cli containerd.io
-        groupadd docker >>/dev/null 2>&1
-        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
-      else
-        echo "Running Release older than Debian 11."
-        apt-get -y update >>/dev/null 2>&1
-        apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
-        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
-        add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
-        apt-get -y update >>/dev/null 2>&1
-        apt-get -y install docker-ce >>/dev/null 2>&1
-        groupadd docker >>/dev/null 2>&1
-        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
-      fi
+      apt-get -y update >>/dev/null 2>&1
+      apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
+      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
+      add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
+      apt-get -y update >>/dev/null 2>&1
+      apt-get -y install docker-ce >>/dev/null 2>&1
+      groupadd docker >>/dev/null 2>&1
+      sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
     }
     yumInstall (){
       echo "Updating yum"
@@ -107,7 +86,7 @@ Initialize() {
   echo "${b}Creating Docker network...${n}"
   docker network create \
   --driver=bridge \
-  --subnet=192.168.0.0/16 \
+  --subnet=192.168.1.0/16 \
   --gateway=192.168.0.1 \
   eas-net
 
@@ -192,13 +171,18 @@ Deploy() {
     exit 1
   fi
 
-  # Deploy the external adapter with the selected version
+  # Deploy the external adapter with the selected version using the corresponding bash script
   echo "Deploying $1 at version $selected_tag"
-  local docker_image="$repo:$selected_tag"
-  echo "Running Docker container with image: $docker_image"
 
-  # Deploy the container with the selected tag
-  docker run -d --name "$1-redis" --rm "$docker_image"
+  # Ensure the script exists before attempting to execute it
+  local deploy_script="externalAdapters/$1"
+  if [[ ! -x "$deploy_script" ]]; then
+    echo "Deployment script $deploy_script not found or not executable."
+    exit 1
+  fi
+
+  # Run the deployment script with the selected tag
+  bash "$deploy_script" "$selected_tag"
 }
 
 ########################################################
@@ -236,7 +220,7 @@ Upgrade() {
   read -p "Select a tag (0-${#tag_list[@]}): " selected_index
 
   # Validate input and assign the selected tag
-  if [[ "$selected_index" =~ ^[0-9]+$ ]] && [ "$selected_index" -ge 0 ] && [ "$selected_index" -lt "${#tag_list[@]}" ]; then
+  if [[ "$selected_index" =~ ^[0-9]+$ ]] && [[ "$selected_index" -ge 0 ]] && [[ "$selected_index" -lt "${#tag_list[@]}" ]]; then
     selected_tag="${tag_list[$selected_index]}"
     echo "Selected tag: $selected_tag"
   else
@@ -250,18 +234,22 @@ Upgrade() {
     exit 1
   fi
 
-  # Upgrade existing EA to the selected version
+  # Stop and remove the existing container
   echo "Stopping, removing, and redeploying $1 at version $selected_tag"
   docker stop "$1-redis"
   docker rm "$1-redis"
 
-  # Construct the Docker image reference and verify it
-  local docker_image="$repo:$selected_tag"
-  echo "Running Docker container with image: $docker_image"
+  # Ensure the script exists before attempting to execute it
+  local upgrade_script="externalAdapters/$1"
+  if [[ ! -x "$upgrade_script" ]]; then
+    echo "Upgrade script $upgrade_script not found or not executable."
+    exit 1
+  fi
 
-  # Deploy the container with the selected tag
-  docker run -d --name "$1-redis" "$docker_image"
+  # Run the upgrade script with the selected tag
+  bash "$upgrade_script" "$selected_tag"
 }
+
 ########################################################
 #                  TEST FUNCTION                    #
 ########################################################
