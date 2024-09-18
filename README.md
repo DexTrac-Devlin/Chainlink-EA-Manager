@@ -29,10 +29,10 @@ sudo ./eaManager.sh -i
 --
 ### Deploy New External Adapter With Specific Version
 * This will:
-  * Deploy a new external adapter of the desired release.
+  * Deploy a new external adapter of the selected release.
   
 ```bash
-./eaManager.sh -d coingecko 1.0.0
+./eaManager.sh -d coingecko
 ```
 
 
@@ -41,10 +41,10 @@ sudo ./eaManager.sh -i
 * This will:
   * Stop the current container.
   * Remove the container.
-  * Deploy a new container based on the desired image version.
+  * Deploy a new container based on the selected image version.
 
 ```bash
-./eaManager.sh -u coingecko 1.0.4
+./eaManager.sh -u coingecko
 ```
 
 
