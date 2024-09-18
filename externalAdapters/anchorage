@@ -1,0 +1,39 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name anchorage-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.2.53 \
+ -p 2053:2053 \
+ -e EA_PORT=2053 \
+ -e TIMEOUT=60000 \
+ -e API_ENDPOINT=$ANCHORAGE_API_ENDPOINT \
+ -e ETH_API_KEY=$ANCHORAGE_ETH_API_KEY \
+ -e BTC_API_KEY=$ANCHORAGE_BTC_API_KEY \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=anchorage \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=anchorage \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="anchorage-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/anchorage-adapter:$1
