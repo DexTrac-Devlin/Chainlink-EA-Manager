@@ -8,7 +8,7 @@ docker run \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
- --ip 192.168.1.113 \
+ --ip 192.168.2.59 \
  -p 2059:2059 \
  -e EA_PORT=2059 \
  -e TIMEOUT=60000 \
