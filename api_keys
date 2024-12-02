@@ -1331,6 +1331,22 @@ export METALSAPI_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# 88b 88    db    Yb    dP           dP""b8  dP"Yb  88b 88 .dP"Y8 88   88 88     888888 88 88b 88  dP""b8
+# 88Yb88   dPYb    Yb  dP  ________ dP   `" dP   Yb 88Yb88 `Ybo." 88   88 88       88   88 88Yb88 dP   `"
+# 88 Y88  dP__Yb    YbdP   """""""" Yb      Yb   dP 88 Y88 o.`Y8b Y8   8P 88  .o   88   88 88 Y88 Yb  "88
+# 88  Y8 dP""""Yb    YP              YboodP  YbodP  88  Y8 8bodP' `YbodP' 88ood8   88   88 88  Y8  YboodP
+export NAV_CONSULTING_ADAPT3R_API_KEY=
+export NAV_CONSULTING_ADAPT3R_SECRET_KEY=
+
+# WEBSITE : N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # 88b 88  dP""b8 888888 Yb  dP 
 # 88Yb88 dP   `" 88__    YbdP  
 # 88 Y88 Yb      88""    dPYb  
