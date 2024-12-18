@@ -27,6 +27,19 @@ export ONEFORGE_SUB_HTTP=
 # WS Supported Subscription Tiers:
 #  N/A
 
+# =========================================================================================
+#    db    88     888888 88b 88  dP"Yb  
+#   dPYb   88     88__   88Yb88 dP   Yb 
+#  dP__Yb  88  .o 88""   88 Y88 Yb   dP 
+# dP""""Yb 88ood8 888888 88  Y8  YbodP  
+export ALENO_API_KEY=
+# WEBSITE: https://aleno.ai/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
 
 
 # =========================================================================================
@@ -1222,6 +1235,24 @@ export JPEGD_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# 88  dP    db    88 88  dP  dP"Yb           .dP"Y8 888888    db    888888 888888 
+# 88odP    dPYb   88 88odP  dP   Yb ________ `Ybo."   88     dPYb     88   88__   
+# 88"Yb   dP__Yb  88 88"Yb  Yb   dP """""""" o.`Y8b   88    dP__Yb    88   88""   
+# 88  Yb dP""""Yb 88 88  Yb  YbodP           8bodP'   88   dP""""Yb   88   888888 
+export KAIKO_STATE_NODE_OPERATOR=
+export KAIKO_STATE_API_KEY=
+export KAIKO_STATE_SUB_WS=
+
+# WEBSITE: https://www.kaiko.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+
+# =========================================================================================
 # 88  dP    db    88 88  dP  dP"Yb  
 # 88odP    dPYb   88 88odP  dP   Yb 
 # 88"Yb   dP__Yb  88 88"Yb  Yb   dP 
@@ -1326,6 +1357,21 @@ export METALSAPI_SUB_WS=
 #  basic
 #  professional
 #  professionalplus
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
+# 8b    d8  dP"Yb  88""Yb 88   88 88        db             .dP"Y8 888888    db    888888 888888 
+# 88b  d88 dP   Yb 88__dP 88   88 88       dPYb   ________ `Ybo."   88     dPYb     88   88__   
+# 88YbdP88 Yb   dP 88""Yb Y8   8P 88  .o  dP__Yb  """""""" o.`Y8b   88    dP__Yb    88   88""   
+# 88 YY 88  YbodP  88oodP `YbodP' 88ood8 dP""""Yb          8bodP'   88   dP""""Yb   88   888888 
+export MOBULA_API_KEY=
+
+# WEBSITE : N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
 
 # WS Supported Subscription Tiers:
 #  N/A
