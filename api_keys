@@ -285,7 +285,12 @@ export BITGO_API_KEY=
 # 88__dP 88   88   dP   `" dP   Yb ________ 88__dP 88__   `Ybo." 88__   88__dP  Yb  dP  88__   `Ybo."
 # 88""Yb 88   88   Yb  "88 Yb   dP """""""" 88"Yb  88""   o.`Y8b 88""   88"Yb    YbdP   88""   o.`Y8b
 # 88oodP 88   88    YboodP  YbodP           88  Yb 888888 8bodP' 888888 88  Yb    YP    888888 8bodP'
-export BITGO_RESERVES_VERIFICATION_PUBKEY=""
+# We have to be creative to get this to work with the required linebreaks.
+read -r -d '' BITGO_RESERVES_VERIFICATION_PUBKEY << EOM
+-----BEGIN PUBLIC KEY-----
+PUT YOUR PUBLIC KEY HERE
+-----END PUBLIC KEY-----
+EOM
 
 # WEBSITE: https://developers.bitgo.com/
 
