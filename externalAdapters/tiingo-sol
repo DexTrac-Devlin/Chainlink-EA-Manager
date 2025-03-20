@@ -1,8 +1,11 @@
 #!/bin/bash
 
-source api_keys
-source misc_vars
+# Source configuration files with absolute paths to ensure they work regardless of where the script is called from
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo_root="$(cd "${script_dir}/.." && pwd)"
 
+source "${repo_root}/api_keys"
+source "${repo_root}/misc_vars"
 docker run \
  --name tiingo-sol-redis \
  --restart=unless-stopped \

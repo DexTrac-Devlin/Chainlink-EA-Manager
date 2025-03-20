@@ -11,13 +11,24 @@ nun=$(tput rmul)
 ########################################################
 #                      Variables                       #
 ########################################################
-IP_ADDRESS=$(ip route get 1.2.3.4 | awk '{print $7}')
-VERSION="0.0.2"
+# Get IP address in a cross-platform way
+if [[ "$(uname)" == "Darwin" ]]; then
+  # macOS
+  IP_ADDRESS=$(ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}' | head -n 1)
+else
+  # Linux
+  IP_ADDRESS=$(ip route get 1.2.3.4 | awk '{print $7}')
+fi
+VERSION="0.0.3"
 
 # Grab API keys from flat file
 source api_keys
 # Grab Container names from flat file
-source ~/.profile
+if [[ -f ~/.profile ]]; then
+  source ~/.profile
+elif [[ -f ~/.bash_profile && "$(uname)" == "Darwin" ]]; then
+  source ~/.bash_profile
+fi
 
 # $1 --> option (--deploy)
 # $2 --> external adapter name (--coingekco)
@@ -30,84 +41,116 @@ Initialize() {
 # Initializes a new Docker environment
   echo "${b}Initializing new Docker environment...${n}"
 
-  # Intall Docker if not already installed
-  if [ $(dpkg-query -W -f='${Status}' docker-ce 2>/dev/null | grep -c "install ok installed") -eq 0 ];
-  then
-    # Check if running as root
-    if [ "$EUID" -ne 0 ]
-      then echo "${b}Run as elevated user (sudo)${n}"
-      exit
-    fi
-    read -p "${b} Enter your non-root username:${n} " USERNAME
-    aptInstall () {
-      echo "${b}Updating apt & Installing Docker-CE${n}"
-      apt-get -y update >>/dev/null 2>&1
-      apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
-      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
-      add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
-      apt-get -y update >>/dev/null 2>&1
-      apt-get -y install docker-ce >>/dev/null 2>&1
-      groupadd docker >>/dev/null 2>&1
-      sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
-    }
-    yumInstall (){
-      echo "Updating yum"
-      echo "Installing dependencies & Docker-CE"
-      sudo yum remove docker* >>/dev/null 2>&1
-      sudo yum -y update >>/dev/null 2>&1
-      sudo yum -y remove docker* >>/dev/null 2>&1
-      sudo yum -y install yum-utils >>/dev/null 2>&1
-      sudo yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  >>/dev/null 2>&1
-      sudo yum -y install docker-ce docker-ce-cli containerd.io >>/dev/null 2>&1
-      sudo systemctl start docker >>/dev/null 2>&1
-      groupadd docker >>/dev/null 2>&1
-      sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
-      sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >>/dev/null 2>&1
-      sudo chmod +x /usr/local/bin/docker-compose
-      docker-compose --version
-      sudo dnf install git -y
-    }
-    apt=`command -v apt-get`
-    yum=`command -v yum`
-
-    if [ -n "$apt" ]; then
-      echo "apt detected"
-      aptInstall
-    elif [ -n "$yum" ]; then
-      echo "yum detected"
-      yumInstall
+  # Check if Docker is installed and install it if needed
+  if ! command -v docker &> /dev/null; then
+    echo "${b}Docker not found. Installing Docker...${n}"
+    
+    # Detect OS
+    if [[ "$(uname)" == "Darwin" ]]; then
+      # macOS - use Homebrew
+      if ! command -v brew &> /dev/null; then
+        echo "${b}Homebrew not found. Please install Homebrew first:${n}"
+        echo "https://brew.sh/"
+        exit 1
+      fi
+      
+      echo "${b}Installing Docker Desktop for Mac...${n}"
+      brew install --cask docker
+      
+      echo "${b}Docker installed. Please open Docker Desktop manually and complete the setup.${n}"
+      echo "${b}After Docker is running, please run this script again.${n}"
+      exit 0
     else
-      echo "Err: apt or yum not detected.";
-      exit 1;
+      # Linux
+      if [ "$EUID" -ne 0 ]; then
+        echo "${b}Run as elevated user (sudo)${n}"
+        exit 1
+      fi
+      
+      read -p "${b}Enter your non-root username:${n} " USERNAME
+      
+      apt=`command -v apt-get`
+      yum=`command -v yum`
+      
+      if [ -n "$apt" ]; then
+        echo "apt detected"
+        echo "${b}Updating apt & Installing Docker-CE${n}"
+        apt-get -y update >>/dev/null 2>&1
+        apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common >>/dev/null 2>&1
+        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - >>/dev/null 2>&1
+        add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >>/dev/null 2>&1
+        apt-get -y update >>/dev/null 2>&1
+        apt-get -y install docker-ce >>/dev/null 2>&1
+        groupadd docker >>/dev/null 2>&1
+        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
+      elif [ -n "$yum" ]; then
+        echo "yum detected"
+        echo "Updating yum"
+        echo "Installing dependencies & Docker-CE"
+        sudo yum remove docker* >>/dev/null 2>&1
+        sudo yum -y update >>/dev/null 2>&1
+        sudo yum -y remove docker* >>/dev/null 2>&1
+        sudo yum -y install yum-utils >>/dev/null 2>&1
+        sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo >>/dev/null 2>&1
+        sudo yum -y install docker-ce docker-ce-cli containerd.io >>/dev/null 2>&1
+        sudo systemctl start docker >>/dev/null 2>&1
+        groupadd docker >>/dev/null 2>&1
+        sudo usermod -aG docker $USERNAME >>/dev/null 2>&1
+        sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >>/dev/null 2>&1
+        sudo chmod +x /usr/local/bin/docker-compose
+        docker-compose --version
+        sudo dnf install git -y
+      else
+        echo "Err: apt or yum not detected.";
+        exit 1;
+      fi
     fi
+  fi
+
+  # Check if Docker is running
+  if ! docker info &> /dev/null; then
+    echo "${b}Docker is not running. Please start Docker and try again.${n}"
+    exit 1
   fi
 
   # create docker network
   echo "${b}Creating Docker network...${n}"
-  docker network create \
-  --driver=bridge \
-  --subnet=192.168.0.0/16 \
-  --gateway=192.168.0.1 \
-  eas-net
+  if ! docker network inspect eas-net &> /dev/null; then
+    # Create the docker network - same configuration for both Mac and Linux
+    docker network create \
+    --driver=bridge \
+    --subnet=192.168.0.0/16 \
+    --gateway=192.168.0.1 \
+    eas-net
+  else
+    echo "${b}Network eas-net already exists${n}"
+  fi
 
   # create directory to use for redis volume
-if [ ! -d /home/mlzboy/b2c2/shared/db ]; then
-  echo "${b}Creating Redis container...${n}"
-  mkdir ~/.redis;
-fi
-
+  if [ ! -d ~/.redis ]; then
+    echo "${b}Creating Redis directory...${n}"
+    mkdir -p ~/.redis
+  fi
 
   # deploy redis container
   echo ""
   echo "${b}Redis volume located at ~/.redis${n}"
-  docker run \
-  --name redis-cache \
-  --restart=unless-stopped \
-  --net eas-net \
-  --ip=192.168.1.1 \
-  -p 6379:6379 \
-  -v ~/.redis:/data \
-  -d redis redis-server --maxclients 2500
+  if ! docker ps -a | grep -q redis-cache; then
+    docker run \
+    --name redis-cache \
+    --restart=unless-stopped \
+    --net eas-net \
+    --ip=192.168.1.1 \
+    -p 6379:6379 \
+    -v ~/.redis:/data \
+    -d redis redis-server --maxclients 2500
+  else
+    echo "${b}Redis container already exists${n}"
+    if ! docker ps | grep -q redis-cache; then
+      echo "${b}Starting existing Redis container...${n}"
+      docker start redis-cache
+    fi
+  fi
 
   # Provide Redis container information
   echo ""
@@ -119,7 +162,16 @@ fi
   # Copy eaManager script to PATH
   echo ""
   echo "Adding eaManager to PATH"
-  sudo cp eaManager /usr/bin/eaManager
+  
+  if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS - copy to /usr/local/bin which is in PATH and doesn't require sudo
+    cp eaManager /usr/local/bin/eaManager
+    chmod +x /usr/local/bin/eaManager
+  else
+    # Linux
+    sudo cp eaManager /usr/bin/eaManager
+    sudo chmod +x /usr/bin/eaManager
+  fi
 }
 
 ########################################################
@@ -129,7 +181,56 @@ Deploy() {
   # Check if skopeo is installed, if not, install it
   if ! command -v skopeo &> /dev/null; then
     echo "skopeo could not be found, installing..."
-    sudo apt-get update && sudo apt-get install -y skopeo
+    
+    if [[ "$(uname)" == "Darwin" ]]; then
+      # macOS installation via Homebrew
+      if ! command -v brew &> /dev/null; then
+        echo "${b}Homebrew not found. Please install Homebrew first:${n}"
+        echo "https://brew.sh/"
+        exit 1
+      fi
+      brew install skopeo
+    else
+      # Linux installation
+      apt=`command -v apt-get`
+      yum=`command -v yum`
+      
+      if [ -n "$apt" ]; then
+        # Debian/Ubuntu
+        sudo apt-get update && sudo apt-get install -y skopeo
+      elif [ -n "$yum" ]; then
+        # RHEL/CentOS
+        sudo yum install -y skopeo
+      else
+        echo "Err: apt or yum not detected."
+        exit 1
+      fi
+    fi
+  fi
+
+  # Check if jq is installed (required for parsing JSON)
+  if ! command -v jq &> /dev/null; then
+    echo "jq could not be found, installing..."
+    
+    if [[ "$(uname)" == "Darwin" ]]; then
+      # macOS installation via Homebrew
+      brew install jq
+    else
+      # Linux installation
+      apt=`command -v apt-get`
+      yum=`command -v yum`
+      
+      if [ -n "$apt" ]; then
+        # Debian/Ubuntu
+        sudo apt-get update && sudo apt-get install -y jq
+      elif [ -n "$yum" ]; then
+        # RHEL/CentOS
+        sudo yum install -y jq
+      else
+        echo "Err: apt or yum not detected."
+        exit 1
+      fi
+    fi
   fi
 
   # Fetch available tags using skopeo
@@ -176,10 +277,13 @@ Deploy() {
 
   # Ensure the script exists before attempting to execute it
   local deploy_script="externalAdapters/$1"
-  if [[ ! -x "$deploy_script" ]]; then
-    echo "Deployment script $deploy_script not found or not executable."
+  if [[ ! -f "$deploy_script" ]]; then
+    echo "Deployment script $deploy_script not found."
     exit 1
   fi
+  
+  # Make script executable if it's not already
+  chmod +x "$deploy_script"
 
   # Run the deployment script with the selected tag
   bash "$deploy_script" "$selected_tag"
@@ -192,7 +296,56 @@ Upgrade() {
   # Check if skopeo is installed, if not, install it
   if ! command -v skopeo &> /dev/null; then
     echo "skopeo could not be found, installing..."
-    sudo apt-get update && sudo apt-get install -y skopeo
+    
+    if [[ "$(uname)" == "Darwin" ]]; then
+      # macOS installation via Homebrew
+      if ! command -v brew &> /dev/null; then
+        echo "${b}Homebrew not found. Please install Homebrew first:${n}"
+        echo "https://brew.sh/"
+        exit 1
+      fi
+      brew install skopeo
+    else
+      # Linux installation
+      apt=`command -v apt-get`
+      yum=`command -v yum`
+      
+      if [ -n "$apt" ]; then
+        # Debian/Ubuntu
+        sudo apt-get update && sudo apt-get install -y skopeo
+      elif [ -n "$yum" ]; then
+        # RHEL/CentOS
+        sudo yum install -y skopeo
+      else
+        echo "Err: apt or yum not detected."
+        exit 1
+      fi
+    fi
+  fi
+
+  # Check if jq is installed (required for parsing JSON)
+  if ! command -v jq &> /dev/null; then
+    echo "jq could not be found, installing..."
+    
+    if [[ "$(uname)" == "Darwin" ]]; then
+      # macOS installation via Homebrew
+      brew install jq
+    else
+      # Linux installation
+      apt=`command -v apt-get`
+      yum=`command -v yum`
+      
+      if [ -n "$apt" ]; then
+        # Debian/Ubuntu
+        sudo apt-get update && sudo apt-get install -y jq
+      elif [ -n "$yum" ]; then
+        # RHEL/CentOS
+        sudo yum install -y jq
+      else
+        echo "Err: apt or yum not detected."
+        exit 1
+      fi
+    fi
   fi
 
   # Fetch available tags using skopeo
@@ -241,10 +394,13 @@ Upgrade() {
 
   # Ensure the script exists before attempting to execute it
   local upgrade_script="externalAdapters/$1"
-  if [[ ! -x "$upgrade_script" ]]; then
-    echo "Upgrade script $upgrade_script not found or not executable."
+  if [[ ! -f "$upgrade_script" ]]; then
+    echo "Upgrade script $upgrade_script not found."
     exit 1
   fi
+  
+  # Make script executable if it's not already
+  chmod +x "$upgrade_script"
 
   # Run the upgrade script with the selected tag
   bash "$upgrade_script" "$selected_tag"
@@ -273,6 +429,37 @@ List() {
 # List EA options
 echo "${b}Listing Supported EAs:${n}"
 echo ""
+
+# Check if tree command is installed
+if ! command -v tree &> /dev/null; then
+  echo "tree command not found, installing..."
+  
+  if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS installation via Homebrew
+    if ! command -v brew &> /dev/null; then
+      echo "${b}Homebrew not found. Please install Homebrew first:${n}"
+      echo "https://brew.sh/"
+      exit 1
+    fi
+    brew install tree
+  else
+    # Linux installation
+    apt=`command -v apt-get`
+    yum=`command -v yum`
+    
+    if [ -n "$apt" ]; then
+      # Debian/Ubuntu
+      sudo apt-get update && sudo apt-get install -y tree
+    elif [ -n "$yum" ]; then
+      # RHEL/CentOS
+      sudo yum install -y tree
+    else
+      echo "Err: apt or yum not detected."
+      exit 1
+    fi
+  fi
+fi
+
 tree externalAdapters
 }
 

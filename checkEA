@@ -9,6 +9,34 @@ echo "${b}Container:${n} $1"
 echo "${b}FROM:${n}      $2"
 echo "${b}TO:${n}        $3"
 
-echo "$coingecko_EA"
+# Check if jq is installed (required for parsing JSON)
+if ! command -v jq &> /dev/null; then
+  echo "jq could not be found, installing..."
+  
+  if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS installation via Homebrew
+    if ! command -v brew &> /dev/null; then
+      echo "${b}Homebrew not found. Please install Homebrew first:${n}"
+      echo "https://brew.sh/"
+      exit 1
+    fi
+    brew install jq
+  else
+    # Linux installation
+    apt=`command -v apt-get`
+    yum=`command -v yum`
+    
+    if [ -n "$apt" ]; then
+      # Debian/Ubuntu
+      sudo apt-get update && sudo apt-get install -y jq
+    elif [ -n "$yum" ]; then
+      # RHEL/CentOS
+      sudo yum install -y jq
+    else
+      echo "Err: apt or yum not detected."
+      exit 1
+    fi
+  fi
+fi
 
 echo "${b}$2 / $3 --> ${n}"  $(curl -s --header "Content-Type: application/json" --request POST --data "{\"data\":{\"from\":\"$2\", \"to\":\"$3\"}}" $1 | jq -r .result)
