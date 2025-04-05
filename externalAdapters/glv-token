@@ -1,0 +1,45 @@
+#!/bin/bash
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name glv-token-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.2.61 \
+ -p 2061:2061 \
+ -e EA_PORT=2061 \
+ -e TIMEOUT=60000 \
+ -e ARBITRUM_RPC_URL=$ARBITRUM_RPC_URL \
+ -e ARBITRUM_CHAIN_ID=$ARBITRUM_CHAIN_ID \
+ -e TIINGO_ADAPTER_URL=http://192.168.1.134:1134 \
+ -e NCFX_ADAPTER_URL=http://192.168.1.163:1163 \
+ -e COINMETRICS_ADAPTER_URL=http://192.168.1.164:1164 \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=glv-token \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e RATE_LIMIT_ENABLED=true \
+ -e WARMUP_ENABLED=true \
+ -e RATE_LIMIT_API_PROVIDER=glv-token \
+ -e RATE_LIMIT_API_TIER=$glv-token_SUB_HTTP \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=glv-token \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="glv-token-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/glv-token-adapter:$1
