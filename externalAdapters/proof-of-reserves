@@ -27,6 +27,7 @@ docker run \
  -e ETH_CONSENSUS_RPC_URL=https://rpc.dextrac.com:5052 \
  -e IGNITION_ADDRESS_LIST_ADAPTER_URL=http://192.168.2.56:2056 \
  -e POR_INDEXER_ADAPTER_URL=http://192.168.2.39:2039 \
+ -e VIEW_FUNCTION_MULTI_CHAIN_ADAPTER_URL=http://192.168.2.35:2035 \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
  -e CACHE_KEY_GROUP=proof-of-reserves \
