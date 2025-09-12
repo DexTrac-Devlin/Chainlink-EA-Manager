@@ -10,7 +10,7 @@ docker run \
  --link redis-cache \
  --ip 192.168.2.75 \
  -p 2075:2075 \
- -e EA_PORT=2057 \
+ -e EA_PORT=2075 \
  -e TIMEOUT=60000 \
  -e RPC_URL=$SOLANA_RPC_URL \
  -e SOLANA_RPC_URL=$SOLANA_RPC_URL \
