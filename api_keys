@@ -1098,6 +1098,22 @@ export FMPCLOUD_SUB_WS=
 # WS Supported Subscription Tiers:
 #  N/A
 
+# =========================================================================================
+# 888888 888888 .dP"Y8 888888          .dP"Y8 888888 888888 88""Yb 
+# 88__     88   `Ybo." 88__   ________ `Ybo." 88__     88   88__dP 
+# 88""     88   o.`Y8b 88""   """""""" o.`Y8b 88""     88   88"""  
+# 88       88   8bodP' 888888          8bodP' 88       88   88     
+export FTSE_SFTP_HOST=''
+export FTSE_SFTP_USERNAME=''
+export FTSE_SFTP_PASSWORD=''
+
+# WEBSITE: https://data.ftse.com/
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
 
 # =========================================================================================
 #  dP""b8    db    88        db    Yb  dP 88 .dP"Y8 
