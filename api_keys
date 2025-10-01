@@ -1817,6 +1817,7 @@ export TAAPI_SUB_WS=
 #   88   88  88 888888     88  Y8 888888   88      YP  YP     YbodP  88  Yb 88  Yb     88     88 88  Yb 88 YY 88 
 export THENETWORKFIRM_API_ENDPOINT=https://api.oracle-services.ledgerlens.io/v1/chainlink/proof-of-reserves/
 export TNF_URANIUM_API_KEY=
+export TNF_EMGEMX_API_KEY=
 export TNF_RE_PROTOCOL_8TAWLM_API_KEY=
 export TNF_BACKED_TSLAX_KYLN3P_API_KEY=
 export TNF_BACKED_METAX_CE1H93_API_KEY=
