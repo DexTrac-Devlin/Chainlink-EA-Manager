@@ -1816,6 +1816,18 @@ export TAAPI_SUB_WS=
 #   88   888888 88""       88 Y88 88""     88     YbdPYbdP   Yb   dP 88"Yb  88"Yb      88""   88 88"Yb  88YbdP88 
 #   88   88  88 888888     88  Y8 888888   88      YP  YP     YbodP  88  Yb 88  Yb     88     88 88  Yb 88 YY 88 
 export THENETWORKFIRM_API_ENDPOINT=https://api.oracle-services.ledgerlens.io/v1/chainlink/proof-of-reserves/
+export URANIUM_API_KEY=
+export TNF_RE_PROTOCOL_8TAWLM_API_KEY=
+export TNF_BACKED_TSLAX_KYLN3P_API_KEY=
+export TNF_BACKED_METAX_CE1H93_API_KEY=
+export TNF_BACKED_SPYX_L6FC4O_API_KEY=
+export TNF_BACKED_NVDAX_X7TPZK_API_KEY=
+export TNF_BACKED_CRCLX_THHJR7_API_KEY=
+export TNF_BACKED_AAPLX_5KFQGY_API_KEY=
+export TNF_BACKED_COINX_KVSIIW_API_KEY=
+export TNF_BACKED_MSTRX_U18DT6_API_KEY=
+export TNF_BACKED_QQQX_LFTQNA_API_KEY=
+export TNF_BACKED_GOOGLX_DOOHKA_API_KEY=
 
 # WEBSITE: https://www.thenetworkfirm.com/
 
