@@ -14,6 +14,7 @@ docker run \
  -e TIMEOUT=60000 \
  -e RPC_URL=$SOLANA_RPC_URL \
  -e SOLANA_RPC_URL=$SOLANA_RPC_URL \
+ -e BACKGROUND_EXECUTE_MS=1000 \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
  -e CACHE_KEY_GROUP=solana-functions \
