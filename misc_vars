@@ -157,6 +157,7 @@ HEDERA_CHAIN_ID=295
 
 HYPERLIQUID_RPC_URL=
 HYPERLIQUID_RPC_CHAIN_ID=999
+HYPERLIQUID_CHAIN_ID=999
 
 ====================================================================
 #  _  __  _  __  __
