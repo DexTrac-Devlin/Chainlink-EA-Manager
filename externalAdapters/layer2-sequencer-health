@@ -12,11 +12,19 @@ docker run \
  -p 1220:1220 \
  -e EA_PORT=1220 \
  -e ARBITRUM_RPC_ENDPOINT=$ARBITRUM_RPC_URL \
- -e METIS_HEALTH_ENDPOINT=https://tokenapi.metis.io/andromeda/health \
+ -e BASE_RPC_ENDPOINT=$BASE_RPC_URL \
+ -e CELO_RPC_ENDPOINT=$CELO_RPC_URL \
+ -e INK_RPC_ENDPOINT=$INK_RPC_URL \
+ -e MANTLE_RPC_ENDPOINT=$MANTLE_RPC_URL \
+ -e METIS_HEALTH_ENDPOINT=https://andromeda-healthy.metisdevops.link/health \
  -e METIS_RPC_ENDPOINT=$METIS_RPC_URL \
  -e OPTIMISM_HEALTH_ENDPOINT=https://mainnet-sequencer.optimism.io/health \
  -e OPTIMISM_RPC_ENDPOINT=$OPTIMISM_RPC_URL \
- -e SCROLL_RPC_URL=$SCROLL_RPC_URL \
+ -e SCROLL_RPC_ENDPOINT=$SCROLL_RPC_URL \
+ -e SONEIUM_RPC_ENDPOINT=$SONEIUM_RPC_URL \
+ -e STARKWARE_RPC_ENDPOINT=$STARKNET_RPC_URL \
+ -e UNICHAIN_RPC_ENDPOINT=$UNICHAIN_RPC_URL \
+ -e XLAYER_RPC_ENDPOINT=$XLAYER_RPC_URL \
  -e TIMEOUT=30000 \
  -e CACHE_ENABLED=false \
  -e CACHE_TYPE=redis \
@@ -35,6 +43,7 @@ docker run \
  -e EXPERIMENTAL_METRICS_ENABLED=true \
  -e METRICS_NAME=layer2-sequencer-health \
  -e RETRY=1 \
+ -e DEBUG_ENDPOINTS=true \
  -l prometheus-scrape.enabled=true \
  -l prometheus-scrape.job_name="layer2-sequencer-health-redis" \
  -l prometheus-scrape.port=9080 \
