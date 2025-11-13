@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: gsr-redis
+# endpoint: http://192.168.1.230:2230
+
 source api_keys
 source misc_vars
 

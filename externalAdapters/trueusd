@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: trueusd-adapter
+# endpoint: http://192.168.1.138:1138
+
 source api_keys
 source misc_vars
 

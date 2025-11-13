@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coinmetrics-redis
+# endpoint: http://192.168.1.164:1164
+
 source api_keys
 source misc_vars
 
@@ -9,7 +12,7 @@ docker run \
  --net eas-net \
  --link redis-cache \
  --ip 192.168.1.164 \
- -p 1164:8080 \
+ -p 1164:1164 \
  -e EA_PORT=1164 \
  -e API_KEY=$COINMETRICS_API_KEY \
  -e TIMEOUT=30000 \

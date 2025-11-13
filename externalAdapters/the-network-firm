@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: the-network-firm-redis
+# endpoint: http://192.168.2.24:2024
+
 source api_keys
 source misc_vars
 

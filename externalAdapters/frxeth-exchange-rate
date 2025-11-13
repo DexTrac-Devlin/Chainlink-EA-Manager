@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: frxeth-exchange-rate-redis
+# endpoint: http://192.168.2.36:2036
+
 source api_keys
 source misc_vars
 

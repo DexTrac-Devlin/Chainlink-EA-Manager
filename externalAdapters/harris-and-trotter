@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: harris-and-trotter-redis
+# endpoint: http://192.168.2.33:2033
+
 source api_keys
 source misc_vars
 

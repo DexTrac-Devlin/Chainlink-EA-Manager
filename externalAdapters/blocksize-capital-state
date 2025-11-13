@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: blocksize-capital-state-redis
+# endpoint: http://192.168.2.85:2085
+
 source api_keys
 source misc_vars
 

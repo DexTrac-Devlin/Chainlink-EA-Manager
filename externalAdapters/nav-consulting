@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: nav-consulting-redis
+# endpoint: http://192.168.2.58:2058
+
 source api_keys
 source misc_vars
 

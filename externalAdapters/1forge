@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# ea-name: 1forge
+# endpoint: http://192.168.1.226:2226
+
 source api_keys
 source misc_vars
 
 docker run \
- --name oneforge-redis \
+ --name 1forge-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
@@ -13,6 +16,7 @@ docker run \
  -e EA_PORT=2226 \
  -e TIMEOUT=30000 \
  -e API_KEY="$ONEFORGE_API_KEY" \
+ -e API_ENDPOINT="$ONEFORGE_API_ENDPOINT" \
  -e CACHE_ENABLED=true \
  -e CACHE_TYPE=redis \
  -e CACHE_KEY_GROUP=oneforge \

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: trumatic-matic-redis
+# endpoint: http://192.168.2.25:2025
+
 source api_keys
 source misc_vars
 

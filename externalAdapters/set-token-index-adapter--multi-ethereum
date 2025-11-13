@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# ea-name: setToken-index--multi-ethereum-redis
+# endpoint: http://192.168.1.213:1213
+
 source api_keys
 source misc_vars
 
 docker run \
- --name setToken-index--multi -ethereum \
+ --name setToken-index--multi-ethereum-redis \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \

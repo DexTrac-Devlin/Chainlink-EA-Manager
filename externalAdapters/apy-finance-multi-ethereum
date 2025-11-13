@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: apy-finance-multi-redis
+# endpoint: http://192.168.0.135:1135
+
 source api_keys
 source misc_vars
 

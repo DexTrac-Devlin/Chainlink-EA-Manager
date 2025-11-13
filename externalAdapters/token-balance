@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: token-balance-redis
+# endpoint: http://192.168.2.59:2059
+
 source api_keys
 source misc_vars
 

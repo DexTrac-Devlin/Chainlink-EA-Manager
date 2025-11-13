@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: por-indexer-redis
+# endpoint: http://192.168.2.39:2039
+
 source api_keys
 source misc_vars
 

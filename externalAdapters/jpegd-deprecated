@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: jpegd-redis
+# endpoint: http://192.168.1.171:1171
+
 source api_keys
 source misc_vars
 

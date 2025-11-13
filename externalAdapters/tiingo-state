@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: tiingo-state-redis
+# endpoint: http://192.168.2.64:2064
+
 source api_keys
 source misc_vars
 

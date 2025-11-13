@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coinpaprika-redis
+# endpoint: http://192.168.1.116:1116
+
 source api_keys
 source misc_vars
 

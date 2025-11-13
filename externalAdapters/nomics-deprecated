@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: nomics-redis
+# endpoint: http://192.168.1.111:1111
+
 source api_keys
 source misc_vars
 

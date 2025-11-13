@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: synthindex-multi-redis
+# endpoint: http://192.168.1.198:1198
+
 source api_keys
 source misc_vars
 

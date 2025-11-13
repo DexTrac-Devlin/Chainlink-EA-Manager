@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: tradinghours-redis
+# endpoint: http://192.168.2.51:2051
+
 source api_keys
 source misc_vars
 

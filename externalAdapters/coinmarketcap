@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coinmarketcap-redis
+# endpoint: http://192.168.1.115:1115
+
 source api_keys
 source misc_vars
 

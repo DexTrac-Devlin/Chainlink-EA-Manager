@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: tradermade-redis
+# endpoint: http://192.168.1.209:1209
+
 source api_keys
 source misc_vars
 

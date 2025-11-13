@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: bitgo-redis
+# endpoint: http://192.168.2.54:2054
+
 source api_keys
 source misc_vars
 

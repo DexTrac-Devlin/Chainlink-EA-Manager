@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: ondo-redis
+# endpoint: http://192.168.2.73:2073
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: dydx-staging-no-redis
+# endpoint: http://192.168.1.240:2240
+
 source api_keys
 source misc_vars
 

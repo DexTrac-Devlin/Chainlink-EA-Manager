@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ea-name: coinpaprika-state-redis
+# endpoint: http://192.168.2.87:2087
 
 source api_keys
 source misc_vars

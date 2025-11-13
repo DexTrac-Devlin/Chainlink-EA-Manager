@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: securitize-redis
+# endpoint: http://192.168.2.79:2079
+
 source api_keys
 source misc_vars
 

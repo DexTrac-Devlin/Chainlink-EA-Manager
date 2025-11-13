@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: gm-token-redis
+# endpoint: http://192.168.2.29:2029
+
 source api_keys
 source misc_vars
 

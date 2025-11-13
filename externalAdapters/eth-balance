@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: eth-balance-redis
+# endpoint: http://192.168.2.48:2048
+
 source api_keys
 source misc_vars
 

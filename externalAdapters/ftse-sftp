@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: ftse-sftp-redis
+# endpoint: http://192.168.2.81:2081
+
 source api_keys
 source misc_vars
 

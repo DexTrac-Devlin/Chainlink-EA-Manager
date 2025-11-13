@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: stader-labs-redis
+# endpoint: http://192.168.1.228:2228
+
 source api_keys
 source misc_vars
 

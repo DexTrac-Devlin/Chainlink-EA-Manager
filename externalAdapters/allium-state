@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: allium-state-redis
+# endpoint: http://192.168.2.84:2084
+
 source api_keys
 source misc_vars
 

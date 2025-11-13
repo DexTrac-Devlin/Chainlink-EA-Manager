@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: alphavantage-redis
+# endpoint: http://192.168.1.236:2236
+
 source api_keys
 source misc_vars
 

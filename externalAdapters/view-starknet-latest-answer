@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: view-starknet-latest-answer-redis
+# endpoint: http://192.168.2.47:2047
+
 source api_keys
 source misc_vars
 

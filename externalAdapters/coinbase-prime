@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coinbase-prime-redis
+# endpoint: http://192.168.2.30:2030
+
 source api_keys
 source misc_vars
 

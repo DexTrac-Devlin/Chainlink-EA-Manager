@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: unibit-redis
+# endpoint: http://192.168.1.143:1143
+
 source api_keys
 source misc_vars
 
@@ -9,7 +12,7 @@ docker run \
  --net eas-net \
  --link redis-cache \
  --ip 192.168.1.143 \
- -p 1143:8080 \
+ -p 1143:1143 \
  -e EA_PORT=1143 \
  -e API_KEY=$UNIBIT_API_KEY \
  -e TIMEOUT=30000 \

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: twelvedata-redis
+# endpoint: http://192.168.2.18:2018
+
 source api_keys
 source misc_vars
 

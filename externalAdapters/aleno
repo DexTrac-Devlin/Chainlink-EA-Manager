@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: aleno-redis
+# endpoint: http://192.168.2.61:2061
+
 source api_keys
 source misc_vars
 

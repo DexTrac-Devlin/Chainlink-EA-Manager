@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: view-function-multi-chain-redis
+# endpoint: http://192.168.2.35:2035
+
 source api_keys
 source misc_vars
 

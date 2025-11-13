@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: gramchain-redis
+# endpoint: http://192.168.1.170:1170
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: asseto-finance-redis
+# endpoint: http://192.168.2.83:2083
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: dxdao-redis
+# endpoint: http://192.168.1.157:1157
+
 source api_keys
 source misc_vars
 

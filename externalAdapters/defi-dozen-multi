@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: defi-dozen-multi-redis
+# endpoint: http://192.168.1.217:1217
+
 source api_keys
 source misc_vars
 

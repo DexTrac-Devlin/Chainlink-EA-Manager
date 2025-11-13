@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: oanda-redis
+# endpoint: http://192.168.1.247:2247
+
 source api_keys
 source misc_vars
 

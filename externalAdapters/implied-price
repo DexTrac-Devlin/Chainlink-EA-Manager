@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: implied-price-redis
+# endpoint: http://92.168.1.174:1174
+
 source api_keys
 source misc_vars
 

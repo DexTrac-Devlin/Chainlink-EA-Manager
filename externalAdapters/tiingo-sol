@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: tiingo-sol-redis
+# endpoint: http://192.168.1.165:1165
+
 source api_keys
 source misc_vars
 

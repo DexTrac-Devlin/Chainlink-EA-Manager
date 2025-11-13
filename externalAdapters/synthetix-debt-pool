@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: synthetix-debt-pool-redis
+# endpoint: http://192.168.1.172:1172
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: cryptoapis-redis
+# endpoint: http://192.168.1.193:1193
+
 source api_keys
 source misc_vars
 

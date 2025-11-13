@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: twosigma-redis
+# endpoint: http://192.168.0.21:2021
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: anchorage-redis
+# endpoint: http://192.168.2.53:2053
+
 source api_keys
 source misc_vars
 

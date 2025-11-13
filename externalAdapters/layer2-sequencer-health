@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: layer2-sequencer-health-redis
+# endpoint: http://192.168.1.220:1220
+
 source api_keys
 source misc_vars
 

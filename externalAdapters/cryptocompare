@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: cryptocompare-redis
+# endpoint: http://192.168.1.114:1114
+
 source api_keys
 source misc_vars
 

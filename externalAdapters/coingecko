@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coingecko-redis
+# endpoint: http://192.168.1.113:1113
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: ignition-address-list-redis
+# endpoint: http://192.168.2.56:2056
+
 source api_keys
 source misc_vars
 

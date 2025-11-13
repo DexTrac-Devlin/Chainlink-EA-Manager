@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: tokenAllocation-multi-redis
+# endpoint: http://192.168.1.152:1152
+
 source api_keys
 source misc_vars
 

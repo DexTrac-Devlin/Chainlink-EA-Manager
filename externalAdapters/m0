@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: m0-redis
+# endpoint: http://192.168.2.57:2057
+
 source api_keys
 source misc_vars
 

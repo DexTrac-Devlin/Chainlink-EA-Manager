@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: fcsapi-redis
+# endpoint: http://192.168.1.133:1133
+
 source api_keys
 source misc_vars
 

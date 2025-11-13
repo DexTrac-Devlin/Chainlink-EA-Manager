@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: clear-bank-redis
+# endpoint: http://192.168.2.43:2043
+
 source api_keys
 source misc_vars
 

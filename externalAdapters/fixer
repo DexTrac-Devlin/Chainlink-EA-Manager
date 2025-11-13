@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: fixer-redis
+# endpoint: http://192.168.1.130:1130
+
 source api_keys
 source misc_vars
 

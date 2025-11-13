@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: expand-network-redis
+# endpoint: http://192.168.2.68:2068
+
 source api_keys
 source misc_vars
 

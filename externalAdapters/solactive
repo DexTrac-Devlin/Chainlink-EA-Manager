@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: solactive-redis
+# endpoint: http://192.168.2.77:2077
+
 source api_keys
 source misc_vars
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: gmci-redis
+# endpoint: http://192.168.2.91:2091
+
 source api_keys
 source misc_vars
 

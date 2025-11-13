@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: coinlore-redis
+# endpoint: http://192.168.1.150:1150
+
 source api_keys
 source misc_vars
 

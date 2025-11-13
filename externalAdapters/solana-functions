@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ea-name: solana-functions-redis
+# endpoint: http://192.168.2.75:2075
+
 source api_keys
 source misc_vars
 
