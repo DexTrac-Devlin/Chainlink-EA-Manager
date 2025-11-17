@@ -55,7 +55,7 @@ BERACHAIN_CHAIN_ID=80094
 # |_()_)|_|  |_|  \____)\____/|_||_|\__|
 
 BITCOIN_RPC_URL=
-BTC_INDEXER_URL=
+BITCOIN_MAINNET_POR_INDEXER_URL=
 BTC_RPC_URL=
 
 # ====================================================================
