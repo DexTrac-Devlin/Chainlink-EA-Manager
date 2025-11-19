@@ -1300,6 +1300,27 @@ export HARRIS_AND_TROTTER_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# 88  dP""b8 888888
+# 88 dP   `" 88__
+# 88 Yb      88""
+# 88  YboodP 888888
+export NETDANIA_PASSWORD=""
+export API_ENDPOINT="https://balancer.netdania.com/StreamingServer/StreamingServer"
+export API_ENDPOINT_FAILOVER_1="https://balancer-cro.netdania.com/StreamingServer/StreamingServer"
+export API_ENDPOINT_FAILOVER_2="https://balancer.datafeeds.io/StreamingServer/StreamingServer"
+export API_ENDPOINT_FAILOVER_3="https://balancer-cro.datafeeds.io/StreamingServer/StreamingServer"
+
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # 88 888888 Yb  dP      dP""b8 88      dP"Yb  88   88 8888b.  
 # 88 88__    YbdP      dP   `" 88     dP   Yb 88   88  8I  Yb 
 # 88 88""    dPYb      Yb      88  .o Yb   dP Y8   8P  8I  dY 
