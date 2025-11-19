@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ea-name: ice-redis
-# endpoint: http://192.168.2.91:2091
+# endpoint: http://192.168.2.93:2093
 
 source api_keys
 source misc_vars
@@ -11,9 +11,9 @@ docker run \
  --restart=unless-stopped \
  --net eas-net \
  --link redis-cache \
- --ip 192.168.2.91 \
- -p 2091:2091 \
- -e EA_PORT=2091 \
+ --ip 192.168.2.93 \
+ -p 2093:2093 \
+ -e EA_PORT=2093 \
  -e TIMEOUT=30000 \
  -e NETDANIA_PASSWORD=$ICE_NETDANIA_PASSWORD \
  -e API_ENDPOINT=$ICE_API_ENDPOINT \
