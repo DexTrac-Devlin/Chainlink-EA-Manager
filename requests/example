@@ -1,0 +1,13 @@
+{
+   "data":{
+      "cid":"33981",
+      "endpoint":"crypto",
+      "from":"USD0++",
+      "overrides":{
+         "tiingo-state":{
+            "USD0++":"usdzeroplpl"
+         }
+      },
+      "to":"USD"
+   }
+}
