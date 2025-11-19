@@ -1304,11 +1304,11 @@ export HARRIS_AND_TROTTER_SUB_WS=
 # 88 dP   `" 88__
 # 88 Yb      88""
 # 88  YboodP 888888
-export NETDANIA_PASSWORD=""
-export API_ENDPOINT="https://balancer.netdania.com/StreamingServer/StreamingServer"
-export API_ENDPOINT_FAILOVER_1="https://balancer-cro.netdania.com/StreamingServer/StreamingServer"
-export API_ENDPOINT_FAILOVER_2="https://balancer.datafeeds.io/StreamingServer/StreamingServer"
-export API_ENDPOINT_FAILOVER_3="https://balancer-cro.datafeeds.io/StreamingServer/StreamingServer"
+export ICE_NETDANIA_PASSWORD=""
+export ICE_API_ENDPOINT="https://balancer.netdania.com/StreamingServer/StreamingServer"
+export ICE_API_ENDPOINT_FAILOVER_1="https://balancer-cro.netdania.com/StreamingServer/StreamingServer"
+export ICE_API_ENDPOINT_FAILOVER_2="https://balancer.datafeeds.io/StreamingServer/StreamingServer"
+export ICE_API_ENDPOINT_FAILOVER_3="https://balancer-cro.datafeeds.io/StreamingServer/StreamingServer"
 
 
 # WEBSITE: N/A
