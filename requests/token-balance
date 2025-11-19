@@ -1,0 +1,18 @@
+{
+  "data": {
+    "endpoint": "evm",
+    "addresses": [
+      {
+        "network": "ethereum",
+        "chainId": "1",
+        "contractAddress": "0x514910771af9ca656af840dff83e8264ecf986ca",
+        "wallets": [
+          "0xBc10f2E862ED4502144c7d632a3459F49DFCDB5e",
+          "0xF977814e90dA44bFA03b6295A0616a897441aceC"
+        ],
+        "balanceOfSignature": "function balanceOf(address account) external view returns (uint256)",
+        "decimalsSignature": "function decimals() external pure returns (uint8)"
+      }
+    ]
+  }
+}
