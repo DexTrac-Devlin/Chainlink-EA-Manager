@@ -148,6 +148,8 @@ export AMBERDATA_GASPRICE_SUB_WS=
 export ANCHORAGE_API_ENDPOINT=https://api.anchorage.com
 export ANCHORAGE_ETH_API_KEY=
 export ANCHORAGE_BTC_API_KEY=
+export ANCHORAGE_COLLATERAL_API_ENDPOINT=
+export ANCHORAGE_COLLATERAL_API_KEY=
 
 # WEBSITE: https://anchoragelogin.com/login/?ref=/
 
