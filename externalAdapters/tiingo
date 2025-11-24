@@ -36,7 +36,7 @@ docker run \
  -e LOG_LEVEL=info \
  -e DEBUG=false \
  -e API_VERBOSE=false \
- -e EXPERIMENTAL_METRICS_ENABLED=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
  -e METRICS_NAME=tiingo \
  -e RETRY=1 \
  -l prometheus-scrape.enabled=true \
