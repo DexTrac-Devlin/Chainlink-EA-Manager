@@ -1236,6 +1236,26 @@ export GENESIS_VOLATILITY_API_KEY=
 #  N/A
 
 # =========================================================================================
+#  dP""b8 888888 88b 88 888888 88""Yb 88  dP""b8
+# dP   `" 88__   88Yb88 88__   88__dP 88 dP   `"
+# Yb  "88 88""   88 Y88 88""   88"Yb  88 Yb
+#  YboodP 888888 88  Y8 888888 88  Yb 88  YboodP
+export GENERIC_ACCOUNTABLE_AXIS_API_URL=
+export GENERIC_ACCOUNTABLE_AXIS_AUTH_HEADER=
+export GENERIC_ACCOUNTABLE_UNITAS_API_URL=
+export GENERIC_ACCOUNTABLE_UNITAS_AUTH_HEADER=
+export GENERIC_ACCOUNTABLE_AXIS_AUTH_HEADER_VALUE=''
+export GENERIC_ACCOUNTABLE_UNITAS_AUTH_HEADER_VALUE=''
+
+# WEBSITE: N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# WS Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 #  dP""b8 8b    d8  dP""b8 88
 # dP   `" 88b  d88 dP   `" 88
 # Yb  "88 88YbdP88 Yb      88
