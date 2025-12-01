@@ -918,6 +918,7 @@ export DXFEED_API_KEY=
 export DXFEED_API_ENDPOINT=
 export DXFEED_API_USERNAME=
 export DXFEED_API_PASSWORD=
+export DXFEED_WS_API_ENDPOINT=
 
 # WEBSITE: https://dxfeed.com/
 
