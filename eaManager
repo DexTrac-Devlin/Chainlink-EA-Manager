@@ -79,6 +79,29 @@ sync_ea_config_from_external() {
 }
 
 ########################################################
+# Extract Docker image repository from adapter script
+########################################################
+get_adapter_image_repo() {
+  local adapter_name="$1"
+  local script_path="$EXTERNAL_DIR/$adapter_name"
+
+  if [[ ! -f "$script_path" ]]; then
+    echo "Error: Adapter script not found: $script_path" >&2
+    exit 1
+  fi
+
+  # Extract the image repo (without tag) from the docker run command
+  local repo=$(grep -o 'public.ecr.aws/chainlink/adapters/[^:]*' "$script_path" 2>/dev/null | head -1)
+
+  if [[ -z "$repo" ]]; then
+    echo "Error: Could not find Docker image in adapter script: $script_path" >&2
+    exit 1
+  fi
+
+  printf '%s\n' "$repo"
+}
+
+########################################################
 # Look up EA URL (with -redis fallback)
 ########################################################
 resolve_ea_url_from_config() {
@@ -242,13 +265,14 @@ Deploy() {
     sudo apt-get update && sudo apt-get install -y skopeo
   fi
 
-  # Fetch available tags using skopeo
-  local repo="public.ecr.aws/chainlink/adapters/$1-adapter"
+  # Get the actual image repository from the adapter script
+  local repo=$(get_adapter_image_repo "$1")
+  local adapter_name=$(basename "$repo" | sed 's/-adapter$//')
   local tags
   local tag_list
   local selected_tag
 
-  echo "Fetching available tags for $1-adapter..."
+  echo "Fetching available tags for $adapter_name-adapter..."
   tags=$(skopeo list-tags "docker://$repo" | jq -r '.Tags[]' | sort -Vr | head -n 10)
 
   if [[ -z "$tags" ]]; then
@@ -286,8 +310,8 @@ Deploy() {
 
   # Ensure the script exists before attempting to execute it
   local deploy_script="externalAdapters/$1"
-  if [[ ! -x "$deploy_script" ]]; then
-    echo "Deployment script $deploy_script not found or not executable."
+  if [[ ! -f "$deploy_script" ]]; then
+    echo "Deployment script $deploy_script not found."
     exit 1
   fi
 
@@ -305,13 +329,14 @@ Upgrade() {
     sudo apt-get update && sudo apt-get install -y skopeo
   fi
 
-  # Fetch available tags using skopeo
-  local repo="public.ecr.aws/chainlink/adapters/$1-adapter"
+  # Get the actual image repository from the adapter script
+  local repo=$(get_adapter_image_repo "$1")
+  local adapter_name=$(basename "$repo" | sed 's/-adapter$//')
   local tags
   local tag_list
   local selected_tag
 
-  echo "Fetching available tags for $1-adapter..."
+  echo "Fetching available tags for $adapter_name-adapter..."
   tags=$(skopeo list-tags "docker://$repo" | jq -r '.Tags[]' | sort -Vr | head -n 10)
 
   if [[ -z "$tags" ]]; then
@@ -351,8 +376,8 @@ Upgrade() {
 
   # Ensure the script exists before attempting to execute it
   local upgrade_script="externalAdapters/$1"
-  if [[ ! -x "$upgrade_script" ]]; then
-    echo "Upgrade script $upgrade_script not found or not executable."
+  if [[ ! -f "$upgrade_script" ]]; then
+    echo "Upgrade script $upgrade_script not found."
     exit 1
   fi
 
