@@ -12,7 +12,7 @@ nun=$(tput rmul)
 #                      Variables                       #
 ########################################################
 IP_ADDRESS=$(ip route get 1.2.3.4 | awk '{print $7}')
-VERSION="0.1.0"
+VERSION="0.2.0"
 
 # Grab API keys from flat file
 source api_keys
@@ -190,7 +190,7 @@ _eaManager() {
     fi
 
     # Main options
-    local main_opts="-i -d -u -t -v -l -h --install-completion"
+    local main_opts="-i --initialize --init -d --deploy -u --upgrade --update -t --test -v --version -l --list -h --help --install-completion"
 
     # Test sub-options
     local test_opts="--ea --url --file --help -e -u -f -h"
@@ -198,7 +198,7 @@ _eaManager() {
     # Check if we're in test mode
     local in_test_mode=0
     for ((i=1; i<${#COMP_WORDS[@]}-1; i++)); do
-        if [[ "${COMP_WORDS[i]}" == "-t" ]]; then
+        if [[ "${COMP_WORDS[i]}" == "-t" || "${COMP_WORDS[i]}" == "--test" ]]; then
             in_test_mode=1
             break
         fi
@@ -206,7 +206,7 @@ _eaManager() {
 
     # Handle completions based on context
     case "${prev}" in
-        -d|-u)
+        -d|--deploy|-u|--upgrade|--update)
             # Complete with adapter names from externalAdapters/
             if [[ -d "$script_dir/externalAdapters" ]]; then
                 local adapters=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
@@ -214,7 +214,7 @@ _eaManager() {
             fi
             return 0
             ;;
-        -t)
+        -t|--test)
             # After -t, offer test sub-options
             COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
             return 0
@@ -316,7 +316,7 @@ _eaManager() {
     fi
 
     # Main options
-    local main_opts="-i -d -u -t -v -l -h --install-completion"
+    local main_opts="-i --initialize --init -d --deploy -u --upgrade --update -t --test -v --version -l --list -h --help --install-completion"
 
     # Test sub-options
     local test_opts="--ea --url --file --help -e -u -f -h"
@@ -324,7 +324,7 @@ _eaManager() {
     # Check if we're in test mode
     local in_test_mode=0
     for ((i=1; i<${#COMP_WORDS[@]}-1; i++)); do
-        if [[ "${COMP_WORDS[i]}" == "-t" ]]; then
+        if [[ "${COMP_WORDS[i]}" == "-t" || "${COMP_WORDS[i]}" == "--test" ]]; then
             in_test_mode=1
             break
         fi
@@ -332,7 +332,7 @@ _eaManager() {
 
     # Handle completions based on context
     case "${prev}" in
-        -d|-u)
+        -d|--deploy|-u|--upgrade|--update)
             # Complete with adapter names from externalAdapters/
             if [[ -d "$script_dir/externalAdapters" ]]; then
                 local adapters=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
@@ -340,7 +340,7 @@ _eaManager() {
             fi
             return 0
             ;;
-        -t)
+        -t|--test)
             # After -t, offer test sub-options
             COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
             return 0
@@ -774,35 +774,43 @@ Help() {
   # Display Help
   echo "This script helps you deploy, manage, and upgrade your Chainlink external adapters."
   echo
-  echo "Usage:  ${b}eaManager option EA_NAME EA_VERSION${n}"
+  echo "Usage:  ${b}eaManager [option] [arguments]${n}"
   echo ""
-  echo "options:"
+  echo "Options:"
   echo ""
-  echo "-i        Initializes a generic EA environment."
-  echo "${b}            Creates Docker network, deploys redis container,${n}"
-  echo "${b}            use this if you want a quick turnkey deployment.${n}"
+  echo "${b}-i, --initialize, --init${n}"
+  echo "  Initializes a generic EA environment."
+  echo "  Creates Docker network, deploys redis container,"
+  echo "  use this if you want a quick turnkey deployment."
   echo ""
-  echo "-d        Deploys new external adapter."
-  echo "${b}            ex: eaManager -d coingecko 1.0.4${n}"
+  echo "${b}-d, --deploy${n} <adapter-name>"
+  echo "  Deploys new external adapter."
+  echo "  ex: eaManager --deploy coingecko"
   echo ""
-  echo "-u        Upgrades external adapter."
-  echo "${b}            ex: eaManager -u coingecko 1.0.4${n}"
+  echo "${b}-u, --upgrade, --update${n} <adapter-name>"
+  echo "  Upgrades external adapter."
+  echo "  ex: eaManager --upgrade coingecko"
   echo ""
-  echo "-t        Send a test request to external adapter."
-  echo "${b}            ex: eaManager -t --ea coinpaprika-state${n}"
-  echo "${b}            ex: eaManager -t --ea allium-state --file req.json${n}"
-  echo "${b}            ex: eaManager -t --url http://localhost:8010 --file req.json${n}"
-  echo "${b}            Use 'eaManager -t --help' for detailed test options${n}"
+  echo "${b}-t, --test${n} [options]"
+  echo "  Send a test request to external adapter."
+  echo "  ex: eaManager --test --ea coinpaprika-state"
+  echo "  ex: eaManager --test --ea allium-state --file req.json"
+  echo "  ex: eaManager --test --url http://localhost:8010 --file req.json"
+  echo "  Use 'eaManager --test --help' for detailed test options"
   echo ""
-  echo "-v        Print script version and exit."
+  echo "${b}-v, --version${n}"
+  echo "  Print script version and exit."
   echo ""
-  echo "-l        Print all supported EA names and exit."
+  echo "${b}-l, --list${n}"
+  echo "  Print all supported EA names and exit."
   echo ""
-  echo "-h        Print this Help function and exit."
+  echo "${b}-h, --help${n}"
+  echo "  Print this Help function and exit."
   echo ""
-  echo "--install-completion    Install bash tab completion for eaManager."
-  echo "${b}                        Enables auto-complete for all commands and adapter names.${n}"
-  echo "${b}                        Also installed automatically during -i (Initialize).${n}"
+  echo "${b}--install-completion${n}"
+  echo "  Install bash tab completion for eaManager."
+  echo "  Enables auto-complete for all commands and adapter names."
+  echo "  Also installed automatically during -i (Initialize)."
   echo
 }
 
@@ -812,55 +820,64 @@ Help() {
 # Silently ensure completion is installed
 ensure_completion_installed
 
-# Handle --install-completion flag (before getopts)
-if [[ "$1" == "--install-completion" ]]; then
-  install_completion
+# Show help if no arguments
+if [[ $# -eq 0 ]]; then
+  Help
   exit 0
 fi
 
-while getopts ":id:u:tlvh" option; do
-   case ${option} in
-      i) # initialize EA environment
-         Initialize
-         exit
-         ;;
-      d) # deploy new external adapter
-         shift
-         Deploy "$@"
-         exit
-         ;;
-      u) # upgrade existing external adapter
-         shift
-         Upgrade "$@"
-         exit
-         ;;
-      t) # send test request to existing external adapter
-         shift
-         Test "$@"
-         exit
-         ;;
-      v) # Print Version
-         Version
-         exit
-         ;;
-      l) # list supported EAs
-         List
-         exit
-         ;;
-      h) # Display Help
-         Help
-         exit
-         ;;
-      \?) # Invalid Option
-         echo "Invalid option: $OPTARG" 1>&2
-         exit 1
-         ;;
-      :) # Invalid Option
-         echo "Invalid option: $OPTARG requires an argument" 1>&2
-         echo ""
-         echo "Please specify the external adapter name" 1>&2
-         echo "ex: ${b}eaManager -$OPTARG coingecko${n}" 1>&2
-         exit 1
-         ;;
-   esac
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -i|--initialize|--init)
+      Initialize
+      exit 0
+      ;;
+    -d|--deploy)
+      shift
+      if [[ -z "$1" ]]; then
+        echo "Error: --deploy requires an adapter name" >&2
+        echo "Usage: eaManager --deploy <adapter-name>" >&2
+        exit 1
+      fi
+      Deploy "$@"
+      exit 0
+      ;;
+    -u|--upgrade|--update)
+      shift
+      if [[ -z "$1" ]]; then
+        echo "Error: --upgrade requires an adapter name" >&2
+        echo "Usage: eaManager --upgrade <adapter-name>" >&2
+        exit 1
+      fi
+      Upgrade "$@"
+      exit 0
+      ;;
+    -t|--test)
+      shift
+      Test "$@"
+      exit 0
+      ;;
+    -v|--version)
+      Version
+      exit 0
+      ;;
+    -l|--list)
+      List
+      exit 0
+      ;;
+    -h|--help)
+      Help
+      exit 0
+      ;;
+    --install-completion)
+      install_completion
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      echo "Run 'eaManager --help' for usage information" >&2
+      exit 1
+      ;;
+  esac
 done
