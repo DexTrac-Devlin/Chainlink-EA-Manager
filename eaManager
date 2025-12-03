@@ -12,7 +12,7 @@ nun=$(tput rmul)
 #                      Variables                       #
 ########################################################
 IP_ADDRESS=$(ip route get 1.2.3.4 | awk '{print $7}')
-VERSION="0.2.0"
+VERSION="0.1.0"
 
 # Grab API keys from flat file
 source api_keys
@@ -26,8 +26,9 @@ source ~/.profile
 ########################################################
 #              EA CONFIG & URL RESOLUTION              #
 ########################################################
-# Figure out repo root based on script location
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Figure out repo root based on script location (follow symlinks)
+SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || realpath "${BASH_SOURCE[0]}" 2>/dev/null || echo "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
 REPO_ROOT="$SCRIPT_DIR"
 
 EA_CONFIG="${EA_CONFIG:-$REPO_ROOT/ea_endpoints}"
@@ -504,10 +505,12 @@ fi
   echo "IPaddress: 192.168.1.1"
   echo "listnPort: 6379"
 
-  # Copy eaManager script to PATH
+  # Symlink eaManager script to PATH
   echo ""
   echo "Adding eaManager to PATH"
-  sudo cp eaManager /usr/bin/eaManager
+  local script_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/eaManager"
+  sudo ln -sf "$script_path" /usr/bin/eaManager
+  echo "Created symlink: /usr/bin/eaManager -> $script_path"
 
   # Install bash completion
   echo ""
