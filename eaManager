@@ -157,6 +157,261 @@ resolve_ea_url_from_config() {
 }
 
 ########################################################
+#            BASH COMPLETION FUNCTIONS                 #
+########################################################
+install_completion() {
+  local completion_dir="$HOME/.local/share/bash-completion/completions"
+  local completion_file="$completion_dir/eaManager"
+
+  echo "${b}Installing bash completion...${n}"
+
+  # Create directory if it doesn't exist
+  mkdir -p "$completion_dir"
+
+  # Write the completion script
+  cat > "$completion_file" << 'EOF'
+#!/usr/bin/env bash
+# Bash completion for eaManager
+
+_eaManager() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    # Find the eaManager script directory
+    local script_dir=""
+    if [[ -d "$HOME/Chainlink-EA-Manager" ]]; then
+        script_dir="$HOME/Chainlink-EA-Manager"
+    elif [[ -d "/usr/local/Chainlink-EA-Manager" ]]; then
+        script_dir="/usr/local/Chainlink-EA-Manager"
+    elif command -v eaManager >/dev/null 2>&1; then
+        script_dir="$(dirname "$(readlink -f "$(command -v eaManager)")")"
+    fi
+
+    # Main options
+    local main_opts="-i -d -u -t -v -l -h --install-completion"
+
+    # Test sub-options
+    local test_opts="--ea --url --file --help -e -u -f -h"
+
+    # Check if we're in test mode
+    local in_test_mode=0
+    for ((i=1; i<${#COMP_WORDS[@]}-1; i++)); do
+        if [[ "${COMP_WORDS[i]}" == "-t" ]]; then
+            in_test_mode=1
+            break
+        fi
+    done
+
+    # Handle completions based on context
+    case "${prev}" in
+        -d|-u)
+            # Complete with adapter names from externalAdapters/
+            if [[ -d "$script_dir/externalAdapters" ]]; then
+                local adapters=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
+                COMPREPLY=( $(compgen -W "${adapters}" -- ${cur}) )
+            fi
+            return 0
+            ;;
+        -t)
+            # After -t, offer test sub-options
+            COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+            return 0
+            ;;
+        --ea|-e)
+            # Complete with EA names
+            if [[ $in_test_mode -eq 1 ]]; then
+                local ea_names=""
+                if [[ -f "$script_dir/ea_endpoints" ]]; then
+                    ea_names=$(grep -v '^#' "$script_dir/ea_endpoints" 2>/dev/null | awk '{print $1}')
+                fi
+                if [[ -z "$ea_names" ]] && [[ -d "$script_dir/externalAdapters" ]]; then
+                    ea_names=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
+                fi
+                COMPREPLY=( $(compgen -W "${ea_names}" -- ${cur}) )
+            fi
+            return 0
+            ;;
+        --file|-f)
+            # Complete with files from requests/ directory
+            if [[ -d "$script_dir/requests" ]]; then
+                local request_files=$(cd "$script_dir/requests" && ls -1 2>/dev/null)
+                local prefixed_files=$(cd "$script_dir/requests" && ls -1 2>/dev/null | sed 's|^|requests/|')
+                COMPREPLY=( $(compgen -W "${request_files} ${prefixed_files}" -- ${cur}) )
+            fi
+            COMPREPLY+=( $(compgen -f -- ${cur}) )
+            return 0
+            ;;
+        --url)
+            return 0
+            ;;
+    esac
+
+    # If in test mode, offer test options
+    if [[ $in_test_mode -eq 1 ]] && [[ ! "${prev}" =~ ^- ]]; then
+        COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+        return 0
+    fi
+
+    # Default: complete with main options
+    if [[ ${cur} == -* ]]; then
+        if [[ $in_test_mode -eq 1 ]]; then
+            COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+        else
+            COMPREPLY=( $(compgen -W "${main_opts}" -- ${cur}) )
+        fi
+        return 0
+    fi
+
+    # First argument: offer main options
+    if [[ ${COMP_CWORD} -eq 1 ]]; then
+        COMPREPLY=( $(compgen -W "${main_opts}" -- ${cur}) )
+        return 0
+    fi
+}
+
+complete -F _eaManager eaManager
+complete -F _eaManager ./eaManager
+EOF
+
+  chmod +x "$completion_file"
+
+  echo "${b}✓ Completion installed to: ${n}$completion_file"
+  echo ""
+  echo "To activate completion, run one of:"
+  echo "  ${b}source $completion_file${n}"
+  echo "  ${b}exec bash${n}  (restart shell)"
+  echo ""
+  echo "Or add this to your ~/.bashrc to make it permanent:"
+  echo "  ${b}source $completion_file${n}"
+}
+
+install_completion_quiet() {
+  local completion_dir="$HOME/.local/share/bash-completion/completions"
+  local completion_file="$completion_dir/eaManager"
+
+  # Create directory if it doesn't exist
+  mkdir -p "$completion_dir" 2>/dev/null
+
+  # Write the completion script (same as above, but silent)
+  cat > "$completion_file" 2>/dev/null << 'EOF'
+#!/usr/bin/env bash
+# Bash completion for eaManager
+
+_eaManager() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    # Find the eaManager script directory
+    local script_dir=""
+    if [[ -d "$HOME/Chainlink-EA-Manager" ]]; then
+        script_dir="$HOME/Chainlink-EA-Manager"
+    elif [[ -d "/usr/local/Chainlink-EA-Manager" ]]; then
+        script_dir="/usr/local/Chainlink-EA-Manager"
+    elif command -v eaManager >/dev/null 2>&1; then
+        script_dir="$(dirname "$(readlink -f "$(command -v eaManager)")")"
+    fi
+
+    # Main options
+    local main_opts="-i -d -u -t -v -l -h --install-completion"
+
+    # Test sub-options
+    local test_opts="--ea --url --file --help -e -u -f -h"
+
+    # Check if we're in test mode
+    local in_test_mode=0
+    for ((i=1; i<${#COMP_WORDS[@]}-1; i++)); do
+        if [[ "${COMP_WORDS[i]}" == "-t" ]]; then
+            in_test_mode=1
+            break
+        fi
+    done
+
+    # Handle completions based on context
+    case "${prev}" in
+        -d|-u)
+            # Complete with adapter names from externalAdapters/
+            if [[ -d "$script_dir/externalAdapters" ]]; then
+                local adapters=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
+                COMPREPLY=( $(compgen -W "${adapters}" -- ${cur}) )
+            fi
+            return 0
+            ;;
+        -t)
+            # After -t, offer test sub-options
+            COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+            return 0
+            ;;
+        --ea|-e)
+            # Complete with EA names
+            if [[ $in_test_mode -eq 1 ]]; then
+                local ea_names=""
+                if [[ -f "$script_dir/ea_endpoints" ]]; then
+                    ea_names=$(grep -v '^#' "$script_dir/ea_endpoints" 2>/dev/null | awk '{print $1}')
+                fi
+                if [[ -z "$ea_names" ]] && [[ -d "$script_dir/externalAdapters" ]]; then
+                    ea_names=$(cd "$script_dir/externalAdapters" && ls -1 2>/dev/null)
+                fi
+                COMPREPLY=( $(compgen -W "${ea_names}" -- ${cur}) )
+            fi
+            return 0
+            ;;
+        --file|-f)
+            # Complete with files from requests/ directory
+            if [[ -d "$script_dir/requests" ]]; then
+                local request_files=$(cd "$script_dir/requests" && ls -1 2>/dev/null)
+                local prefixed_files=$(cd "$script_dir/requests" && ls -1 2>/dev/null | sed 's|^|requests/|')
+                COMPREPLY=( $(compgen -W "${request_files} ${prefixed_files}" -- ${cur}) )
+            fi
+            COMPREPLY+=( $(compgen -f -- ${cur}) )
+            return 0
+            ;;
+        --url)
+            return 0
+            ;;
+    esac
+
+    # If in test mode, offer test options
+    if [[ $in_test_mode -eq 1 ]] && [[ ! "${prev}" =~ ^- ]]; then
+        COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+        return 0
+    fi
+
+    # Default: complete with main options
+    if [[ ${cur} == -* ]]; then
+        if [[ $in_test_mode -eq 1 ]]; then
+            COMPREPLY=( $(compgen -W "${test_opts}" -- ${cur}) )
+        else
+            COMPREPLY=( $(compgen -W "${main_opts}" -- ${cur}) )
+        fi
+        return 0
+    fi
+
+    # First argument: offer main options
+    if [[ ${COMP_CWORD} -eq 1 ]]; then
+        COMPREPLY=( $(compgen -W "${main_opts}" -- ${cur}) )
+        return 0
+    fi
+}
+
+complete -F _eaManager eaManager
+complete -F _eaManager ./eaManager
+EOF
+
+  chmod +x "$completion_file" 2>/dev/null
+}
+
+ensure_completion_installed() {
+  local completion_file="$HOME/.local/share/bash-completion/completions/eaManager"
+  if [[ ! -f "$completion_file" ]]; then
+    install_completion_quiet
+  fi
+}
+
+########################################################
 #                 INITIALIZE FUNCTION                  #
 ########################################################
 Initialize() {
@@ -253,6 +508,10 @@ fi
   echo ""
   echo "Adding eaManager to PATH"
   sudo cp eaManager /usr/bin/eaManager
+
+  # Install bash completion
+  echo ""
+  install_completion
 }
 
 ########################################################
@@ -540,12 +799,25 @@ Help() {
   echo "-l        Print all supported EA names and exit."
   echo ""
   echo "-h        Print this Help function and exit."
+  echo ""
+  echo "--install-completion    Install bash tab completion for eaManager."
+  echo "${b}                        Enables auto-complete for all commands and adapter names.${n}"
+  echo "${b}                        Also installed automatically during -i (Initialize).${n}"
   echo
 }
 
 ########################################################
 #                        MAIN                          #
 ########################################################
+# Silently ensure completion is installed
+ensure_completion_installed
+
+# Handle --install-completion flag (before getopts)
+if [[ "$1" == "--install-completion" ]]; then
+  install_completion
+  exit 0
+fi
+
 while getopts ":id:u:tlvh" option; do
    case ${option} in
       i) # initialize EA environment
