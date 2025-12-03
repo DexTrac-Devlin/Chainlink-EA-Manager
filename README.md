@@ -30,7 +30,7 @@ sudo ./eaManager.sh -i
 ### Deploy New External Adapter With Specific Version
 * This will:
   * Deploy a new external adapter of the selected release.
-  
+
 ```bash
 ./eaManager.sh -d coingecko
 ```
@@ -45,6 +45,58 @@ sudo ./eaManager.sh -i
 
 ```bash
 ./eaManager.sh -u coingecko
+```
+
+
+--
+### Test an External Adapter
+* This will:
+  * Send a test request to an external adapter
+  * Validate JSON payload (if `jq` is available)
+  * Display the formatted response
+
+#### Test by EA Name (Auto-Discovery)
+The script will automatically discover the EA's endpoint from comments in the adapter script:
+
+```bash
+./eaManager -t --ea coingecko --file requests/generic
+```
+
+If the EA name is not found in the configuration, you'll be prompted to enter a URL for one-time use.
+
+#### Test by Direct URL
+Bypass auto-discovery and test a specific endpoint directly:
+
+```bash
+./eaManager -t --url http://192.168.1.113:1113 --file requests/generic
+```
+
+#### Test with Interactive Payload
+Omit the `--file` option to paste JSON payload directly (press Ctrl-D when done):
+
+```bash
+./eaManager -t --ea coingecko
+# Paste your JSON payload, then press Ctrl-D
+```
+
+#### How EA Auto-Discovery Works
+The script scans `externalAdapters/` scripts for special comment headers:
+```bash
+# ea-name: coingecko-redis
+# endpoint: http://192.168.1.113:1113
+```
+
+These are cached in `ea_endpoints` for quick lookup. The script will try exact matches first, then fall back to `-redis` suffix variants.
+
+#### Test Options
+- `-e, --ea <name>` - EA name for auto-discovery
+- `-u, --url <URL>` - Direct URL (bypasses auto-discovery)
+- `-f, --file <path>` - JSON payload file
+- `-h, --help` - Show detailed test usage
+
+```bash
+# For detailed test options
+./eaManager -t --help
 ```
 
 
