@@ -1,6 +1,8 @@
 # Chainlink-EA-Manager
 Collection of scripts for deploying and managing Chainlink External Adapters
 
+Note: If you are currently using the eaManager, I highly recommend updating your eaManager script, as it has many new and convenient features.
+
 ---
 
 #### This has been tested on Debian 10, 11, & 12.
