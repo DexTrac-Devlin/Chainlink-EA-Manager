@@ -1,0 +1,6 @@
+{
+    "data": {
+        "endpoint": "batch-index",
+        "indices": ["CUUR0000SA0"]
+    }
+}
