@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# ea-name: dlc-cbtc-por-redis
+# endpoint: http://192.168.2.105:2105
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name dlc-cbtc-por-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.2.105 \
+ -p 2105:2105 \
+ -e EA_PORT=2105 \
+ -e TIMEOUT=30000 \
+ -e ATTESTER_API_URLS= \
+ -e BITCOIN_RPC_ENDPOINT= \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=dlc-cbtc-por \
+ -e CACHE_KEY_IGNORED_PROPS=meta \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e CACHE_MIN_AGE=120000 \
+ -e CACHE_MAX_AGE=180000 \
+ -e RATE_LIMIT_ENABLED=true \
+ -e WARMUP_ENABLED=false \
+ -e WS_ENABLED=false \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e RETRY=1 \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=dlc-cbtc-por \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="dlc-cbtc-por-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/dlc-cbtc-por-adapter:$1
