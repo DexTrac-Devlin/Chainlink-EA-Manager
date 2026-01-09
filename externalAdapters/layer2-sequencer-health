@@ -19,6 +19,7 @@ docker run \
  -e CELO_RPC_ENDPOINT=$CELO_RPC_URL \
  -e INK_RPC_ENDPOINT=$INK_RPC_URL \
  -e MANTLE_RPC_ENDPOINT=$MANTLE_RPC_URL \
+ -e MEGAETH_RPC_ENDPOINT=$MEGAETH_RPC_ENDPOINT \
  -e METIS_HEALTH_ENDPOINT=https://andromeda-healthy.metisdevops.link/health \
  -e METIS_RPC_ENDPOINT=$METIS_RPC_URL \
  -e OPTIMISM_HEALTH_ENDPOINT=https://mainnet-sequencer.optimism.io/health \
