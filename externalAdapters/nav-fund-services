@@ -25,7 +25,6 @@ docker run \
  -e CACHE_REDIS_HOST="192.168.1.1" \
  -e CACHE_REDIS_PORT=6379 \
  -e CACHE_MIN_AGE=120000 \
- -e CACHE_MAX_AGE=180000 \
  -e RATE_LIMIT_ENABLED=true \
  -e WARMUP_ENABLED=false \
  -e WS_ENABLED=false \
