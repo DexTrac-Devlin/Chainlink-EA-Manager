@@ -1533,6 +1533,22 @@ export MARKETSTACK_SUB_WS=
 #  N/A
 
 # =========================================================================================
+# 8b    d8    db    888888 88""Yb 88 Yb  dP 8888b.   dP"Yb   dP""b8 88  dP
+# 88b  d88   dPYb     88   88__dP 88  YbdP   8I  Yb dP   Yb dP   `" 88odP
+# 88YbdP88  dP__Yb    88   88"Yb  88  dPYb   8I  dY Yb   dP Yb      88"Yb
+# 88 YY 88 dP""""Yb   88   88  Yb 88 dP  Yb 8888Y"   YbodP   YboodP 88  Yb
+export MATRIXDOCK_API_KEY=
+export MATRIXDOCK_API_SECRET=
+
+# WEBSITE:
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# HTTP Supported Subscription Tiers:
+#  N/A
+
+# =========================================================================================
 # 8b    d8 888888 .dP"Y8 .dP"Y8    db    88""Yb 88 
 # 88b  d88 88__   `Ybo." `Ybo."   dPYb   88__dP 88 
 # 88YbdP88 88""   o.`Y8b o.`Y8b  dP__Yb  88"Yb  88 
