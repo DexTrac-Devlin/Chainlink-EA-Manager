@@ -5,7 +5,7 @@ Note: If you are currently using the eaManager, I highly recommend updating your
 
 ---
 
-#### This has been tested on Debian 10, 11, & 12.
+#### This has been tested on Debian 10, 11, 12, & 13.
 
 (use at your own risk, consider this as 100% untested)
 
