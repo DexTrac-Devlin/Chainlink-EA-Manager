@@ -5,6 +5,7 @@
 
 APTOS_RPC_URL=
 APTOS_CHAIN_ID=
+APTOS_RPC_CHAIN_ID=
 
 # ====================================================================
 #   ____  _____ _____  _  _____ _____  __ __  __  __ 
@@ -13,6 +14,7 @@ APTOS_CHAIN_ID=
 
 ARBITRUM_RPC_URL=
 ARBITRUM_CHAIN_ID=42161
+ARBITRUM_RPC_CHAIN_ID=42161
 
 # ====================================================================
 #    ____    ____  _____  ____  _____
@@ -21,6 +23,7 @@ ARBITRUM_CHAIN_ID=42161
 
 ASTAR_RPC_URL=
 ASTAR_CHAIN_ID=592
+ASTAR_RPC_CHAIN_ID=592
 
 # ====================================================================
 #   ____ __  __ ____   _      ____   __  _  ____  _   _  ____ 
@@ -32,6 +35,7 @@ AVAX_PCHAIN_RPC_URL=
 AVALANCHE_RPC_URL=
 AVALANCHE_PCHAIN_RPC_URL=
 AVALANCHE_CHAIN_ID=43114
+AVALANCHE_RPC_CHAIN_ID=43114
 
 # ====================================================================
 # _____   ____    ____  ____ 
@@ -40,6 +44,7 @@ AVALANCHE_CHAIN_ID=43114
 
 BASE_RPC_URL=
 BASE_CHAIN_ID=8453
+BASE_RPC_CHAIN_ID=8453
 
 # ====================================================================
 # _____  ____ _____   ____   ____  _   _   ____   _  __  _
@@ -48,6 +53,7 @@ BASE_CHAIN_ID=8453
 
 BERACHAIN_RPC_URL=
 BERACHAIN_CHAIN_ID=80094
+BERACHAIN_RPC_CHAIN_ID=80094
 
 # ====================================================================
 # _____  _  _____  ____  ____  _  __  _ 
@@ -65,6 +71,7 @@ BTC_RPC_URL=
 
 BITLAYER_RPC_URL=
 BITLAYER_CHAIN_ID=200901
+BITLAYER_RPC_CHAIN_ID=200901
 
 # ====================================================================
 # _____  ____ _____
@@ -73,6 +80,7 @@ BITLAYER_CHAIN_ID=200901
 
 BOB_RPC_URL=
 BOB_CHAIN_ID=60808
+BOB_RPC_CHAIN_ID=60808
 
 # ====================================================================
 # _____   ____  ____ 
@@ -82,7 +90,9 @@ BOB_CHAIN_ID=60808
 BSC_RPC_URL=
 BINANCESMARTCHAIN_RPC_URL=
 BSC_CHAIN_ID=56
+BSC_RPC_CHAIN_ID=56
 BINANCESMARTCHAIN_CHAIN_ID=56
+BINANCESMARTCHAIN_RPC_CHAIN_ID=56
 
 # ====================================================================
 # _____   ____  ____  __ __  ____  _____  ____  ____
@@ -91,6 +101,7 @@ BINANCESMARTCHAIN_CHAIN_ID=56
 
 BSQUARED_RPC_URL=
 BSQUARED_CHAIN_ID=223
+BSQUARED_RPC_CHAIN_ID=223
 
 # ====================================================================
 #  ____  ____  _     ____
@@ -99,6 +110,7 @@ BSQUARED_CHAIN_ID=223
 
 CELO_RPC_URL=
 CELO_CHAIN_ID=42220
+CELO_RPC_CHAIN_ID=42220
 
 # ====================================================================
 #  ____  _____  _   _  ____ _____  ____  __ __  __  __
@@ -112,6 +124,7 @@ ETHEREUM_BEACON_RPC_URL=
 ETHEREUM_ARCHIVE_RPC_URL=
 RPC_URL=
 ETHEREUM_CHAIN_ID=1
+ETHEREUM_RPC_CHAIN_ID=1
 
 # ====================================================================
 #  ____  ____   __  _  _____  ____  __  __ 
@@ -120,6 +133,7 @@ ETHEREUM_CHAIN_ID=1
 
 FANTOM_RPC_URL=
 FANTOM_CHAIN_ID=250
+FANTOM_RPC_CHAIN_ID=250
 
 # ====================================================================
 #  ____ _____   ____  __  __ _____  ____   _    
@@ -127,6 +141,7 @@ FANTOM_CHAIN_ID=250
 # |__|  |_|\_\/__/\__\/_/\_\  |_| /__/\__\|____|
 FRAXTAL_RPC_URL=
 FRAXTAL_CHAIN_ID=252
+FRAXTAL_RPC_CHAIN_ID=252
 
 # ====================================================================
 #  _   _   ____  _____  __  __  ____  __  _ __  __
@@ -135,6 +150,7 @@ FRAXTAL_CHAIN_ID=252
 
 HARMONY_RPC_URL=
 HARMONY_CHAIN_ID=1666600000
+HARMONY_RPC_CHAIN_ID=1666600000
 
 # ====================================================================
 #  _   _  ____  ____  ____ 
@@ -143,6 +159,7 @@ HARMONY_CHAIN_ID=1666600000
 
 HECO_RPC_URL=
 HECO_CHAIN_ID=128
+HECO_RPC_CHAIN_ID=128
 
 # ====================================================================
 #  _   _  ____  ____  ____ _____   ____
@@ -151,6 +168,7 @@ HECO_CHAIN_ID=128
 
 HEDERA_RPC_URL=
 HEDERA_CHAIN_ID=295
+HEDERA_RPC_CHAIN_ID=295
 
 # ====================================================================
 #  _   _ __  _______  ____ _____  _     _  ____  __ __  _  ____
@@ -158,8 +176,8 @@ HEDERA_CHAIN_ID=295
 # |_| |_| |__| |_|   |____||_|\_\|____||_|\____/=\___/ |_||____/
 
 HYPERLIQUID_RPC_URL=
-HYPERLIQUID_RPC_CHAIN_ID=999
 HYPERLIQUID_CHAIN_ID=999
+HYPERLIQUID_RPC_CHAIN_ID=999
 
 ====================================================================
 #  _  __  _  __  __
@@ -168,6 +186,7 @@ HYPERLIQUID_CHAIN_ID=999
 
 INK_RPC_URL=
 INK_CHAIN_ID=57073
+INK_RPC_CHAIN_ID=57073
 
 # ====================================================================
 #  __  __  ____ __  __ ____   __  _
@@ -184,6 +203,7 @@ KOVAN_OPTIMISM_RPC_URL=
 
 LINEA_RPC_URL=
 LINEA_CHAIN_ID=59144
+LINEA_RPC_CHAIN_ID=59144
 
 # ====================================================================
 #  __  __   ____  _____  _  ____ 
@@ -192,6 +212,7 @@ LINEA_CHAIN_ID=59144
 
 MATIC_RPC_URL=
 MATIC_CHAIN_ID=137
+MATIC_RPC_CHAIN_ID=137
 
 # ====================================================================
 #  __  __   ____   __  _  _____  _     ____
@@ -200,6 +221,7 @@ MATIC_CHAIN_ID=137
 
 MANTLE_RPC_URL=
 MANTLE_CHAIN_ID=5000
+MANTLE_RPC_CHAIN_ID=5000
 
 # ====================================================================
 #  __  __  ____  ____   ____   ____  _____  _   _
@@ -208,8 +230,8 @@ MANTLE_CHAIN_ID=5000
 
 MEGAETH_RPC_ENDPOINT=
 MEGAETH_RPC_URL=
-MEGAETH_RPC_CHAIN_ID=4326
 MEGAETH_CHAIN_ID=4326
+MEGAETH_RPC_CHAIN_ID=4326
 
 # ====================================================================
 #  __  __  ____ _____  _     _  __  _
@@ -218,6 +240,7 @@ MEGAETH_CHAIN_ID=4326
 
 MERLIN_RPC_URL=
 MERLIN_CHAIN_ID=4200
+MERLIN_RPC_CHAIN_ID=4200
 
 # ====================================================================
 #  __  __  ____  _____  _   ____
@@ -226,6 +249,7 @@ MERLIN_CHAIN_ID=4200
 
 METIS_RPC_URL=
 METIS_CHAIN_ID=1088
+METIS_RPC_CHAIN_ID=1088
 
 # ====================================================================
 #  __  __  ____  ____  ____
@@ -234,6 +258,7 @@ METIS_CHAIN_ID=1088
 
 MODE_RPC_URL=
 MODE_CHAIN_ID=34443
+MODE_RPC_CHAIN_ID=34443
 
 # ====================================================================
 #  __  __  ____  ____  __  _ _____  ____   ____   __  __ 
@@ -242,6 +267,7 @@ MODE_CHAIN_ID=34443
 
 MOONBEAM_RPC_URL=
 MOONBEAM_CHAIN_ID=1284
+MOONBEAM_RPC_CHAIN_ID=1284
 
 # ====================================================================
 #  __  __  ____  ____  __  _ _____  _ __  __ ____ _____ 
@@ -250,6 +276,7 @@ MOONBEAM_CHAIN_ID=1284
 
 MOONRIVER_RPC_URL=
 MOONRIVER_CHAIN_ID=1285
+MOONRIVER_RPC_CHAIN_ID=1285
 
 # ====================================================================
 #  __  __  ____ _____ _____  _   _
@@ -258,6 +285,7 @@ MOONRIVER_CHAIN_ID=1285
 
 MORPH_RPC_URL=
 MORPH_CHAIN_ID=2818
+MORPH_RPC_CHAIN_ID=2818
 
 # ====================================================================
 #  ____ _____  _____  _  __  __  _   ____  __  __ 
@@ -266,6 +294,7 @@ MORPH_CHAIN_ID=2818
 
 OPTIMISM_RPC_URL=
 OPTIMISM_CHAIN_ID=10
+OPTIMISM_RPC_CHAIN_ID=10
 
 # ====================================================================
 # _____  ____  _     __  __   ____   ____  ____  _____ 
@@ -281,6 +310,7 @@ POLKADOT_ASSET_HUB_RPC_URL=
 
 POLYGON_RPC_URL=
 POLYGON_CHAIN_ID=137
+POLYGON_RPC_CHAIN_ID=137
 
 # ====================================================================
 # _____  ____  ____  _____  ____  _____  ____  ____  __  __
@@ -289,6 +319,7 @@ POLYGON_CHAIN_ID=137
 
 ROOTSTOCK_RPC_URL=
 ROOTSTOCK_CHAIN_ID=30
+ROOTSTOCK_RPC_CHAIN_ID=30
 
 # ====================================================================
 # _____   ____  __  __ 
@@ -297,6 +328,7 @@ ROOTSTOCK_CHAIN_ID=30
 
 RSK_RPC_URL=
 RSK_CHAIN_ID=30
+RSK_RPC_CHAIN_ID=30
 
 # ====================================================================
 #   ____  ____ _____  ____  _     _    
@@ -305,6 +337,7 @@ RSK_CHAIN_ID=30
 
 SCROLL_RPC_URL=
 SCROLL_CHAIN_ID=534352
+SCROLL_RPC_CHAIN_ID=534352
 
 # ====================================================================
 #   ____  ____  _
@@ -313,6 +346,7 @@ SCROLL_CHAIN_ID=534352
 
 SEI_RPC_URL=
 SEI_CHAIN_ID=1329
+SEI_RPC_CHAIN_ID=1329
 
 # ====================================================================
 #   ____  ____  _      ____   __  _   ____  
@@ -328,6 +362,7 @@ SOLANA_RPC_URL=
 
 SONEIUM_RPC_URL=
 SONEIUM_CHAIN_ID=1868
+SONEIUM_RPC_CHAIN_ID=1868
 
 # ====================================================================
 #   ____  ____  __  _  _  ____
@@ -335,8 +370,8 @@ SONEIUM_CHAIN_ID=1868
 # .__)__)\____/|_|\__||_|\____)
 
 SONIC_RPC_URL=
-#SONIC_RPC_URL=
 SONIC_CHAIN_ID=146
+SONIC_RPC_CHAIN_ID=146
 
 # ====================================================================
 #   ____  _____  ____  _____  __  __  __  _  ____  _____ 
@@ -368,6 +403,7 @@ COLUMBUS_5_RPC_URL=
 
 UNICHAIN_RPC_URL=
 UNICHAIN_CHAIN_ID=130
+UNICHAIN_RPC_CHAIN_ID=130
 
 # ====================================================================
 #  _____ _____  ____  __  _
@@ -376,6 +412,7 @@ UNICHAIN_CHAIN_ID=130
 
 TRON_RPC_URL=
 TRON_CHAIN_ID=728126428
+TRON_RPC_CHAIN_ID=728126428
 
 # ====================================================================
 # __  __ ____   ____   _ 
@@ -384,6 +421,7 @@ TRON_CHAIN_ID=728126428
 
 XDAI_RPC_URL=
 XDAI_CHAIN_ID=100
+XDAI_RPC_CHAIN_ID=100
 
 # ====================================================================
 # __  __ _      ____ __  __ ____ _____
@@ -393,6 +431,8 @@ XDAI_CHAIN_ID=100
 # Local RPC Endpoint:
 XLAYER_RPC_URL=
 XLAYER_CHAIN_ID=196
+XLAYER_RPC_CHAIN_ID=196
+
 
 # ====================================================================
 # __  _______ _____  _
@@ -401,6 +441,7 @@ XLAYER_CHAIN_ID=196
 
 XRPL_RPC_URL=
 XRPL_CHAIN_ID=
+XRPL_RPC_CHAIN_ID=
 
 # ====================================================================
 # _____  ____  _____  ____
@@ -409,3 +450,4 @@ XRPL_CHAIN_ID=
 
 ZETA_RPC_URL=
 ZETA_CHAIN_ID=7000
+ZETA_RPC_CHAIN_ID=7000
