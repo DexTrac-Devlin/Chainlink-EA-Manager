@@ -15,7 +15,6 @@ docker run \
  -p 2101:2101 \
  -e EA_PORT=2101 \
  -e TIMEOUT=30000 \
- -e API_ENDPOINT=https://api.navfundservices.com \
  -e API_KEY_220980=$NAV_FUND_SERVICES_API_KEY \
  -e SECRET_KEY_220980=$NAV_FUND_SERVICES_SECRET_KEY \
  -e CACHE_ENABLED=true \
