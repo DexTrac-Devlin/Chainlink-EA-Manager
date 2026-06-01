@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# ea-name: lo-tech-redis
+# endpoint: http://192.168.2.118:2118
+
+source api_keys
+source misc_vars
+
+docker run \
+ --name lo-tech-redis \
+ --restart=unless-stopped \
+ --net eas-net \
+ --link redis-cache \
+ --ip 192.168.2.118 \
+ -p 2118:1118 \
+ -e EA_PORT=2118 \
+ -e ASIA_API_KEY=$LO_TECH_ASIA_API_KEY \
+ -e ASIA_WS_API_ENDPOINT=$LO_TECH_ASIA_WS_API_ENDPOINT \
+ -e US_API_KEY=$LO_TECH_US_API_KEY \
+ -e US_WS_API_ENDPOINT=$LO_TECH_US_WS_API_ENDPOINT \
+ -e TIMEOUT=30000 \
+ -e CACHE_ENABLED=true \
+ -e CACHE_TYPE=redis \
+ -e CACHE_KEY_GROUP=lo-tech \
+ -e CACHE_REDIS_HOST="192.168.1.1" \
+ -e CACHE_REDIS_PORT=6379 \
+ -e CACHE_REDIS_TIMEOUT=10000 \
+ -e RATE_LIMIT_ENABLED=true \
+ -e WARMUP_ENABLED=true \
+ -e REQUEST_COALESCING_ENABLED=true \
+ -e REQUEST_COALESCING_INTERVAL=100 \
+ -e REQUEST_COALESCING_INTERVAL_MAX=1000 \
+ -e REQUEST_COALESCING_INTERVAL_COEFFICIENT=2 \
+ -e REQUEST_COALESCING_ENTROPY_MAX=0 \
+ -e LOG_LEVEL=info \
+ -e DEBUG=false \
+ -e API_VERBOSE=false \
+ -e EXPERIMENTAL_METRICS_ENABLED=true \
+ -e METRICS_NAME=lo-tech \
+ -e RETRY=1 \
+ -l prometheus-scrape.enabled=true \
+ -l prometheus-scrape.job_name="lo-tech-redis" \
+ -l prometheus-scrape.port=9080 \
+ -l prometheus-scrape.metrics_path="/metrics" \
+ -d public.ecr.aws/chainlink/adapters/lo-tech-adapter:$1
